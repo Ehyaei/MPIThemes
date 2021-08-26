@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=139 alt="logo with an image of a MPI Templates" />
+# MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=160 alt="logo with an image of a MPI Templates" />
 
 <!-- badges: start -->
 <!-- badges: end -->
