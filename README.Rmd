@@ -8,6 +8,8 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
+  results="hide",
+  eval = FALSE,
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
@@ -32,14 +34,14 @@ Especially you can create PDF reports without worrying about the lateX code. Inc
 
 You can install the released version of MPIThemes from [GitHub](https://github.com/) with:
 
-``` {r,evel=F}
+``` r
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
 ```
 
 
-```{r,evel=F}
-# install.packages("tinytex")
-# tinytex::install_tinytex()
+```r
+install.packages("tinytex")
+tinytex::install_tinytex()
 ```
 
