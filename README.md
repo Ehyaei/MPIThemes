@@ -1,61 +1,49 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# MPIThemes
+# MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=139 alt="logo with an image of a MPI Templates" />
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of MPIThemes is to create useful templates
+The goal of the MPIThemes package is to provide a variety of Rmarkdown
+templates with ggplot themes for scientific reproducible research with
+custom design for the MAX PLANCK institute.
+
+Rmarkdown templates can be rendered in PDF, Docx, and HTML format.
+Especially you can create PDF reports without worrying about the lateX
+code. Included in the package are: - Beamer presentation - Analytical
+reports
 
 ## Installation
 
 You can install the released version of MPIThemes from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("MPIThemes")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
+#> Using github PAT from envvar GITHUB_PAT
+#> Downloading GitHub repo Ehyaei/MPIThemes@HEAD
+#> stringi   (1.7.3   -> 1.7.4) [CRAN]
+#> htmltools (0.5.1.1 -> 0.5.2) [CRAN]
+#> Installing 2 packages: stringi, htmltools
+#> Installing packages into '/tmp/RtmpybMziC/temp_libpath5e827c48f342'
+#> (as 'lib' is unspecified)
+#>      checking for file ‘/tmp/RtmpydP8Th/remotes36692474303aa/Ehyaei-MPIThemes-5dc6b81/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/RtmpydP8Th/remotes36692474303aa/Ehyaei-MPIThemes-5dc6b81/DESCRIPTION’
+#>   ─  preparing ‘MPIThemes’:
+#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>    Omitted ‘LazyData’ from DESCRIPTION
+#>   ─  building ‘MPIThemes_0.0.0.9000.tar.gz’
+#>      
+#> 
+#> Installing package into '/tmp/RtmpybMziC/temp_libpath5e827c48f342'
+#> (as 'lib' is unspecified)
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(MPIThemes)
-## basic example code
+# install.packages("tinytex")
+# tinytex::install_tinytex()
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
