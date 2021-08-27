@@ -5,3 +5,9 @@
 ^R/_render\.r$
 ^R/_usethis\.R$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^vignettes$
+^.binder$
+^vignettes/articles$

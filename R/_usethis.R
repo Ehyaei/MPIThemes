@@ -51,3 +51,14 @@ usethis::use_roxygen_md()
 #   - Determine test coverage
 
 use_github_actions()
+
+# add package-level documentation
+usethis::use_package_doc()
+
+# setup package documentation as website
+usethis::use_pkgdown()
+usethis::use_article("MPIThemes")
+usethis::use_article("ggplot2_themes", title = "ggplot2 themes")
+pkgdown::build_site()
+
+
