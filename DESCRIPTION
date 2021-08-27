@@ -22,3 +22,6 @@ Imports:
     pagedown,
     rmarkdown,
     scales
+Suggests: 
+    spelling
+Language: en-US

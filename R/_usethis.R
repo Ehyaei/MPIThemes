@@ -62,3 +62,6 @@ usethis::use_article("ggplot2_themes", title = "ggplot2 themes")
 pkgdown::build_site()
 
 
+# setup spell checking
+usethis::use_spell_check()
+devtools::check()
