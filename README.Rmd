@@ -22,7 +22,7 @@ library("badger", quietly = TRUE)
 
 ```{r, echo = FALSE, results='asis', message=FALSE,eval=TRUE}
 cat(
-  badge_devel("Ehyaei/MPIThemes", "#FD8008"),
+  badge_devel("Ehyaei/MPIThemes", "orange"),
   badge_lifecycle("experimental"),
   badge_last_commit("Ehyaei/MPIThemes")
 )

@@ -3,7 +3,7 @@
 
 # MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=160 alt="logo with an image of a MPI Templates" />
 
-[![](https://img.shields.io/badge/devel%20version-0.0.0.9000-#FD8008.svg)](https://github.com/Ehyaei/MPIThemes)
+[![](https://img.shields.io/badge/devel%20version-0.0.0.9000-orange.svg)](https://github.com/Ehyaei/MPIThemes)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg)](https://github.com/Ehyaei/MPIThemes/commits/master)
 
