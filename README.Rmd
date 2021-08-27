@@ -20,15 +20,13 @@ library("badger", quietly = TRUE)
 
 ```{r, echo = FALSE, results='asis', message=FALSE,eval=TRUE}
 cat(
-  badge_devel("Ehyaei/MPIThemes", "orange"),
-  badge_lifecycle("experimental"),
-  badge_last_commit("Ehyaei/MPIThemes")
+  badger::badge_github_actions("Ehyaei/MPIThemes"),
+  badger::badge_devel("Ehyaei/MPIThemes", "orange"),
+  badger::badge_lifecycle("experimental"),
+  badger::badge_last_commit("Ehyaei/MPIThemes")
 )
 ```
 
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ehyaei/MPIThemes/actions)
-<!-- badges: end -->
 
 <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
 
