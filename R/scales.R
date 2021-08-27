@@ -24,6 +24,7 @@ palette_mpi <- function() {
 #' @export
 #'
 #' @examples
+#' library(ggplot2)
 #' ggplot(data = mtcars, aes(x = cyl)) +
 #'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))+
 #'   scale_fill_mpi()
@@ -41,6 +42,7 @@ scale_fill_mpi <- function(...){
 #' @export
 #'
 #' @examples
+#' library(ggplot2)
 #' ggplot(data = mtcars, aes(x = wt, y= mpg,color = as.character(cyl))) +
 #'   geom_point()+scale_color_mpi()
 scale_color_mpi <- function(...){

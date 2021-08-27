@@ -16,6 +16,7 @@ scale_color_mpi(...)
 Fill scale constructor for MPI palette
 }
 \examples{
+library(ggplot2)
 ggplot(data = mtcars, aes(x = wt, y= mpg,color = as.character(cyl))) +
   geom_point()+scale_color_mpi()
 }

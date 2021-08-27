@@ -16,6 +16,7 @@ scale_fill_mpi(...)
 Color scale constructor for MPI palette
 }
 \examples{
+library(ggplot2)
 ggplot(data = mtcars, aes(x = cyl)) +
   geom_bar(aes(y = ..count..,fill = as.character(cyl)))+
   scale_fill_mpi()
