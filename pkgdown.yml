@@ -1,0 +1,8 @@
+pandoc: 2.7.3
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  articles/MPIThemes: MPIThemes.html
+  articles/ggplot2_themes: ggplot2_themes.html
+last_built: 2021-08-27T09:35Z
+
