@@ -17,7 +17,7 @@ library("badger", quietly = TRUE)
 ```
 
 
-# MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=160 alt="logo with an image of a MPI Templates" />
+# MPIThemes 
 
 
 ```{r, echo = FALSE, results='asis', message=FALSE,eval=TRUE}
@@ -27,6 +27,8 @@ cat(
   badge_last_commit("Ehyaei/MPIThemes")
 )
 ```
+
+<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=160 style="padding: 0 15px; float: right; alt="logo with an image of a MPI Templates" />
 
 The goal of the MPIThemes package is to provide a variety of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX PLANCK institute.
 
