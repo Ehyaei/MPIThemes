@@ -16,9 +16,7 @@ knitr::opts_chunk$set(
 library("badger", quietly = TRUE)
 ```
 
-
-# MPIThemes 
-
+# MPIThemes
 
 ```{r, echo = FALSE, results='asis', message=FALSE,eval=TRUE}
 cat(
@@ -28,14 +26,18 @@ cat(
 )
 ```
 
-<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width=160 style="padding: 0 15px; float: right;"/>
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ehyaei/MPIThemes/actions)
+<!-- badges: end -->
+
+<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
 
 The goal of the MPIThemes package is to provide a variety of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX PLANCK institute.
 
-Rmarkdown templates can be rendered in PDF, Docx, and HTML format.
-Especially you can create PDF reports without worrying about the lateX code. Included in the package are:
-- Beamer presentation
-- Analytical reports
+Rmarkdown templates can be rendered in PDF, Docx, and HTML format. Especially you can create PDF reports without worrying about the lateX code. Included in the package are:
+
+-   Beamer presentation
+-   Analytical reports
 
 ## Installation
 
@@ -46,7 +48,7 @@ You can install the released version of MPIThemes from [GitHub](https://github.c
 devtools::install_github("Ehyaei/MPIThemes")
 ```
 
-```r
+``` r
 install.packages("tinytex")
 tinytex::install_tinytex()
 ```
