@@ -7,7 +7,12 @@
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg)](https://github.com/Ehyaei/MPIThemes/commits/master)
 
-<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width=160 style="padding: 0 15px; float: right;"/>
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ehyaei/MPIThemes/actions)
+<!-- badges: end -->
+
+<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
 
 The goal of the MPIThemes package is to provide a variety of Rmarkdown
 templates with ggplot themes for scientific reproducible research with
@@ -15,8 +20,10 @@ custom design for the MAX PLANCK institute.
 
 Rmarkdown templates can be rendered in PDF, Docx, and HTML format.
 Especially you can create PDF reports without worrying about the lateX
-code. Included in the package are: - Beamer presentation - Analytical
-reports
+code. Included in the package are:
+
+-   Beamer presentation
+-   Analytical reports
 
 ## Installation
 
