@@ -3,11 +3,7 @@
 
 # MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" align="right" width=139 height=160 alt="logo with an image of a MPI Templates" />
 
-<!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
+experimental
 
 The goal of the MPIThemes package is to provide a variety of Rmarkdown
 templates with ggplot themes for scientific reproducible research with
@@ -33,7 +29,7 @@ install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 
-# Ggplot2 theme
+# ggplot2 theme
 
 This package includes several ggplot themes and palettes for creating
 plots with MPI custom design.
