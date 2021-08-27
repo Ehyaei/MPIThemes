@@ -20,10 +20,23 @@ devtools::build_readme() # Render README.RMD to generate README.md
 
 # add dependency
 usethis::use_package("rmarkdown")
+usethis::use_package("bookdown")
+usethis::use_package("pagedown")
 usethis::use_package("ggplot2")
+usethis::use_package("gridExtra")
+usethis::use_package("scales")
 
 # create r scripts
 usethis::use_r("_usethis")
+usethis::use_r("_render.r")
+usethis::use_r("utils")
+usethis::use_r("data")
+usethis::use_r("themes")
+usethis::use_r("scales")
+usethis::use_r("latex_templates")
+usethis::use_r("html_templates")
+usethis::use_r("office_templates")
+usethis::use_r("bookdown_templates")
 
 # hide script that deploys from package
 usethis::use_build_ignore(c("R/_render.r", "R/_usethis.R"))
