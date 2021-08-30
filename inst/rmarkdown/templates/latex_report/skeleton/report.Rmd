@@ -1,0 +1,55 @@
+---
+title: "Statistical analysis of behavioral data "
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+author: [Ahmad Ehyaei, Sara Ershadmanesh]
+affiliation: Max Planck Institute for Biological Cybernetics 
+location: Tübingen
+titlepage: true
+toc: true
+content-has-page: true
+logo-primary: MPILogoGray.eps
+logo-secondary: MPIBCWhite.eps
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: xelatex
+    template: mpi_report.latex
+...
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,comment = "", message = FALSE, 
+  error = FALSE,warning = FALSE
+                      )
+```
+
+# Hello RMarkdown+Latex
+
+This is simple an R Markdown document to show MPIThemes features.
+use `#` sign to define chapter.
+For definition sub chapter add `##` to first line and add name of sub chapter.
+
+## Code Embedding
+
+```{r cars}
+summary(cars)
+```
+
+We can run inline R code `2^10=` `r 2^10`
+
+## plot
+
+By using ggplot package, we can  
+
+```{r}
+library(ggplot2)
+
+ggplot(iris, aes(Sepal.Length, Petal.Length)) + 
+  labs(subtitle="Iris Data: Sepal Length vs Petal Length",
+       title="Bubble chart") + 
+  geom_jitter(aes(col=Species, size=Sepal.Width)) + 
+  geom_smooth(aes(col=Species), method="lm", se=F)
+```
+
