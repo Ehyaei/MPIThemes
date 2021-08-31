@@ -1,18 +1,30 @@
-#' Title
+#' PDF Repolrt Latex Template
 #'
-#' @param ...
-#' @param keep_tex
-#' @param highlight
+#' latex_report function includes many features to customize your latex template
+#' and produce pdf report output.
 #'
-#' @return
+#' @param ... Arguments to \code{rmarkdown::pdf_document}
+#' @param keep_tex A Boolean toggle to select whether intermediate. Default value is TRUE
+#' @param highlight Syntax highlighting style. Default value is "tango".
+#' @param latex_engine LateX engine for producing PDF output. Default value is xelatex
+#' @param fig_caption TRUE to render figures with captions.
+#' @return R Markdown output format.
 #' @export
 #'
 #' @examples
-#' #' @references \url{https://github.com/sebastiansauer/yart/blob/master/R/yart.R}
-
-latex_report <- function(..., keep_tex = FALSE,highlight = "tango") {
-  template <- system.file("rmarkdown", "templates", "report", "resources", "template.tex", package = "alef")
-  base <- inherit_pdf_document(..., template = template, keep_tex = keep_tex,highlight = highlight)
+#' \dontrun{
+#' rmarkdown::draft("report.Rmd", template = "latex_report", package = "MPIThemes")
+#' rmarkdown::render("report.Rmd")
+#' }
+latex_report <- function(..., keep_tex = TRUE, highlight = "tango",
+                         latex_engine= "xelatex", fig_caption = TRUE) {
+  template <- system.file("rmarkdown", "templates", "latex_report", "resources",
+                           package = "MPIThemes")
+  template = paste0(template,"/template.tex")
+  base <- inherit_pdf_document(..., template = template, keep_tex = keep_tex,
+                               highlight = highlight,latex_engine = latex_engine,
+                               fig_caption = fig_caption
+                               )
 
   base$knitr$opts_chunk$prompt <- FALSE
   base$knitr$opts_chunk$comment <- ''
@@ -25,17 +37,8 @@ latex_report <- function(..., keep_tex = FALSE,highlight = "tango") {
   base$knitr$opts_chunk$fig.align <- "center"
   base$knitr$opts_chunk$dev <- "cairo_pdf"
   base$knitr$opts_chunk$fig.pos <- "H"
+  base$knitr$opts_chunk$fig.path="figure/"
   base
 }
 
-# Call rmarkdown::pdf_documet and mark the return value as inheriting pdf_document
-inherit_pdf_document <- function(...) {
-  fmt <- rmarkdown::pdf_document(...)
-  fmt$inherits <- "pdf_document"
-  fmt
-}
-
-knitr_fun <- function(name) utils::getFromNamespace(name, 'knitr')
-
-output_asis <- knitr_fun('output_asis')
 

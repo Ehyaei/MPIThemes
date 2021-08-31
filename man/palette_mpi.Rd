@@ -10,7 +10,7 @@ palette_mpi()
 a vector containing the colors.
 }
 \description{
-This palette was inspired by the CD manual (available \href{http://stackoverflow.com/}{here} )
+This palette was inspired by the CD manual (available \href{https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html}{here} )
 of the Max Planck Society.
 }
 \examples{

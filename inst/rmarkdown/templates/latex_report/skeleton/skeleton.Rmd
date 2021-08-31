@@ -7,25 +7,17 @@ location: Tübingen
 titlepage: true
 toc: true
 content-has-page: true
-logo-primary: MPILogoGray.eps
-logo-secondary: MPIBCWhite.eps
-output: 
-  pdf_document:
-    citation_package: natbib
-    keep_tex: true
-    fig_caption: true
-    latex_engine: xelatex
-    template: mpi_report.latex
+logo-primary: src/icon/MPILogoGray.eps
+logo-secondary: src/icon/MPIBCWhite.eps
+output:
+  MPIThemes::latex_report
 ...
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,comment = "", message = FALSE, 
-  error = FALSE,warning = FALSE
-                      )
+```{r,include=FALSE}
+source("manuscript/global.R")
 ```
 
-# Hello RMarkdown+Latex
+# RMarkdown+Latex
 
 This is simple an R Markdown document to show MPIThemes features.
 use `#` sign to define chapter.
@@ -39,17 +31,35 @@ summary(cars)
 
 We can run inline R code `2^10=` `r 2^10`
 
+## Markdown
+
+In RMarkdown we can use markdown syntax, such as unordered list items
+
+- item
+- item
+    - more item
+
+Or use block quotes are written after `>`, e.g.,
+
+> To be, or not to be, that is the question!
+
+## Latex
+
+We can easily write math expressions by latex syntax. 
+Inline LateX equations can be written in a pair of dollar signs
+$$f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}$$
+
 ## plot
 
 By using ggplot package, we can  
 
-```{r}
-library(ggplot2)
-
+```{r scatterPlot, echo=TRUE}
 ggplot(iris, aes(Sepal.Length, Petal.Length)) + 
   labs(subtitle="Iris Data: Sepal Length vs Petal Length",
        title="Bubble chart") + 
   geom_jitter(aes(col=Species, size=Sepal.Width)) + 
-  geom_smooth(aes(col=Species), method="lm", se=F)
+  geom_smooth(aes(col=Species), method="lm", se=F)+
+  theme_bw()+
+  scale_color_mpi()
 ```
 

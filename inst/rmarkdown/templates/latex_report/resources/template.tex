@@ -458,7 +458,7 @@ $endif$
 
 % ...................................................................... %
 %
-%               Add MPI Custom Template For Long Reprt 
+%               Add MPI Custom Template For Long Reprt
 %
 % ...................................................................... %
 
@@ -478,61 +478,61 @@ $endif$
 % set titlepage top, bottom, text and rule color
 
 $if(titlepage-top-color)$
-\definecolor{titlepageTopColor}{HTML}{$titlepage-top-color$} 
+\definecolor{titlepageTopColor}{HTML}{$titlepage-top-color$}
 $else$
-\definecolor{titlepageTopColor}{HTML}{DDDED6} 
+\definecolor{titlepageTopColor}{HTML}{DDDED6}
 $endif$
 
 $if(titlepage-bottom-color)$ % when we use titlepage-background do not set this!
-\definecolor{titlepageBottomColor}{HTML}{$titlepage-bottom-color$} 
+\definecolor{titlepageBottomColor}{HTML}{$titlepage-bottom-color$}
 $else$
-\definecolor{titlepageBottomColor}{HTML}{009EE2} 
+\definecolor{titlepageBottomColor}{HTML}{009EE2}
 $endif$
 
-$if(titlepage-text-color)$ 
-\definecolor{titlepageTextColor}{HTML}{$titlepage-text-color$} 
+$if(titlepage-text-color)$
+\definecolor{titlepageTextColor}{HTML}{$titlepage-text-color$}
 $else$
-\definecolor{titlepageTextColor}{HTML}{706d6e} 
+\definecolor{titlepageTextColor}{HTML}{706d6e}
 $endif$
 
-$if(titlepage-color)$ 
-\definecolor{titlePageColor}{HTML}{$titlepage-color$} 
+$if(titlepage-color)$
+\definecolor{titlePageColor}{HTML}{$titlepage-color$}
 $else$
-\definecolor{titlePageColor}{HTML}{009EE2} 
+\definecolor{titlePageColor}{HTML}{009EE2}
 $endif$
 
-$if(titlepage-rule-color)$ 
-\definecolor{titlePageRuleColor}{HTML}{$titlepage-rule-color$} 
+$if(titlepage-rule-color)$
+\definecolor{titlePageRuleColor}{HTML}{$titlepage-rule-color$}
 $else$
-\definecolor{titlePageRuleColor}{HTML}{000000} 
+\definecolor{titlePageRuleColor}{HTML}{000000}
 $endif$
 
 
 % Set Initial Values
 
-$if(titlepage-rule-height)$ 
-\def\titlepageRuleHeight{$titlepage-rule-height$} 
+$if(titlepage-rule-height)$
+\def\titlepageRuleHeight{$titlepage-rule-height$}
 $else$
-\def\titlepageRuleHeight{10} 
+\def\titlepageRuleHeight{10}
 $endif$
 
 
-$if(titlepage-twocolor-rule-height)$ 
-\def\titlepageTwocolorRuleHeight{$titlepage-twocolor-rule-height$} 
+$if(titlepage-twocolor-rule-height)$
+\def\titlepageTwocolorRuleHeight{$titlepage-twocolor-rule-height$}
 $else$
-\def\titlepageTwocolorRuleHeight{3} 
+\def\titlepageTwocolorRuleHeight{3}
 $endif$
 
-$if(title-vjust)$ 
-\def\titleVjust{$title-vjust$} 
+$if(title-vjust)$
+\def\titleVjust{$title-vjust$}
 $else$
-\def\titleVjust{0} 
+\def\titleVjust{0}
 $endif$
 
-$if(title-hjust)$ 
-\def\titleHjust{$title-hjust$} 
+$if(title-hjust)$
+\def\titleHjust{$title-hjust$}
 $else$
-\def\titleHjust{0} 
+\def\titleHjust{0}
 $endif$
 
 
@@ -544,22 +544,22 @@ $endif$
 
 \usepackage{fontspec}
 % set main font univers
-\setmainfont[ Path = fonts/]{Univers-light-normal.ttf}[
+\setmainfont[ Path = src/fonts/]{Univers-light-normal.ttf}[
 BoldFont = UniversBlack.ttf,
 ItalicFont = UniversLTStd.otf,
 BoldItalicFont = UniversLTStd-Bold.otf
 ]
-% define Bodoni font for title 
+% define Bodoni font for title
 \newfontfamily\Bodoni[
-  Path=fonts/,
+  Path=src/fonts/,
   LetterSpace=2.0,
   WordSpace={10,0,0},
   HyphenChar=None,
   PunctuationSpace=WordSpace
   ]{BodoniFLF-Roman.ttf}
-% \newfontfamily\BodoniBold[Path=fonts/]{BodoniFLF-Bold.ttf}
-% \newfontfamily\BodoniBoldItalic[Path=fonts/]{BodoniFLF-BoldItalic.ttf}
-% \newfontfamily\BodoniItalic[Path=fonts/]{BodoniFLF-Italic.ttf}
+% \newfontfamily\BodoniBold[Path=src/fonts/]{BodoniFLF-Bold.ttf}
+% \newfontfamily\BodoniBoldItalic[Path=src/fonts/]{BodoniFLF-BoldItalic.ttf}
+% \newfontfamily\BodoniItalic[Path=src/fonts/]{BodoniFLF-Italic.ttf}
 
 
 
@@ -639,7 +639,7 @@ $endif$
 
 %......................................................................%
 %
-%               End of Modifications 
+%               End of Modifications
 %
 %......................................................................%
 
@@ -647,7 +647,7 @@ $endif$
 \begin{document}
 
 %......................................................................%
-%               Add Titlepage 
+%               Add Titlepage
 %......................................................................%
 
 $if(titlepage)$
@@ -657,8 +657,8 @@ $if(titlepage)$
 %......................................................................%
 %                         Max-Planck Society Design
 
-\begin{tikzpicture}[remember picture,overlay] 
-% add title page top color 
+\begin{tikzpicture}[remember picture,overlay]
+% add title page top color
 \fill[titlepageTopColor] (page cs:-1,0.23) rectangle (current page.north east);
 % add title page bottom color
 \fill[titlepageBottomColor] (current page.south west) rectangle (page cs:1,0.23);
@@ -704,29 +704,29 @@ $endif$
   \Huge{\uppercase{$title$}}
   \vspace{0.3cm}
   $endif$
-  
+
   $if(subtitle)$
   \huge{$subtitle$}
-  \vspace{0.3cm}  
+  \vspace{0.3cm}
   $endif$
-  
+
   % add bodoni font to date
   $if(date)$
   \huge{\uppercase{$date$}}
   \vspace{0.3cm}
   $endif$
-  
+
   % $if(author)$
   % \Large{\textsf{$for(author)$$author$$sep$, $endfor$}}
   % \vspace{0.3cm}
   % $endif$
-  
+
   \vspace{1cm}
   $if(affiliation)$
   \Large{ $affiliation$}
   \vspace{0.1cm}
   $endif$
-  
+
   $if(location)$
   \large{$location$}
   $endif$
