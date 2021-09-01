@@ -495,6 +495,13 @@ $else$
 \definecolor{titlepageTextColor}{HTML}{706d6e}
 $endif$
 
+$if(titlepage-author-text-color)$
+\definecolor{titlepageAuthorTextColor}{HTML}{$titlepage-author-text-color$}
+$else$
+\definecolor{titlepageAuthorTextColor}{HTML}{FFFFFF}
+$endif$
+
+
 $if(titlepage-color)$
 \definecolor{titlePageColor}{HTML}{$titlepage-color$}
 $else$
@@ -526,13 +533,26 @@ $endif$
 $if(title-vjust)$
 \def\titleVjust{$title-vjust$}
 $else$
-\def\titleVjust{0}
+\def\titleVjust{250}
 $endif$
 
 $if(title-hjust)$
 \def\titleHjust{$title-hjust$}
 $else$
-\def\titleHjust{0}
+\def\titleHjust{30}
+$endif$
+
+
+$if(author-vjust)$
+\def\authorVjust{$author-vjust$}
+$else$
+\def\authorVjust{-345}
+$endif$
+
+$if(author-hjust)$
+\def\authorHjust{$author-hjust$}
+$else$
+\def\authorHjust{30}
 $endif$
 
 
@@ -658,10 +678,25 @@ $if(titlepage)$
 %                         Max-Planck Society Design
 
 \begin{tikzpicture}[remember picture,overlay]
+
+
+$if(titlepage-background)$
+$else$
+
+$if(titlepage-top-background)$
+$else$
 % add title page top color
 \fill[titlepageTopColor] (page cs:-1,0.23) rectangle (current page.north east);
+$endif$
+
+$if(titlepage-bottom-background)$
+$else$
 % add title page bottom color
 \fill[titlepageBottomColor] (current page.south west) rectangle (page cs:1,0.23);
+$endif$
+
+$endif$
+
 % add white rule
 \path [fill=white] (page cs:1,0.23) rectangle (page cs:-1,0.23+\titlepageTwocolorRuleHeight);
 
@@ -672,6 +707,7 @@ $endif$
 $if(titlepage-bottom-background)$
 \node[inner sep=0pt] at (page cs:0,-0.38){\includegraphics[width=\paperwidth]{$titlepage-bottom-background$}};
 $endif$
+
 %......................................................................%
 
 
@@ -699,7 +735,9 @@ $endif$
 
 % add title and subtitle
 % TODO: use bodoni font in title
-\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15+\titleHjust,0.57+\titleVjust) {
+% \node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15+\titleHjust,0.57+\titleVjust) {
+\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.0+\titleHjust,0.0+\titleVjust) {
+
   $if(title)$
   \Huge{\uppercase{$title$}}
   \vspace{0.3cm}
@@ -732,9 +770,9 @@ $endif$
   $endif$
 };
 
-\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15,-0.87) {
+\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.0+\authorHjust,0.0+\authorVjust) {
   $if(author)$
-  \huge{\textsf{$for(author)$\textcolor{white}{$author$}$sep$\textcolor{white}{,} $endfor$}}
+  \huge{\textsf{$for(author)$\textcolor{titlepageAuthorTextColor}{$author$}$sep$\textcolor{titlepageAuthorTextColor}{,} $endfor$}}
   \vspace{0.3cm}
   $endif$
 };
