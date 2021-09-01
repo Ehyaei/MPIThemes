@@ -693,13 +693,13 @@ $endif$
 
 
 % add main logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.8,0.85){$if(logo-primary)$\includegraphics[height=0.1\paperheight]{$logo-primary$}$endif$};
+\node[inner sep=0pt] at (page cs:0.672,0.795){$if(logo-primary)$\includegraphics[height=0.126\paperheight]{$logo-primary$}$endif$};
 % add secondary logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.8,-0.85){$if(logo-secondary)$\includegraphics[height=0.1\paperheight]{$logo-secondary$}$endif$};
+\node[inner sep=0pt] at (page cs:0.672,-0.795){$if(logo-secondary)$\includegraphics[height=0.126\paperheight]{$logo-secondary$}$endif$};
 
 % add title and subtitle
 % TODO: use bodoni font in title
-\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15+\titleHjust,0.6+\titleVjust) {
+\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15+\titleHjust,0.57+\titleVjust) {
   $if(title)$
   \Huge{\uppercase{$title$}}
   \vspace{0.3cm}
@@ -721,7 +721,7 @@ $endif$
   % \vspace{0.3cm}
   % $endif$
 
-  \vspace{1cm}
+  \vspace{0.6cm}
   $if(affiliation)$
   \Large{ $affiliation$}
   \vspace{0.1cm}
@@ -732,7 +732,7 @@ $endif$
   $endif$
 };
 
-\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15,-0.82) {
+\node[below,text width=\paperwidth,font=\color{titlepageTextColor}] at (page cs:0.15,-0.87) {
   $if(author)$
   \huge{\textsf{$for(author)$\textcolor{white}{$author$}$sep$\textcolor{white}{,} $endfor$}}
   \vspace{0.3cm}
