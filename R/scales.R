@@ -10,10 +10,7 @@
 #' library(MPIThemes)
 #' scales::show_col(palette_mpi())
 palette_mpi <- function() {
-  c("mpi" = "#007367",
-    "mpi_gray" = "#D0D3D4",
-    "mpi_blue" = "#009EE2"
-    )
+MPIThemes::palette_colors$HTML
 }
 
 #' Color scale constructor for MPI palette
@@ -30,7 +27,7 @@ palette_mpi <- function() {
 #'   scale_fill_mpi()
 scale_fill_mpi <- function(...){
   ggplot2::discrete_scale("fill","mpi",
-                          scales::manual_pal(values = c("#007367", "#D0D3D4", "#009EE2")), ...)
+                          scales::manual_pal(values = MPIThemes::palette_colors$HTML), ...)
 }
 
 
@@ -46,5 +43,5 @@ scale_fill_mpi <- function(...){
 #' ggplot(data = mtcars, aes(x = wt, y= mpg,color = as.character(cyl))) +
 #'   geom_point()+scale_color_mpi()
 scale_color_mpi <- function(...){
-  ggplot2::discrete_scale("color","mpi",scales::manual_pal(values = c("#007367", "#D0D3D4", "#009EE2")), ...)
+  ggplot2::discrete_scale("color","mpi",scales::manual_pal(values =   MPIThemes::palette_colors$HTML), ...)
 }
