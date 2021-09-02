@@ -643,17 +643,15 @@ $else$
 % \cfoot{}
 % \rfoot{}
 
-% add from eisvogel style
 $if(page-background)$
-\backgroundsetup{
-scale=1,
-color=black,
-opacity=$if(page-background-opacity)$$page-background-opacity$$else$0.2$endif$,
-angle=0,
-contents={%
-  \includegraphics[width=\paperwidth,height=\paperheight]{$page-background$}
-  }%
+\usepackage{eso-pic}
+\newcommand\BackPage{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt,opacity=$if(page-background-opacity)$$page-background-opacity$$else$1$endif$] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{$page-background$}};
+\end{tikzpicture}%
 }
+
+
 $endif$
 $endif$
 
@@ -715,10 +713,11 @@ $endif$
 %                         FullCover Color Page Design
 
 $if(titlepage-color)$
+\usetikzlibrary{positioning,shapes.misc,calc}
 % add full cover color page
 \fill[titlePageColor](current page.south west) rectangle (\paperwidth,\paperheight);
 % add rule
-\path [fill=titlePageRuleColor] (page cs:1,0.5) rectangle (page cs:-1,0.5+\titlepageRuleHeight);
+\path [fill=titlePageRuleColor,rounded corners,rounded rectangle left arc=none] (page cs:1,0.6) rectangle (page cs:-0.24,0.6+\titlepageRuleHeight);
 $endif$
 %......................................................................%
 
@@ -784,6 +783,15 @@ $endif$
 
 % end design titlepage
 %......................................................................%
+
+%......................................................................%
+% Add Page Background
+$if(page-background)$
+\ClearShipoutPicture
+\AddToShipoutPicture{\BackPage}
+$endif$
+
+
 
 $if(content-has-page)$
 $if(preface-logo)$
