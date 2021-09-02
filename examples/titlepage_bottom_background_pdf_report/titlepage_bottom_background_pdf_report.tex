@@ -116,15 +116,15 @@
 
 % set titlepage top, bottom, text and rule color
 
-\definecolor{titlepageTopColor}{HTML}{DDDED6}
+\definecolor{titlepageTopColor}{HTML}{f03e4c}
 
 
 \definecolor{titlepageBottomColor}{HTML}{009EE2}
 
 
-\definecolor{titlepageTextColor}{HTML}{116656}
+\definecolor{titlepageTextColor}{HTML}{FFFFFF}
 
-\definecolor{titlepageAuthorTextColor}{HTML}{116656}
+\definecolor{titlepageAuthorTextColor}{HTML}{FFFFFF}
 
 
 \definecolor{titlePageColor}{HTML}{009EE2}
@@ -139,12 +139,12 @@
 
 \def\titlepageTwocolorRuleHeight{3}
 
-\def\titleVjust{40}
+\def\titleVjust{250}
 
 \def\titleHjust{30}
 
 
-\def\authorVjust{-150}
+\def\authorVjust{-345}
 
 \def\authorHjust{30}
 
@@ -256,10 +256,16 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 
 
+% add title page top color
+\fill[titlepageTopColor] (page cs:-1,0.23) rectangle (current page.north east);
+
+
+
 % add white rule
 \path [fill=white] (page cs:1,0.23) rectangle (page cs:-1,0.23+\titlepageTwocolorRuleHeight);
 
 
+\node[inner sep=0pt] at (page cs:0,-0.38){\includegraphics[width=\paperwidth]{src/img/bottom\_background.png}};
 
 %......................................................................%
 
@@ -270,11 +276,10 @@ BoldItalicFont = UniversLTStd-Bold.otf
 %......................................................................%
 
 
-\node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{src/img/title\_page.png}};
 
 
 % add main logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.672,0.795){\includegraphics[height=0.126\paperheight]{src/icon/MPILogoGreen.eps}};
+\node[inner sep=0pt] at (page cs:0.672,0.795){\includegraphics[height=0.126\paperheight]{src/icon/MPILogoWhite.eps}};
 % add secondary logo % TODO: add else
 \node[inner sep=0pt] at (page cs:0.672,-0.795){};
 

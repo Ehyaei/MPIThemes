@@ -122,14 +122,14 @@
 \definecolor{titlepageBottomColor}{HTML}{009EE2}
 
 
-\definecolor{titlepageTextColor}{HTML}{116656}
+\definecolor{titlepageTextColor}{HTML}{FFFFFF}
 
-\definecolor{titlepageAuthorTextColor}{HTML}{116656}
+\definecolor{titlepageAuthorTextColor}{HTML}{FFFFFF}
 
 
 \definecolor{titlePageColor}{HTML}{009EE2}
 
-\definecolor{titlePageRuleColor}{HTML}{000000}
+\definecolor{titlePageRuleColor}{HTML}{FFFFFF}
 
 
 % Set Initial Values
@@ -139,12 +139,12 @@
 
 \def\titlepageTwocolorRuleHeight{3}
 
-\def\titleVjust{40}
+\def\titleVjust{150}
 
 \def\titleHjust{30}
 
 
-\def\authorVjust{-150}
+\def\authorVjust{-345}
 
 \def\authorHjust{30}
 
@@ -231,7 +231,6 @@ BoldItalicFont = UniversLTStd-Bold.otf
 % \cfoot{}
 % \rfoot{}
 
-% add from eisvogel style
 
 %......................................................................%
 %
@@ -256,6 +255,13 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 
 
+% add title page top color
+\fill[titlepageTopColor] (page cs:-1,0.23) rectangle (current page.north east);
+
+% add title page bottom color
+\fill[titlepageBottomColor] (current page.south west) rectangle (page cs:1,0.23);
+
+
 % add white rule
 \path [fill=white] (page cs:1,0.23) rectangle (page cs:-1,0.23+\titlepageTwocolorRuleHeight);
 
@@ -267,16 +273,20 @@ BoldItalicFont = UniversLTStd-Bold.otf
 %......................................................................%
 %                         FullCover Color Page Design
 
+\usetikzlibrary{positioning,shapes.misc,calc}
+% add full cover color page
+\fill[titlePageColor](current page.south west) rectangle (\paperwidth,\paperheight);
+% add rule
+\path [fill=titlePageRuleColor,rounded corners,rounded rectangle left arc=none] (page cs:1,0.6) rectangle (page cs:-0.24,0.6+\titlepageRuleHeight);
 %......................................................................%
 
 
-\node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{src/img/title\_page.png}};
 
 
 % add main logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.672,0.795){\includegraphics[height=0.126\paperheight]{src/icon/MPILogoGreen.eps}};
+\node[inner sep=0pt] at (page cs:0.672,0.795){};
 % add secondary logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.672,-0.795){};
+\node[inner sep=0pt] at (page cs:0.672,-0.795){\includegraphics[height=0.126\paperheight]{src/icon/MPILogoWhite.eps}};
 
 % add title and subtitle
 % TODO: use bodoni font in title
@@ -314,6 +324,11 @@ Ershadmanesh}}}
 
 % end design titlepage
 %......................................................................%
+
+%......................................................................%
+% Add Page Background
+
+
 
 
 % add these lines for simple report template
