@@ -92,7 +92,6 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
 <div id="mpithemes" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#mpithemes" class="anchor"></a>MPIThemes</h1></div>
@@ -104,24 +103,20 @@
 <li>Beamer presentation</li>
 <li>Analytical reports</li>
 </ul>
+<p>The pdf RMarkdown templates compile with XeLatex. You will need to install some version of XeLatex. If you do not have one, there is a simple way in R. <a href="https://yihui.org/tinytex/">Tinytex</a> is A lightweight LaTeX distribution that is sufficient for compiling pdf templates. To install the tinytex package and a working version of LaTeX run these commands:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tinytex"</span><span class="op">)</span>
+<span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>The MPITheme package requires additional LaTeX dependencies that tinytex does not install by default. If you are online, these dependencies will be installed automatically.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of MPIThemes from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Ehyaei/MPIThemes"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tinytex"</span><span class="op">)</span>
-<span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
-<div id="ggplot2-theme" class="section level1">
-<h1 class="hasAnchor">
-<a href="#ggplot2-theme" class="anchor"></a>ggplot2 theme</h1>
-<p>This package includes several ggplot themes and palettes for creating plots with MPI custom design.</p>
-</div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
