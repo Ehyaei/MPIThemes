@@ -9,6 +9,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+This package includes several ggplot themes and palettes for creating plots with MPI custom design.
+
+## Color Palette
+
 ```{r setup}
 library(MPIThemes)
+scales::show_col(palette_mpi())
 ```
+
+## Theme
