@@ -22,6 +22,22 @@ code. Included in the package are:
 -   Beamer presentation
 -   Analytical reports
 
+The pdf RMarkdown templates compile with XeLatex. You will need to
+install some version of XeLatex. If you do not have one, there is a
+simple way in R. [Tinytex](https://yihui.org/tinytex/) is A lightweight
+LaTeX distribution that is sufficient for compiling pdf templates. To
+install the tinytex package and a working version of LaTeX run these
+commands:
+
+``` r
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+The MPITheme package requires additional LaTeX dependencies that tinytex
+does not install by default. If you are online, these dependencies will
+be installed automatically.
+
 ## Installation
 
 You can install the released version of MPIThemes from
@@ -31,13 +47,3 @@ You can install the released version of MPIThemes from
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
 ```
-
-``` r
-install.packages("tinytex")
-tinytex::install_tinytex()
-```
-
-# ggplot2 theme
-
-This package includes several ggplot themes and palettes for creating
-plots with MPI custom design.
