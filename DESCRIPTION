@@ -21,7 +21,8 @@ Imports:
     gridExtra,
     pagedown,
     rmarkdown,
-    scales
+    scales,
+    sysfonts
 Suggests: 
     spelling
 Language: en-US
