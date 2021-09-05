@@ -160,19 +160,11 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>dplyr</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in library(dplyr): there is no package called ‘dplyr’</span></div><div class='input'><span class='va'>iris</span> <span class='op'>%&gt;%</span>
-<span class='fu'>group_by</span><span class='op'>(</span><span class='va'>Species</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>summarise</span><span class='op'>(</span>Sepal.Width <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Sepal.Width</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Species</span>, y <span class='op'>=</span> <span class='va'>Sepal.Width</span>, fill <span class='op'>=</span> <span class='va'>Species</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>"Species"</span>,
-       y<span class='op'>=</span><span class='st'>"Average Sepal Width"</span>,
-       fill <span class='op'>=</span> <span class='st'>"Species"</span>,
-       title <span class='op'>=</span> <span class='st'>"Iris Dataset"</span><span class='op'>)</span><span class='op'>+</span>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>mtcars</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>cyl</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>..count..</span>,fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>theme_scientific</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='scale_fill_mpi.html'>scale_fill_mpi</a></span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in iris %&gt;% group_by(Species) %&gt;% summarise(Sepal.Width = mean(Sepal.Width)) %&gt;%     ggplot(aes(x = Species, y = Sepal.Width, fill = Species)): could not find function "%&gt;%"</span></div></pre>
+</div><div class='img'><img src='theme_scientific-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
