@@ -9,6 +9,7 @@ knitr::opts_chunk$set(
 )
 library(MPIThemes)
 library(ggplot2)
+if (!require("dplyr")) install.packages("dplyr")
 library(dplyr)
 ```
 
