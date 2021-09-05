@@ -40,6 +40,8 @@ scales::show_col(palette_mpi(),ncol = 4)
 
 
 ```{r,echo=FALSE,out.width="100%"}
+library(ggplot2)
+library(dplyr)
 scatter_plot <-
   ggplot(iris, aes(x=jitter(Sepal.Width),
                    y=jitter(Sepal.Length),
