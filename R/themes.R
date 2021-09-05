@@ -7,16 +7,8 @@
 #'
 #' @examples
 #' library(ggplot2)
-#' library(dplyr)
-#' iris %>%
-#' group_by(Species) %>%
-#'   summarise(Sepal.Width = mean(Sepal.Width)) %>%
-#'   ggplot(aes(x = Species, y = Sepal.Width, fill = Species)) +
-#'   geom_col() +
-#'   labs(x="Species",
-#'        y="Average Sepal Width",
-#'        fill = "Species",
-#'        title = "Iris Dataset")+
+#' ggplot(data = mtcars, aes(x = cyl)) +
+#'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))+
 #'   theme_scientific()+
 #'   scale_fill_mpi()
 theme_scientific <- function(base_size = 12){
