@@ -6,6 +6,8 @@
 #' @export
 #'
 #' @examples
+#' library(ggplot2)
+#' library(dplyr)
 #' iris %>%
 #' group_by(Species) %>%
 #'   summarise(Sepal.Width = mean(Sepal.Width)) %>%

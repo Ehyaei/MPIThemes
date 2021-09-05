@@ -4,7 +4,7 @@
 \alias{theme_scientific}
 \title{Theme 'scientific'}
 \usage{
-theme_scientific(base_size = 14)
+theme_scientific(base_size = 12)
 }
 \arguments{
 \item{base_size}{base font size, given in pts.}
@@ -16,6 +16,8 @@ scientific theme
 Theme 'scientific'
 }
 \examples{
+library(ggplot2)
+library(dplyr)
 iris \%>\%
 group_by(Species) \%>\%
   summarise(Sepal.Width = mean(Sepal.Width)) \%>\%
