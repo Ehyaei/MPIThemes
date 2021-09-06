@@ -65,3 +65,6 @@ pkgdown::build_site()
 # setup spell checking
 usethis::use_spell_check()
 devtools::check()
+
+library(rcmdcheck)
+rcmdcheck("../MPIThemes_0.0.0.9000.tar.gz")
