@@ -38,6 +38,7 @@ latex_report <- function(..., keep_tex = TRUE, highlight = "tango",
   base$knitr$opts_chunk$dev <- "cairo_pdf"
   base$knitr$opts_chunk$fig.pos <- "H"
   base$knitr$opts_chunk$fig.path="figure/"
+  base$knitr$opts_chunk$dev.args=list(bg="transparent")
   base
 }
 
