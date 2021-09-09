@@ -464,10 +464,22 @@ $endif$
 
 % ...................................................................... %
 % Load Packages
-% tables requirement packages2
+% tables requirement kableExtra packages2
 \usepackage{caption}
 \usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 
 
 % ...................................................................... %
@@ -521,6 +533,11 @@ $else$
 \definecolor{titlePageRuleColor}{HTML}{000000}
 $endif$
 
+$if(page-background-color)$
+\definecolor{pageBackgroundColor}{HTML}{$page-background-color$}
+$else$
+\definecolor{pageBackgroundColor}{HTML}{000000}
+$endif$
 
 % Set Initial Values
 
@@ -657,9 +674,17 @@ $if(page-background)$
 \node[inner sep=0pt,opacity=$if(page-background-opacity)$$page-background-opacity$$else$1$endif$] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{$page-background$}};
 \end{tikzpicture}%
 }
-
-
 $endif$
+
+$if(page-background-color)$
+\usepackage{eso-pic}
+\newcommand\BackPage{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[pageBackgroundColor](current page.south west) rectangle (\paperwidth,\paperheight);
+\end{tikzpicture}%
+}
+$endif$
+
 $endif$
 
 %......................................................................%
@@ -797,6 +822,12 @@ $if(page-background)$
 \ClearShipoutPicture
 \AddToShipoutPicture{\BackPage}
 $endif$
+
+$if(page-background-color)$
+\ClearShipoutPicture
+\AddToShipoutPicture{\BackPage}
+$endif$
+
 
 
 
