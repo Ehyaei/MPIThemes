@@ -1,0 +1,14 @@
+---
+title: "Add Table to PDF Reports"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MPIThemes)
+```
