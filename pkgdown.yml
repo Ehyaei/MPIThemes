@@ -2,7 +2,9 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
+  articles/Add-Table-to-PDF-Reports: Add-Table-to-PDF-Reports.html
+  articles/Latex-Environments: Latex-Environments.html
   articles/MPIThemes: MPIThemes.html
   articles/ggplot2_themes: ggplot2_themes.html
-last_built: 2021-09-09T09:47Z
+last_built: 2021-09-09T09:50Z
 
