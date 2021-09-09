@@ -12,3 +12,8 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(MPIThemes)
 ```
+
+# Refrences
+
+[Display tables with package gt](https://aosmith16.github.io/spring-r-topics/slides/week04_gt_tables.html#1)
+[gt-cookbook](https://themockup.blog/static/gt-cookbook.html#Introduction)
