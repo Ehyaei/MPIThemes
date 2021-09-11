@@ -26,7 +26,8 @@ code.
 
 <p align="center">
 <img src="vignettes/src/img/rmarkdown_overview.png" width="70%"/>
-([image source](https://epirhandbook.com/reports-with-r-markdown.html))
+<a href="https://epirhandbook.com/reports-with-r-markdown.html">image
+source</a>
 </p>
 
 The MPIThemes package’s objective is to provide a wide range of
@@ -36,7 +37,9 @@ research with custom design for the MAX-PLANCK institute.
 For designing report templates, I found the CD manual (available
 [here](https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html))
 
+<p align="center">
 <img src="vignettes/src/img/cd_manual.png" width="30%"/>
+</p>
 
 The manual sets out the standards for writing reports for Max-Planck
 society. The title page, logo, size, colors, and font guidelines are all
