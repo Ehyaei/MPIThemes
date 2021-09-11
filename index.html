@@ -105,7 +105,7 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#mpithemes" class="anchor"></a>MPIThemes</h1></div>
 
-<p><a href="%7Bhttps://github.com/Ehyaei/MPIThemes%7D"><img src="reference/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"></a></p>
+<p><a href="https://github.com/Ehyaei/MPIThemes/actions"><img src="https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://github.com/Ehyaei/MPIThemes"><img src="https://img.shields.io/badge/devel%20version-0.0.0.9000-orange.svg"></a> <a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"></a> <a href="https://github.com/Ehyaei/MPIThemes/commits/master"><img src="https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg"></a></p>
 <p>RMarkdown enables you to write reproducible academic publications such as articles, PhD thesis, lab reports, posters, presentations, and a variety of other fascinating documents using the lightweight and plain-text Markdown syntax.</p>
 <p>In the Rmarkdown environment, you can write text, insert images, formulas, R and recently, Python scripts. When running your Rmd files with knitr, output plots, tables and code results are embedded in the md file. Then, Rstudio by using pandoc’s powerful engine can convert your documents to many formats, such as PDF, Docx, HTML, epub, and… In particular, you can create PDF reports without worrying about the lateX code.</p>
 <p align="center">
@@ -113,8 +113,7 @@
 <p><img src="articles/src/img/rmarkdown_overview.png" width="70%"></p>
 <a href="https://epirhandbook.com/reports-with-r-markdown.html">image source</a>
 
-<p>The MPIThemes package’s objective is to provide a wide range of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX-PLANCK institute.</p>
-<p>For designing report templates, I found the CD manual (available <a href="https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html">here</a>)</p>
+<p>The MPIThemes package’s objective is to provide a wide range of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX-PLANCK institute. For designing report templates, I found the CD manual (available <a href="https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html">here</a>)</p>
 <p align="center">
 <img src="articles/src/img/cd_manual.png" width="30%"></p>
 <p>The manual sets out the standards for writing reports for Max-Planck society. The title page, logo, size, colors, and font guidelines are all described in this document. I attempted to meet the guidelines, but it still does not fully comply.</p>
@@ -134,26 +133,30 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the released version of MPIThemes from <a href="https://github.com/">GitHub</a> with:</p>
+<p><code>MPIThemes</code> is not (yet) available on CRAN, so install development version from GitHub via the <code>devtools</code> or <code>remotes</code> packages.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Ehyaei/MPIThemes"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="usage" class="section level2">
+<div id="example-gallery" class="section level2">
 <h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
-</div>
-<div id="example-output" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example-output" class="anchor"></a>Example output</h2>
-</div>
-<div id="requirements" class="section level2">
-<h2 class="hasAnchor">
-<a href="#requirements" class="anchor"></a>Requirements</h2>
+<a href="#example-gallery" class="anchor"></a>Example Gallery</h2>
+<p>PDF, HTML, and Office outputs are all supported by the template. See the outputs of the newest version of the templates in the examples below:</p>
+<ul>
+<li><a href="https://github.com/Ehyaei/MPIThemes/blob/master/examples/basic_pdf_report/basic_pdf_report.pdf">simple pdf report</a></li>
+<li><a href="https://github.com/Ehyaei/MPIThemes/blob/master/examples/titlepage_background_pdf_report/titlepage_background_pdf_report.pdf">custom design pdf report</a></li>
+</ul>
 </div>
 <div id="attribution" class="section level2">
 <h2 class="hasAnchor">
 <a href="#attribution" class="anchor"></a>Attribution</h2>
+<p>The RMarkdown packages and latex resources that inspired this effort include:</p>
+<ul>
+<li>Pascal Wagler’s <a href="https://github.com/Wandmalfarbe/pandoc-latex-template">pandoc-latex-template</a>
+</li>
+<li>Sebastian Sauer’s <a href="https://github.com/sebastiansauer/yart">Yart</a> package</li>
+<li>David Carayon’s <a href="https://github.com/davidcarayon/InraeThemes">InraeThemes</a> package</li>
+</ul>
 </div>
 <div id="todo" class="section level2">
 <h2 class="hasAnchor">
@@ -219,10 +222,7 @@ Conference Posters (HTML/LaTeX)</li>
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/Ehyaei/MPIThemes/actions"><img src="https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://github.com/Ehyaei/MPIThemes"><img src="https://img.shields.io/badge/devel%20version-0.0.0.9000-orange.svg"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"></a></li>
-<li><a href="https://github.com/Ehyaei/MPIThemes/commits/master"><img src="https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg"></a></li>
+<li><a href="%7Bhttps://github.com/Ehyaei/MPIThemes%7D"><img src="reference/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"></a></li>
 </ul>
 </div>
 </div>
