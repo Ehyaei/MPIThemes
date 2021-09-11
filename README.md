@@ -24,7 +24,7 @@ documents to many formats, such as PDF, Docx, HTML, epub, and… In
 particular, you can create PDF reports without worrying about the lateX
 code.
 
-![How RMarkdown works](vignettes/src/img/rmarkdown_overview.png)
+<img src="vignettes/src/img/rmarkdown_overview.png" width="50%"/>
 (source: <https://epirhandbook.com/reports-with-r-markdown.html>)
 
 The MPIThemes package’s objective is to provide a wide range of
@@ -49,19 +49,9 @@ found in the
 [examples](https://github.com/Ehyaei/MPIThemes/tree/master/examples)
 section.
 
-<table width="100%" border="0">
-<tr>
-<td>
-<img src="examples/basic_pdf_report/basic_pdf_report.png" alt="basic pdf report" align="left" />
-</td>
-<td>
-<img src="examples/titlepage_bottom_background_pdf_report/titlepage_bottom_background_pdf_report.png" alt="titlepage bottom background pdf report" align="center" />
-</td>
-<td>
-<img src="examples/titlepage_background_pdf_report/titlepage_background_pdf_report.png" alt="titlepage background_pdf report" align="right"/>
-</td>
-</tr>
-</table>
+|                                                                     |                                                                                                                                       |                                                                                                                   |
+|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| ![basic pdf report](examples/basic_pdf_report/basic_pdf_report.png) | ![titlepage bottom background pdf report](examples/titlepage_bottom_background_pdf_report/titlepage_bottom_background_pdf_report.png) | ![titlepage background\_pdf report](examples/titlepage_background_pdf_report/titlepage_background_pdf_report.png) |
 
 ## Installation
 
