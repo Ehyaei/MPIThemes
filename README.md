@@ -24,7 +24,7 @@ code.
 
 <p align="center">
 
-<img src="vignettes/src/img/rmarkdown_overview.png" width="70%"/>
+<img src="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/src/img/cd_manual.png" width="70%"/>
 
 <a href="https://epirhandbook.com/reports-with-r-markdown.html">image
 source</a>

@@ -1,5 +1,8 @@
 ---
 output: github_document
+resource_files:
+  - vignettes/src/img/cd_manual.png
+  - vignettes/src/img/rmarkdown_overview.png
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
