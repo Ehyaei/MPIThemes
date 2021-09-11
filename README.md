@@ -34,7 +34,7 @@ research with custom design for the MAX-PLANCK institute.
 For designing report templates, I found the CD manual (available
 [here](https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html))
 
-<img src="vignettes/src/img/cd_manual.png" class="center" height="30%"/>
+<img src="vignettes/src/img/cd_manual.png" width="50%"/>
 
 The manual sets out the standards for writing reports for Max-Planck
 society. The title page, logo, size, colors, and font guidelines are all
