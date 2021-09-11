@@ -24,7 +24,7 @@ code.
 
 <p align="center">
 
-<img src="vignettes/src/img/rmarkdown_overview.png" width="70%"/>
+<img src="man/figures/rmarkdown_overview.png" width="70%"/>
 
 <a href="https://epirhandbook.com/reports-with-r-markdown.html">image
 source</a>
@@ -37,7 +37,7 @@ report templates, I found the CD manual (available
 [here](https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html))
 
 <p align="center">
-<img src="vignettes/src/img/cd_manual.png" width="30%"/>
+<img src="man/figures/cd_manual.png" width="30%"/>
 </p>
 
 The manual sets out the standards for writing reports for Max-Planck
@@ -54,9 +54,9 @@ Some Design can be found in the
 [examples](https://github.com/Ehyaei/MPIThemes/tree/master/examples)
 section.
 
-|                                                                     |                                                                                                                                       |                                                                                                                   |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| ![basic pdf report](examples/basic_pdf_report/basic_pdf_report.png) | ![titlepage bottom background pdf report](examples/titlepage_bottom_background_pdf_report/titlepage_bottom_background_pdf_report.png) | ![titlepage background\_pdf report](examples/titlepage_background_pdf_report/titlepage_background_pdf_report.png) |
+|                                                                     |                                                                                                                                       |                                                                                      |
+|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| ![basic pdf report](examples/basic_pdf_report/basic_pdf_report.png) | ![titlepage bottom background pdf report](examples/titlepage_bottom_background_pdf_report/titlepage_bottom_background_pdf_report.png) | ![titlepage background\_pdf report](man/figures/titlepage_background_pdf_report.png) |
 
 ## Installation
 
