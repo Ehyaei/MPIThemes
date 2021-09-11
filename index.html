@@ -106,24 +106,82 @@
 <a href="#mpithemes" class="anchor"></a>MPIThemes</h1></div>
 
 <p><a href="%7Bhttps://github.com/Ehyaei/MPIThemes%7D"><img src="reference/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"></a></p>
-<p>The goal of the MPIThemes package is to provide a variety of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX PLANCK institute.</p>
-<p>Rmarkdown templates can be rendered in PDF, Docx, and HTML format. Especially you can create PDF reports without worrying about the lateX code. Included in the package are:</p>
-<ul>
-<li>Beamer presentation</li>
-<li>Analytical reports</li>
-</ul>
-<p>The pdf RMarkdown templates compile with XeLatex. You will need to install some version of XeLatex. If you do not have one, there is a simple way in R. <a href="https://yihui.org/tinytex/">Tinytex</a> is A lightweight LaTeX distribution that is sufficient for compiling pdf templates. To install the tinytex package and a working version of LaTeX run these commands:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tinytex"</span><span class="op">)</span>
-<span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>The MPITheme package requires additional LaTeX dependencies that tinytex does not install by default. If you are online, these dependencies will be installed automatically.</p>
+<p>RMarkdown enables you to write reproducible academic publications such as articles, PhD thesis, lab reports, posters, presentations, and a variety of other fascinating documents using the lightweight and plain-text Markdown syntax.</p>
+<p>In the Rmarkdown environment, you can write text, insert images, formulas, R and recently, Python scripts. When running your Rmd files with knitr, output plots, tables and code results are embedded in the md file. Then, Rstudio by using pandoc’s powerful engine can convert your documents to many formats, such as PDF, Docx, HTML, epub, and… In particular, you can create PDF reports without worrying about the lateX code.</p>
+<p><img src="articles/src/img/rmarkdown_overview.png" alt="How RMarkdown works"> (source: <a href="https://epirhandbook.com/reports-with-r-markdown.html" class="uri">https://epirhandbook.com/reports-with-r-markdown.html</a>)</p>
+<p>The MPIThemes package’s objective is to provide a wide range of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX-PLANCK institute.</p>
+<p>For designing report templates, I found the CD manual (available <a href="https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html">here</a>)</p>
+<p><img src="articles/src/img/cd_manual.png" class="centerImage" height="50%"></p>
+<p>The manual sets out the standards for writing reports for Max-Planck society. The title page, logo, size, colors, and font guidelines are all described in this document. I attempted to meet the guidelines, but it still does not fully comply.</p>
+<p>The reports’ default format is based on the Maxi-Planck theme. We weren’t, however, constrained by this theme. Reports in various styles can be created by defining the relevant parameters in YAML. for more details see <a href="">PDF Report Template Customization</a> Some Design can be found in the <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples">examples</a> section.</p>
+<table class="table"><tr>
+<td>
+<img src="examples/basic_pdf_report/basic_pdf_report.png" alt="basic pdf report" align="left">
+</td>
+<td>
+<img src="examples/titlepage_bottom_background_pdf_report/titlepage_bottom_background_pdf_report.png" alt="titlepage bottom background pdf report" align="center">
+</td>
+<td>
+<img src="examples/titlepage_background_pdf_report/titlepage_background_pdf_report.png" alt="titlepage background_pdf report" align="right">
+</td>
+</tr></table>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of MPIThemes from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Ehyaei/MPIThemes"</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="usage" class="section level2">
+<h2 class="hasAnchor">
+<a href="#usage" class="anchor"></a>Usage</h2>
+</div>
+<div id="example-output" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example-output" class="anchor"></a>Example output</h2>
+</div>
+<div id="requirements" class="section level2">
+<h2 class="hasAnchor">
+<a href="#requirements" class="anchor"></a>Requirements</h2>
+</div>
+<div id="attribution" class="section level2">
+<h2 class="hasAnchor">
+<a href="#attribution" class="anchor"></a>Attribution</h2>
+</div>
+<div id="todo" class="section level2">
+<h2 class="hasAnchor">
+<a href="#todo" class="anchor"></a>TODO</h2>
+<p>I’ll try to gradually add the following templates into the package. Please let me know if you have a suggested template.</p>
+<ul>
+<li>
+<input type="checkbox" disabled checked>
+PDF Report (LaTeX)</li>
+<li>
+<input type="checkbox" disabled>
+Short PDF note (LaTeX)</li>
+<li>
+<input type="checkbox" disabled>
+Long Document (Gitbook/Bookdown)</li>
+<li>
+<input type="checkbox" disabled>
+Editable Report (Word)</li>
+<li>
+<input type="checkbox" disabled>
+PhD Thesis (LaTeX/Bookdown)</li>
+<li>
+<input type="checkbox" disabled>
+Beamer Presentation (LaTeX)</li>
+<li>
+<input type="checkbox" disabled>
+HTML Presentation (RevealJS)</li>
+<li>
+<input type="checkbox" disabled>
+Editable Presentation (Powerpoint)</li>
+<li>
+<input type="checkbox" disabled>
+Conference Posters (HTML/LaTeX)</li>
+</ul>
 </div>
 </div>
   </div>
