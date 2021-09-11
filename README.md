@@ -54,9 +54,19 @@ Some Design can be found in the
 [examples](https://github.com/Ehyaei/MPIThemes/tree/master/examples)
 section.
 
-|                                                                     |                                                                                                                                       |                                                                                      |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| ![basic pdf report](examples/basic_pdf_report/basic_pdf_report.png) | ![titlepage bottom background pdf report](examples/titlepage_bottom_background_pdf_report/titlepage_bottom_background_pdf_report.png) | ![titlepage background\_pdf report](man/figures/titlepage_background_pdf_report.png) |
+<table width="100%" border="0">
+<tr>
+<td>
+<img src="man/figures/basic_pdf_report.png" align="left" />
+</td>
+<td>
+<img src="man/figures/titlepage_bottom_background_pdf_report.png" align="center" />
+</td>
+<td>
+<img src="man/figures/titlepage_background_pdf_report.png" align="right"/>
+</td>
+</tr>
+</table>
 
 ## Installation
 
