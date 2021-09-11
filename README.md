@@ -3,13 +3,13 @@
 
 # MPIThemes
 
+<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
+
 [![R build
 status](https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ehyaei/MPIThemes/actions)
 [![](https://img.shields.io/badge/devel%20version-0.0.0.9000-orange.svg)](https://github.com/Ehyaei/MPIThemes)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg)](https://github.com/Ehyaei/MPIThemes/commits/master)
-
-<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
 
 RMarkdown enables you to write reproducible academic publications such
 as articles, PhD thesis, lab reports, posters, presentations, and a
@@ -34,9 +34,8 @@ source</a>
 
 The MPIThemes package’s objective is to provide a wide range of
 Rmarkdown templates with ggplot themes for scientific reproducible
-research with custom design for the MAX-PLANCK institute.
-
-For designing report templates, I found the CD manual (available
+research with custom design for the MAX-PLANCK institute. For designing
+report templates, I found the CD manual (available
 [here](https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html))
 
 <p align="center">
@@ -63,21 +62,35 @@ section.
 
 ## Installation
 
-You can install the released version of MPIThemes from
-[GitHub](https://github.com/) with:
+`MPIThemes` is not (yet) available on CRAN, so install development
+version from GitHub via the `devtools` or `remotes` packages.
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
 ```
 
-## Usage
+## Example Gallery
 
-## Example output
+PDF, HTML, and Office outputs are all supported by the template. See the
+outputs of the newest version of the templates in the examples below:
 
-## Requirements
+-   [simple pdf
+    report](https://github.com/Ehyaei/MPIThemes/blob/master/examples/basic_pdf_report/basic_pdf_report.pdf)
+-   [custom design pdf
+    report](https://github.com/Ehyaei/MPIThemes/blob/master/examples/titlepage_background_pdf_report/titlepage_background_pdf_report.pdf)
 
 ## Attribution
+
+The RMarkdown packages and latex resources that inspired this effort
+include:
+
+-   Pascal Wagler’s
+    [pandoc-latex-template](https://github.com/Wandmalfarbe/pandoc-latex-template)
+-   Sebastian Sauer’s [Yart](https://github.com/sebastiansauer/yart)
+    package
+-   David Carayon’s
+    [InraeThemes](https://github.com/davidcarayon/InraeThemes) package
 
 ## TODO
 
