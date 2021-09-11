@@ -25,7 +25,9 @@ particular, you can create PDF reports without worrying about the lateX
 code.
 
 <p align="center">
+
 <img src="vignettes/src/img/rmarkdown_overview.png" width="70%"/>
+
 <a href="https://epirhandbook.com/reports-with-r-markdown.html">image
 source</a>
 </p>
@@ -49,8 +51,9 @@ still does not fully comply.
 The reports’ default format is based on the Maxi-Planck theme. We
 weren’t, however, constrained by this theme. Reports in various styles
 can be created by defining the relevant parameters in YAML. for more
-details see [PDF Report Template Customization]() Some Design can be
-found in the
+details see [PDF Report Template
+Customization](https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_template_customization.html)
+Some Design can be found in the
 [examples](https://github.com/Ehyaei/MPIThemes/tree/master/examples)
 section.
 
