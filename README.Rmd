@@ -16,13 +16,6 @@ knitr::opts_chunk$set(
 library("badger", quietly = TRUE)
 ```
 
-<style type="text/css">
-.centerImage
-{
- text-align:center;
- display:block;
-}
-</style>
 
 # MPIThemes
 
@@ -47,7 +40,7 @@ The MPIThemes package's objective is to provide a wide range of Rmarkdown templa
 
 For designing report templates, I found the CD manual (available [here](https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html))
 
-<img src="vignettes/src/img/cd_manual.png" class="centerImage" height="50%"/>
+<img src="vignettes/src/img/cd_manual.png" class="center" height="30%"/>
 
 The manual sets out the standards for writing reports for Max-Planck society. The title page, logo, size, colors, and font guidelines are all described in this document. I attempted to meet the guidelines, but it still does not fully comply.
 
