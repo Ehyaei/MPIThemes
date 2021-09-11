@@ -11,4 +11,13 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(MPIThemes)
+
 ```
+The pdf RMarkdown templates compile with XeLatex. You will need to install some version of XeLatex. If you do not have one, there is a simple way in R. [Tinytex](https://yihui.org/tinytex/) is A lightweight LaTeX distribution that is sufficient for compiling pdf templates. To install the tinytex package and a working version of LaTeX run these commands:
+
+``` r
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+The MPITheme package requires additional LaTeX dependencies that tinytex does not install by default. If you are online, these dependencies will be installed automatically.
