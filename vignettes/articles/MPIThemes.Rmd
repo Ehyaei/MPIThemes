@@ -5,7 +5,11 @@ title: "Getting started with MPIThemes"
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  results="hide",
+  eval = FALSE,
+  fig.path = "man/figures/",
+  out.width = "100%"
 )
 ```
 
