@@ -9,6 +9,107 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(MPIThemes)
+Set several YAML settings at the top of the Rmd file to customize the template's output. The following is a list of MPIThems-specific options. 
+Other YAML choices are available; for additional information, see the [the pandoc manual](https://pandoc.org/MANUAL.html#variables-for-latex).
+All of the parameters are optional. The template is also running if it doesn't fill in.
+
+## Document Metadata
+
+- `title`: The main title of your document.
+- `subtitle`: The subtitle of the document. 
+- `author`: includes the name of authors. you can write authors name in
+`["Ahmad Ehyaei","Sara Ershadmanes"]`
+- `data`: The report's publication date. It generated automatically from system time by default.
+- `affiliation`: Relates to the name of the organization or entity of the person producing the report.
+- `location`: City or location of organization.
+
+<table width="100%" border="0">
+  <tr>
+  <td>
 ```
+---
+title: Statistical analysis of behavioral data
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+author: [Ahmad Ehyaei, Sara Ershadmanesh]
+affiliation: Max Planck Institute for Biological Cybernetics 
+location: Tübingen
+---
+```
+  </td>
+    <td><img style="display:block;" width="80%" src="../../man/figures/basic_pdf_report.png" align="left" /></td>
+  </tr>
+</table>
+
+
+- `title-vjust`: vjust stands for title location vertical adjustment.
+- `title-hjust`: hjust stands for title location horizontal adjustment.
+- `author-hjust`: hjust stands for author location horizontal adjustment.
+- `author-vjust`: vjust stands for author location vertical adjustment.
+- `titlepage-text-color`: the text color of the title page.
+- `titlepage-author-text-color`: the text color of the author in title page.
+
+
+<table width="100%" border="0">
+  <tr>
+  <td>
+```
+---
+title-vjust: 40
+author-vjust: -150
+titlepage-text-color: 116656
+titlepage-author-text-color: 116656 
+---
+```
+  </td>
+    <td><img style="display:block;" width="80%" src="../../man/figures/titlepage_background_pdf_report.png" align="left" /></td>
+  </tr>
+</table>
+
+
+
+## Title Page Background
+
+- `titlepage`: When true, the title page is displayed. The default value is false.
+- `titlepage-color`: The color of the title page's background The color value must be specified in HTML hex format, such as D8DE2C, without the leading number sign (#). It's best to put color it in quotes, such as "D8DE2C".
+- `titlepage-top-color`: The color of the top title page's background.
+- `titlepage-bottom-color`: The color of the bottom title page's background.
+- `titlepage-rule-color`: The rule's color at the top of the title page.
+- `titlepage-rule-height`: The rule's height at the top of the title page.
+- `titlepage-twocolor-rule`: It is a Boolean variable. If set to true, then add the rule line between the top and bottom parts.
+- `titlepage-twocolor-rule-height`: The rule's height of two color rule.
+- `titlepage-background`: The path to a title page background image The background image has been resized to fill the entire page.
+- `titlepage-top-background`: The path to a top title page background.
+- `titlepage-bottom-background`: The path to a bottom title page background.
+- `logo-primary`: The path to the main logo is at the top of the title page.
+- `logo-secondary`: The path to the second logo is at the bottom of the title page.
+
+
+<table width="100%" border="0">
+  <tr>
+  <td>
+```
+---
+logo-primary: src/icon/MPILogoWhite.eps
+titlepage-top-color: f03e4c
+titlepage-text-color: FFFFFF
+titlepage-bottom-background: src/img/bottom_background.png
+---
+```
+  </td>
+    <td><img style="display:block;" width="80%" src="../../man/figures/titlepage_bottom_background_pdf_report.png" align="left" /></td>
+  </tr>
+</table>
+
+
+## Page Content Variables
+
+- `content-has-page`:  If true, then begin a new page after the table of contents, tables, and figures.
+- `preface-logo`: The path logo or small image in top a table of contents.
+- `toc`:
+- `lof`:
+- `lot`:
+- `disable-header-and-footer`: On all pages, the header and footer are disabled. False is the default setting.
+- `page-background`: The path to a background image for any page. The background image has been stretched to fill the entire page.
+- `page-background-opacity`: The background image opacity.
+- `page-background-color`: hex color to fill to a background image for any page.
+

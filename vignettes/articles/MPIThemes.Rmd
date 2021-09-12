@@ -62,7 +62,7 @@ or its better to use keyboard shortcut for knitr,
 
 ```
 ---
-title: "Statistical analysis of behavioral data "
+title: Statistical analysis of behavioral data
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 author: [Ahmad Ehyaei, Sara Ershadmanesh]
 affiliation: Max Planck Institute for Biological Cybernetics 
