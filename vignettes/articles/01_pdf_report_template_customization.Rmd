@@ -105,9 +105,9 @@ titlepage-bottom-background: src/img/bottom_background.png
 
 - `content-has-page`:  If true, then begin a new page after the table of contents, tables, and figures.
 - `preface-logo`: The path logo or small image in top a table of contents.
-- `toc`:
-- `lof`:
-- `lot`:
+- `toc`: The Boolean variable, if true, shows the table of contents. 
+- `lof`: The Boolean variable, if true, shows the list of figures.
+- `lot`: The Boolean variable, if true, shows the list of tables.
 - `disable-header-and-footer`: On all pages, the header and footer are disabled. False is the default setting.
 - `page-background`: The path to a background image for any page. The background image has been stretched to fill the entire page.
 - `page-background-opacity`: The background image opacity.
