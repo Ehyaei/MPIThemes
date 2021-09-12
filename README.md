@@ -63,7 +63,7 @@ section.
 <img src="man/figures/titlepage_bottom_background_pdf_report.png" align="center" />
 </td>
 <td>
-<img src="man/figures/titlepage_background_pdf_report.png" align="right"/>
+<img src="man/figures/titlepage_background_pdf_report.png"  align="right"/>
 </td>
 </tr>
 </table>
@@ -102,8 +102,9 @@ include:
 
 ## TODO
 
-I’ll try to gradually add the following templates into the package.
-Please let me know if you have a suggested template.
+Comments and bug reports are welcome. Please submit a bug report or a
+pull request to the Github repository. The following templates will be
+gradually added to the bundle.
 
 -   [x] PDF Report (LaTeX)
 -   [ ] Short PDF note (LaTeX)
