@@ -51,7 +51,7 @@ Then set the name and directory location and finally click OK.
 In a location directory, a Rmd file and a project structure will be created.
 
 <p align="center">
-<img src="man/figures/choose_tamplate.png" width="30%"/>
+<img src="../man/figures/choose_tamplate.png" width="30%"/>
 </p>
 
 3: Knit the document by clicking on the Knit icon in the top bar of the Rstudio editor
@@ -83,7 +83,7 @@ There are plenty of other YAML options; see the [PDF Report Template Customizati
 5: Fill in your report's content. For a pdf template, you can use the markdown command or tex.
 
 <p align="center">
-<img src="man/figures/report_content.png" width="30%"/>
+<img src="../man/figures/report_content.png" width="30%"/>
 </p>
 
 6: Knit the Rmd file and see result!.
