@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting started with MPIThemes • MPIThemes</title>
+<title>PDF Report Template Customization • MPIThemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
-<script src="../../pkgdown.js"></script><meta property="og:title" content="Getting started with MPIThemes">
+<script src="../../pkgdown.js"></script><meta property="og:title" content="PDF Report Template Customization">
 <meta property="og:description" content="MPIThemes">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -98,77 +98,26 @@
 
       
 
-      </header><script src="MPIThemes_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="01_pdf_report_template_customization_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Getting started with MPIThemes</h1>
+      <h1 data-toc-skip>PDF Report Template Customization</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/MPIThemes.Rmd"><code>vignettes/articles/MPIThemes.Rmd</code></a></small>
-      <div class="hidden name"><code>MPIThemes.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/01_pdf_report_template_customization.Rmd"><code>vignettes/articles/01_pdf_report_template_customization.Rmd</code></a></small>
+      <div class="hidden name"><code>01_pdf_report_template_customization.Rmd</code></div>
 
     </div>
 
     
     
-<div id="installation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h1>
-<p>To compile PDF documents with R, you must have Pandoc, LaTeX, and a few other packages installed.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Pandoc</strong>: Pandoc is already installed if you have a recent version of RStudio. There’s no need to be concerned if you’re unfamiliar with <a href="https://pandoc.org/">pandoc</a>.</p></li>
-<li><p><strong>XeLatex</strong>: The pdf RMarkdown templates compile with XeLatex. You will need to install some version of XeLatex. If you do not have one, there is a simple way in R. <a href="https://yihui.org/tinytex/">Tinytex</a> is A lightweight LaTeX distribution that is sufficient for compiling pdf templates. To install the tinytex package and a working version of LaTeX run these commands:</p></li>
-</ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tinytex"</span><span class="op">)</span>
-<span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>The MPITheme package requires additional LaTeX dependencies that tinytex does not install by default. If you are online, these dependencies will be installed automatically.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>
-<strong>MPITheme</strong>: Install the <code>MPITheme</code> package from GitHub. This package is not (yet) available on CRAN.</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va">devtools</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> 
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lcreteig/amsterdown"</span><span class="op">)</span> </code></pre></div>
-<p>After installing the package, you may need to restart RStudio in order to add new templates to Rstudio.</p>
-</div>
-<div id="create-report" class="section level1">
-<h1 class="hasAnchor">
-<a href="#create-report" class="anchor"></a>Create Report</h1>
-<p>Follow these simple steps to create the First Report.:</p>
-<p>1: In RStudio menu, go to <code>File &gt; New File &gt; R Markdown &gt; From Template</code>.</p>
-<p>2: Select the <code>pdf report</code> template from the list, Then set the name and directory location and finally click OK. In a location directory, a Rmd file and a project structure will be created.</p>
-<p align="center">
-<img src="../../man/figures/choose_tamplate.png" width="50%"></p>
-<p>3: Knit the document by clicking on the Knit icon in the top bar of the Rstudio editor or its better to use keyboard shortcut for knitr, <code>command + Shift + K</code> on a Mac, or <code>Ctrl + Shift + K</code> on Linux and Windows.</p>
-<p>4: Your document will automatically include default YAML headers</p>
-<pre><code>---
-title: "Statistical analysis of behavioral data "
-date: "12 September, 2021"
-author: [Ahmad Ehyaei, Sara Ershadmanesh]
-affiliation: Max Planck Institute for Biological Cybernetics 
-location: Tübingen
-titlepage: true
-toc: true
-content-has-page: true
-logo-primary: src/icon/MPILogoGray.eps
-logo-secondary: src/icon/MPIBCWhite.eps
-output:
-  MPIThemes::latex_report
----</code></pre>
-<p>Fill in these YAML options with your information. There are plenty of other YAML options; see the <a href="https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_template_customization.html">PDF Report Template Customization</a> article.</p>
-<p>5: Fill in your report’s content. For a pdf template, you can use the markdown command or tex.</p>
-<p align="center">
-<img src="../../man/figures/report_content.png" width="50%"></p>
-<p>6: Knit the Rmd file and see result!.</p>
-</div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Ehyaei/MPIThemes">MPIThemes</a></span><span class="op">)</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
