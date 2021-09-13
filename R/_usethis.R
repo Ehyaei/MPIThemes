@@ -68,3 +68,31 @@ devtools::check()
 
 library(rcmdcheck)
 rcmdcheck("../MPIThemes_0.0.0.9000.tar.gz")
+
+## Add color data
+
+palette_colors = data.frame(
+  color = c(
+    "red",
+    "green",
+    "lightBlue",
+    "orange",
+    "yellow",
+    "pink",
+    "blue",
+    "lightGreen",
+    "gray"),
+  HTML = c(
+    "#E90649",
+    "#116656",
+    "#40BDE8",
+    "#FF7300",
+    "#FFCE09",
+    "#FA9FCC",
+    "#0067C6",
+    "#62BD19",
+    "#CDC9C4")
+)
+
+usethis::use_data(palette_colors,overwrite = T)
+

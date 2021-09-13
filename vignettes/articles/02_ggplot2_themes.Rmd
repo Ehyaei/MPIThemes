@@ -1,5 +1,5 @@
 ---
-title: "ggplot2 themes"
+title: "GGPLOT2 Themes & Palettes"
 ---
 
 ```{r, include = FALSE}
@@ -27,74 +27,78 @@ Max-Planck institute has a standard style for document design. You can find CD m
 The Pantone color system is a standardized color matching system, which is widely used. 
 Below we can see traditional two main colors in Max-Planck society.
 
-```{r}
+```{r max_planck_colors,crop = TRUE,out.width="50%"}
 scales::show_col(c("#116656","#DDDED6"))
 ```
 
 To find a color palette,  Some colors are chosen from the Pantone list that is different from the two main colors.  Color selection is a process in progress.
 
-```{r}
-scales::show_col(palette_mpi(),ncol = 4)
+```{r mpithemes_palette,crop = TRUE,out.width="50%"}
+scales::show_col(palette_mpi(),ncol = 3)
+```
+
+There are some examples here.
+
+```{r mpithemes_colors,echo=FALSE,out.width="100%"}
+library(ggplot2)
+
+k = 9
+# Define a set of figures to play with using the Iris dataset
+df1 = data.frame(x = rnorm(100*k),y = rnorm(100*k),type = letters[1:k])
+point_plot <- ggplot(df1, aes(x=jitter(x), y=jitter(y), col=type)) + 
+  geom_point() + 
+  theme_void()+
+  scale_color_mpi()+
+  labs(x= NULL,y = NULL)+
+  theme(legend.position = "none")
+
+
+df2 = data.frame(y = abs(rnorm(k))+2,x = letters[1:k])
+
+bar_plot <- ggplot(df2, aes(x=x, y=y, fill=x)) + 
+  geom_bar(stat="identity") + 
+  theme_void()+
+  scale_fill_mpi()+
+  labs(x= NULL,y = NULL)+
+  theme(legend.position = "none")
+df1$x = df1$x+as.integer(as.factor(df1$type))
+
+density_plot <- ggplot(df1, aes(x=x, fill=type)) + 
+  geom_density(alpha = 0.8,color = "transparent") +
+  theme_void()+
+  scale_fill_mpi()+
+    labs(x= NULL,y = NULL)+
+  theme(legend.position = "none")
+
+box_plot <- ggplot(df1, aes(x=x, fill=type)) + 
+  geom_boxplot(alpha = 0.8,size = 0.1) +
+  theme_void()+
+  scale_fill_mpi()+
+    labs(x= NULL,y = NULL)+
+  theme(legend.position = "none")
+
+# Display this figure:
+gridExtra::grid.arrange(point_plot,bar_plot,density_plot,box_plot,ncol = 2)
+
 ```
 
 ## Theme
 
-
-```{r,echo=FALSE,out.width="100%"}
-library(ggplot2)
-library(dplyr)
-scatter_plot <-
-  ggplot(iris, aes(x=jitter(Sepal.Width),
-                   y=jitter(Sepal.Length),
-                   col=Species)) +
-  geom_point() +
-  labs(x = "Sepal Width (cm)",
-       y = "Sepal Length (cm)",
-       col = "Species",
-       title = "Sepal Width vs Length")+
-  theme_scientific(6)+
+```{r mpithemes_theme_scientific,eval=TRUE,echo=FALSE}
+k = 3
+data.frame(x = rnorm(100*k),y = rnorm(100*k),type = letters[1:k]) %>% 
+ggplot(aes(x=jitter(x), y=jitter(y), col=type)) + 
+  geom_point() + 
+  labs(x= "Width",y = "Height")+
+  theme_scientific()+
   scale_color_mpi()
-
-bar_plot <-
-  iris %>%
-  group_by(Species) %>%
-  summarise(Sepal.Width = mean(Sepal.Width)) %>%
-  ggplot(aes(x = Species, y = Sepal.Width, fill = Species)) +
-  geom_col() +
-  labs(x = "Species",
-       y = "Average Sepal Width (cm)",
-       fill = "Species",
-       title = "Average Sepal Width")+
-  theme_scientific(6)+
-  scale_fill_mpi()
-
-box_plot <- ggplot(iris, aes(x = Species, y = Sepal.Width, fill = Species)) +
-  geom_boxplot() +
-  labs(x = "Species",
-       y = "Sepal Width (cm)",
-       fill = "Species",
-       title="Sepal Width Box plot")+
-  theme_scientific(6)+
-  scale_fill_mpi()
-
-density_plot <-
-  iris %>%
-  ggplot(aes(x = Sepal.Length, fill = Species)) +
-  geom_density(size = 0.1, alpha = 0.8) +
-  facet_wrap(.~Species) +
-  labs(x = "Sepal Length (cm)",
-       y = "Density",
-       fill = "Species",
-       title = "Sepal Length Density plot")+
-  theme_scientific(6)+
-  scale_fill_mpi()
+```
 
 
-plots <-
-  list(bar_plot,
-       box_plot,
-       density_plot,
-       scatter_plot)
-do.call(gridExtra::grid.arrange,plots)
+```{r,include=FALSE}
+fig.path = list.files("../../docs/articles/articles/02_ggplot2_themes_files/figure-html",full.names = T)
+for(im in fig.path){
+  knitr::plot_crop(im)
+}
 ```
 
