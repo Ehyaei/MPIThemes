@@ -24,6 +24,11 @@ All of the parameters are optional. The template is also running if it doesn't f
 - `location`: City or location of organization.
 
 <table width="100%" border="0">
+  <colgroup>
+       <col span="1" style="width: 60%;">
+       <col span="1" style="width: 40%;">
+  </colgroup>
+
   <tr>
   <td>
 ```
@@ -36,7 +41,7 @@ location: Tübingen
 ---
 ```
   </td>
-    <td><img style="display:block;" width="80%" src="../../man/figures/basic_pdf_report.png" align="left" /></td>
+    <td><img src="../../man/figures/basic_pdf_report.png" align="left" /></td>
   </tr>
 </table>
 
@@ -50,6 +55,12 @@ location: Tübingen
 
 
 <table width="100%" border="0">
+
+  <colgroup>
+       <col span="1" style="width: 60%;">
+       <col span="1" style="width: 40%;">
+  </colgroup>
+
   <tr>
   <td>
 ```
@@ -61,11 +72,9 @@ titlepage-author-text-color: 116656
 ---
 ```
   </td>
-    <td><img style="display:block;" width="80%" src="../../man/figures/titlepage_background_pdf_report.png" align="left" /></td>
+    <td><img src="../../man/figures/titlepage_background_pdf_report.png" align="left" /></td>
   </tr>
 </table>
-
-
 
 ## Title Page Background
 
@@ -85,6 +94,11 @@ titlepage-author-text-color: 116656
 
 
 <table width="100%" border="0">
+  <colgroup>
+       <col span="1" style="width: 60%;">
+       <col span="1" style="width: 40%;">
+  </colgroup>
+
   <tr>
   <td>
 ```
@@ -96,10 +110,9 @@ titlepage-bottom-background: src/img/bottom_background.png
 ---
 ```
   </td>
-    <td><img style="display:block;" width="80%" src="../../man/figures/titlepage_bottom_background_pdf_report.png" align="left" /></td>
+    <td><img src="../../man/figures/titlepage_bottom_background_pdf_report.png" align="left" /></td>
   </tr>
 </table>
-
 
 ## Page Content Variables
 
