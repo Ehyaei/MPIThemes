@@ -5,6 +5,9 @@ title: "GGPLOT2 Themes & Palettes"
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE, 
+  warning = F,
+  message = F,
+  error = F,
   fig.align = "center",
   comment = "#>"
 )
