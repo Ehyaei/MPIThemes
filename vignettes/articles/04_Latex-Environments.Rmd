@@ -1,5 +1,5 @@
 ---
-title: "Latex Environments"
+title: "Colored Box Latex Environments"
 ---
 
 ```{r, include = FALSE}
@@ -9,6 +9,95 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(MPIThemes)
+Block content can be useful for informing or alerting your readers about a specific topic.
+We use the `awesomebox` and `tcolorbox` Latex packages for colored block content.
+For supplemental information, you can use notes, tips, info, error, and warning elements. Each block serves a specific semantic purpose.
+
+# awesomebox
+
+`awesomebox`'s aim is to use `FontAwesome 5` icons to simplify the illustration of these boxes.
+Some examples of block environments are shown below.
+
+```markdown
+::: {.noteblock data-latex=""}
+Lorem Ipsum ...
+:::
 ```
+
+<p align="center">
+<img src="../../man/figures/note_block.png" width="100%"/>
+</p>
+
+```markdown
+::: {.tipblock data-latex=""}
+Lorem Ipsum ...
+:::
+```
+<p align="center">
+<img src="../../man/figures/tip_block.png" width="100%"/>
+</p>
+
+
+```markdown
+::: {.warningblock data-latex=""}
+Lorem Ipsum ...
+:::
+```
+<p align="center">
+<img src="../../man/figures/warning_block.png" width="100%"/>
+</p>
+
+```markdown
+::: {.cautionblock data-latex=""}
+Lorem Ipsum ...
+:::
+```
+<p align="center">
+<img src="../../man/figures/caution_block.png" width="100%"/>
+</p>
+
+
+```markdown
+::: {.importantblock data-latex=""}
+Lorem Ipsum ...
+:::
+```
+
+<p align="center">
+<img src="../../man/figures/important_block.png" width="100%"/>
+</p>
+
+
+# tcolorbox
+
+tcolorbox is a well-known latex package that generates a configuration for colored and framed text boxes with a heading line.
+
+We use simple colored boxes in MPIThems. In the future, appropriate blocks will be added. look at some simple examples
+
+```markdown
+::: {.info-box data-latex=""}
+Lorem Ipsum ...
+:::
+```
+<p align="center">
+<img src="../../man/figures/info_box.png" width="100%"/>
+</p>
+
+```markdown
+::: {.warning-box data-latex=""}
+Lorem Ipsum ...
+:::
+```
+
+<p align="center">
+<img src="../../man/figures/warning_box.png" width="100%"/>
+</p>
+
+```markdown
+::: {.error-box data-latex=""}
+Lorem Ipsum ...
+:::
+```
+<p align="center">
+<img src="../../man/figures/error_box.png" width="100%"/>
+</p>
