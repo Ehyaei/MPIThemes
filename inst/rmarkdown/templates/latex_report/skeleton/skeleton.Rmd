@@ -48,18 +48,15 @@ Or use block quotes are written after `>`, e.g.,
 We can easily write math expressions by latex syntax. 
 Inline LateX equations can be written in a pair of dollar signs
 $$f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}$$
-
 ## plot
 
 By using ggplot package, we can  
 
 ```{r scatterPlot, echo=TRUE}
 ggplot(iris, aes(Sepal.Length, Petal.Length)) + 
-  labs(subtitle="Iris Data: Sepal Length vs Petal Length",
+  labs(subtitle="Sepal Length vs Petal Length",
        title="Bubble chart") + 
-  geom_jitter(aes(col=Species, size=Sepal.Width)) + 
-  geom_smooth(aes(col=Species), method="lm", se=F)+
-  theme_bw()+
-  scale_color_mpi()
+  geom_point(aes(color=Species, size=Sepal.Width),alpha = 0.5) +
+  geom_smooth(aes(col=Species), method="lm", se=F)
 ```
 
