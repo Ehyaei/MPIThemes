@@ -78,6 +78,8 @@ gridExtra::grid.arrange(
 A continuous palette can be seen in the example below.  
 
 ```{r continous_palette, out.height="50%"}
+if (!require(hexbin)) install.packages('hexbin')
+
 df <- data.frame(
   x = rnorm(10000),
   y = rnorm(10000)
