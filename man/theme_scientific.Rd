@@ -10,7 +10,7 @@ theme_scientific(base_size = 12)
 \item{base_size}{base font size, given in pts.}
 }
 \value{
-scientific theme
+ggplot2 theme
 }
 \description{
 Theme 'scientific'
