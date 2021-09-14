@@ -32,19 +32,20 @@ theme_scientific <- function(base_size = 12){
       legend.box.background = element_blank(),
       legend.background = element_rect(fill = "transparent"),
       panel.grid.major = element_line(color = "gray70", size = .2, linetype = "dotted"),
-      panel.grid.minor = element_line(color = "gray80", size = .1, linetype = "dotted"),
+      panel.grid.minor = element_line(color = "gray70", size = .1, linetype = "dotted"),
       axis.line.x = element_line(color = "gray40",size = .4),
       axis.line.y = element_line(color = "gray40",size = .4),
       axis.ticks = element_line(color = "gray20"),
+      legend.title = element_text(size = rel(0.8), color = "gray20", vjust = 0),
       legend.key = element_rect(fill = NA, color = NA),
-      legend.text = element_text(size = rel(.8), color = "black"),
+      legend.text = element_text(size = rel(.7), color = "black"),
       plot.title = element_text(color = "gray20", size = rel(1.2),face = "bold", hjust = .5),
-      axis.text.x = element_text(size = rel(.8), color = "gray20"),
-      axis.text.y = element_text(size = rel(.8), color = "gray20"),
-      axis.title.x = element_text(size = rel(0.9), color = "gray20", vjust = 0),
-      axis.title.y = element_text(size = rel(0.9), color="gray20", vjust = 1),
+      axis.text.x = element_text(size = rel(.7), color = "gray20"),
+      axis.text.y = element_text(size = rel(.7), color = "gray20"),
+      axis.title.x = element_text(size = rel(0.8), color = "gray20", vjust = 0),
+      axis.title.y = element_text(size = rel(0.8), color="gray20", vjust = 1),
       plot.margin = margin(25, 25, 25, 25),
-      plot.caption = element_text(size = rel(0.9), face = "italic")
+      plot.caption = element_text(size = rel(0.8), face = "italic")
     )
 }
 
