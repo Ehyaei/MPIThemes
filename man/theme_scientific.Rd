@@ -16,9 +16,11 @@ ggplot2 theme
 Theme 'scientific'
 }
 \examples{
+\dontrun{
 library(ggplot2)
 ggplot(data = mtcars, aes(x = cyl)) +
   geom_bar(aes(y = ..count..,fill = as.character(cyl)))+
   theme_scientific()+
   scale_fill_mpi()
+  }
 }

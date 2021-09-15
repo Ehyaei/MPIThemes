@@ -13,8 +13,10 @@ set theme and color to all ggplot figures
 Set ggplot default theme and palette
 }
 \examples{
+\dontrun{
 library(ggplot2)
 set_color_theme()
 ggplot(data = mtcars, aes(x = cyl)) +
   geom_bar(aes(y = ..count..,fill = as.character(cyl)))
+  }
 }

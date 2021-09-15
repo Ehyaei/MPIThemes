@@ -6,11 +6,13 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #' ggplot(data = mtcars, aes(x = cyl)) +
 #'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))+
 #'   theme_scientific()+
 #'   scale_fill_mpi()
+#'   }
 theme_scientific <- function(base_size = 12){
 
   fontPath <- system.file("rmarkdown", "templates",
@@ -114,10 +116,12 @@ bottom_legend = function(){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #' set_color_theme()
 #' ggplot(data = mtcars, aes(x = cyl)) +
 #'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))
+#'   }
 set_color_theme <- function() {
   continuous_color = c("#1B3037", "#213C47", "#26525B", "#28847D", "#45A289", "#7CAE7F", "#B2B974", "#E9C46A", "#ECBA67", "#EFB065", "#F2A662", "#F0935C", "#E87653", "#D8674B", "#C65D44")
   ggplot2::theme_set(MPIThemes::theme_scientific())
