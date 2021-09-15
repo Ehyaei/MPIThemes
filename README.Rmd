@@ -16,7 +16,9 @@ knitr::opts_chunk$set(
 library("badger", quietly = TRUE)
 ```
 
-# MPIThemes <a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
+<a href={https://github.com/Ehyaei/MPIThemes}><img src="man/figures/logo.png" alt="logo with an image of a MPI Templates" align="right" width="160" style="padding: 0 15px; float: right;"/>
+
+# MPIThemes 
 
 ```{r, echo = FALSE, results='asis', message=FALSE,eval=TRUE}
 cat(
