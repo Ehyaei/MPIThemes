@@ -123,12 +123,32 @@ bottom_legend = function(){
 #'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))
 #'   }
 set_color_theme <- function() {
-  continuous_color = c("#1B3037", "#213C47", "#26525B", "#28847D", "#45A289", "#7CAE7F", "#B2B974", "#E9C46A", "#ECBA67", "#EFB065", "#F2A662", "#F0935C", "#E87653", "#D8674B", "#C65D44")
+  continuous_color = c("#FDE725FF", "#C2DF23FF", "#85D54AFF", "#51C56AFF", "#2BB07FFF",
+                       "#1E9B8AFF", "#25858EFF", "#2D708EFF",
+                       "#38598CFF", "#433E85FF", "#482173FF", "#440154FF")
   ggplot2::theme_set(MPIThemes::theme_scientific())
   assign("scale_colour_discrete", function(..., values = MPIThemes::palette_colors$HTML) scale_colour_manual(..., values = values), globalenv())
   assign("scale_fill_discrete", function(..., values = MPIThemes::palette_colors$HTML) scale_fill_manual(..., values = values), globalenv())
   assign("scale_fill_continuous", function(..., values = continuous_color) scale_fill_gradientn(..., colours = values), globalenv())
   assign("scale_colour_continuous", function(..., values = continuous_color) scale_colour_gradientn(..., colours = values), globalenv())
+  update_geom_defaults("point",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("line",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  # update_stat_defaults("jitter",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("bar",   list(fill = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("bar",   list(colour = "transparent"))
+  update_geom_defaults("col",   list(fill = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("col",   list(colour = "transparent"))
+  # update_geom_defaults("histogram",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("area",   list(colour = MPIThemes::palette_colors$HTML[1],fill = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("boxplot",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("density",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("smooth",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("quantile",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("path",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("polygon",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("rect",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("step",   list(colour = MPIThemes::palette_colors$HTML[1]))
+  update_geom_defaults("rug",   list(colour = MPIThemes::palette_colors$HTML[1]))
 
 }
 
