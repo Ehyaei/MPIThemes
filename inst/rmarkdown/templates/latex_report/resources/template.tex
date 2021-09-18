@@ -532,11 +532,12 @@ $else$
 \def\titlepageRuleHeight{10}
 $endif$
 
-
+$if(titlepage-twocolor-rule)$
 $if(titlepage-twocolor-rule-height)$
 \def\titlepageTwocolorRuleHeight{$titlepage-twocolor-rule-height$}
 $else$
 \def\titlepageTwocolorRuleHeight{3}
+$endif$
 $endif$
 
 $if(title-vjust)$
@@ -724,8 +725,9 @@ $endif$
 $endif$
 
 % add white rule
+$if(titlepage-twocolor-rule)$
 \path [fill=white] (page cs:1,0.23) rectangle (page cs:-1,0.23+\titlepageTwocolorRuleHeight);
-
+$endif$
 $if(titlepage-top-background)$
 \node[inner sep=0pt] at (page cs:0,0.62){\includegraphics[width=\paperwidth]{$titlepage-top-background$}};
 $endif$
