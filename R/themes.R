@@ -47,7 +47,9 @@ theme_scientific <- function(base_size = 12){
       axis.title.x = element_text(size = rel(0.8), color = "gray20", vjust = 0),
       axis.title.y = element_text(size = rel(0.8), color="gray20", vjust = 1),
       plot.margin = margin(25, 25, 25, 25),
-      plot.caption = element_text(size = rel(0.8), face = "italic")
+      plot.caption = element_text(size = rel(0.8), face = "italic"),
+      strip.background = element_blank(),
+      strip.text = element_text(face = "bold",vjust = -1,hjust = 0.5,color = "gray20")
     )
 }
 
