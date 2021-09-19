@@ -570,6 +570,16 @@ $endif$
 %......................................................................%
 
 %......................................................................%
+% set default hold position of figure and table
+\makeatletter
+  \providecommand*\setfloatlocations[2]{\@namedef{fps@#1}{#2}}
+\makeatother
+\setfloatlocations{figure}{H}
+\setfloatlocations{table}{H}
+%......................................................................%
+
+
+%......................................................................%
 % Add Main Fonts
 
 \usepackage{fontspec}
