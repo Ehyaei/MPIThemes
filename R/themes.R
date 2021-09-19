@@ -125,9 +125,8 @@ bottom_legend = function(){
 #'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))
 #'   }
 set_color_theme <- function() {
-  continuous_color = c("#FDE725FF", "#C2DF23FF", "#85D54AFF", "#51C56AFF", "#2BB07FFF",
-                       "#1E9B8AFF", "#25858EFF", "#2D708EFF",
-                       "#38598CFF", "#433E85FF", "#482173FF", "#440154FF")
+  # continuous_color = c(lighten(MPIBlue,0.6),MPIBlue,MPIYellow,MPIRed,darken(MPIRed,0.4),darken(MPIRed,0.8))
+  continuous_color = c("#B5E6FF", "#40BDE8", "#FFCE09", "#E90649",  "#900129", "#41000C")
   ggplot2::theme_set(MPIThemes::theme_scientific())
   assign("scale_colour_discrete", function(..., values = MPIThemes::palette_colors$HTML) scale_colour_manual(..., values = values), globalenv())
   assign("scale_fill_discrete", function(..., values = MPIThemes::palette_colors$HTML) scale_fill_manual(..., values = values), globalenv())
