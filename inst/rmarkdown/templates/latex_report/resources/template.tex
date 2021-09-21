@@ -723,13 +723,13 @@ $else$
 $if(titlepage-top-background)$
 $else$
 % add title page top color
-\fill[titlepageTopColor] (page cs:-1,0.23) rectangle (current page.north east);
+\fill[titlepageTopColor] (page cs:-1,0.25) rectangle (current page.north east);
 $endif$
 
 $if(titlepage-bottom-background)$
 $else$
 % add title page bottom color
-\fill[titlepageBottomColor] (current page.south west) rectangle (page cs:1,0.23);
+\fill[titlepageBottomColor] (current page.south west) rectangle (page cs:1,0.25);
 $endif$
 
 $endif$
@@ -738,6 +738,7 @@ $endif$
 $if(titlepage-twocolor-rule)$
 \path [fill=white] (page cs:1,0.23) rectangle (page cs:-1,0.23+\titlepageTwocolorRuleHeight);
 $endif$
+
 $if(titlepage-top-background)$
 \node[inner sep=0pt] at (page cs:0,0.62){\includegraphics[width=\paperwidth]{$titlepage-top-background$}};
 $endif$
