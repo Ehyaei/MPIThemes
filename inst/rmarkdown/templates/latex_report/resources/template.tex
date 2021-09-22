@@ -794,11 +794,6 @@ $endif$
   \vspace{0.3cm}
   $endif$
 
-  % $if(author)$
-  % \Large{\textsf{$for(author)$$author$$sep$, $endfor$}}
-  % \vspace{0.3cm}
-  % $endif$
-
   \vspace{0.6cm}
   $if(affiliation)$
   \Large{ $affiliation$}
@@ -858,7 +853,52 @@ $else$
 % add these lines for simple report template
 $if(titlepage)$
 $else$
-\maketitle
+
+%......................................................................%
+% start short report titlepage
+
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] at (page cs:0.8,0.85){$if(logo-primary)$\includegraphics[height=0.1\paperheight]{$logo-primary$}$endif$};
+\node[inner sep=0pt] at (page cs:-0.8,0.85){$if(logo-secondary)$\includegraphics[height=0.1\paperheight]{$logo-secondary$}$endif$};
+\end{tikzpicture}
+{\color{titlepageTextColor}
+\begin{center}
+\vspace{0.5cm}
+$if(title)$
+\huge{\uppercase{$title$}}
+\vspace{0.2cm}
+$endif$
+
+$if(subtitle)$
+\Large{$subtitle$}
+\vspace{0.4cm}
+$endif$
+
+$if(author)$
+\normalsize{\textsf{$for(author)$$author$$sep$, $endfor$}}
+\vspace{0.2cm}
+$endif$
+
+$if(date)$
+\normalsize{\uppercase{$date$}}
+\vspace{0.4cm}
+$endif$
+
+$if(affiliation)$
+\normalsize{ $affiliation$}
+\vspace{0.1cm}
+$endif$
+
+$if(location)$
+\normalsize{$location$}
+$endif$
+\vspace{0.5cm}
+\end{center}
+}
+% end short report titlepage
+%......................................................................%
+
 $endif$
 % end add
 $endif$
