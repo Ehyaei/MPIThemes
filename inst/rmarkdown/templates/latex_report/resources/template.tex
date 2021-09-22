@@ -524,6 +524,19 @@ $else$
 \definecolor{pageBackgroundColor}{HTML}{000000}
 $endif$
 
+$if(banner-color)$
+\definecolor{bannerColor}{HTML}{$banner-color$}
+$else$
+\definecolor{bannerColor}{HTML}{40BDE8}
+$endif$
+
+$if(banner-text-color)$
+\definecolor{bannerTextColor}{HTML}{$banner-text-color$}
+$else$
+\definecolor{bannerTextColor}{HTML}{000000}
+$endif$
+
+
 % Set Initial Values
 
 $if(titlepage-rule-height)$
@@ -656,14 +669,23 @@ $endif$
 $if(disable-header-and-footer)$
 $else$
 
+$if(banner-color)$
+% Add Style
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\setlength{\footskip}{60pt}
+\fancyhf{}
+\fancyfoot[R]{\textcolor{bannerTextColor}{\large\thepage}}
+\renewcommand{\headrulewidth}{0pt}
 
+$else$
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\leftmark}
 \fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0.5pt}
+% \renewcommand{\footrulewidth}{0.25pt}
 
 
 % TODO: Add header and footer options
@@ -674,6 +696,56 @@ $else$
 % \cfoot{}
 % \rfoot{}
 
+$endif$
+$endif$
+
+% ---------------------------------------------------------------------------- %
+% Banner Page Header and Footer Style
+
+$if(banner-color)$
+\usepackage{eso-pic}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{positioning}
+% Banner Page Header Style
+\newcommand\BannerPageHeader{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[bannerColor]
+  (current page.north west) -- (current page.north east) --
+  ([yshift=20pt]current page.north east|-current page text area.north east) --
+  ([yshift=20pt,xshift=5cm]current page.north|-current page text area.north) --
+  ([yshift=40pt,xshift=3cm]current page.north|-current page text area.north) --
+  ([yshift=40pt]current page.north west|-current page text area.north west) -- cycle;
+
+\node[inner sep=0pt] at (page cs:0.82,0.92){
+$if(banner-logo)$\includegraphics[height=0.06\paperheight]{$banner-logo$}$endif$
+};
+\node[font=\color{bannerTextColor},anchor=west,
+  xshift=1cm,yshift=-0.7cm] at (current page.north west)
+  {
+  \small{\textbf{$if(banner-text)$ \Large\textbf{$banner-text$} \\$endif$}}
+  };
+\end{tikzpicture}%
+}
+
+% Banner Page Footer Style
+
+\newcommand\BannerPageFooter{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[bannerColor]
+  (current page.south west) -- (current page.south east) --
+  ([yshift=-40pt]current page.south east|-current page text area.south east) --
+  ([yshift=-40pt,xshift=5cm]current page.south|-current page text area.south) --
+  ([yshift=-60pt,xshift=3cm]current page.south|-current page text area.south) --
+  ([yshift=-60pt]current page.south west|-current page text area.south west) -- cycle;
+
+\end{tikzpicture}%
+}
+$endif$
+
+
+% ---------------------------------------------------------------------------- %
+% Add Page Background
+
 $if(page-background)$
 \usepackage{eso-pic}
 \newcommand\BackPage{%
@@ -682,6 +754,9 @@ $if(page-background)$
 \end{tikzpicture}%
 }
 $endif$
+
+% ---------------------------------------------------------------------------- %
+% Add Page Background Color
 
 $if(page-background-color)$
 \usepackage{eso-pic}
@@ -692,7 +767,6 @@ $if(page-background-color)$
 }
 $endif$
 
-$endif$
 
 %......................................................................%
 %
@@ -702,7 +776,6 @@ $endif$
 
 
 \begin{document}
-
 %......................................................................%
 %               Add Titlepage
 %......................................................................%
@@ -831,9 +904,6 @@ $if(page-background-color)$
 \ClearShipoutPicture
 \AddToShipoutPicture{\BackPage}
 $endif$
-
-
-
 
 $if(content-has-page)$
 $if(preface-logo)$
@@ -978,6 +1048,13 @@ $endif$
 $if(has-frontmatter)$
 \mainmatter
 $endif$
+
+$if(banner-color)$
+\ClearShipoutPicture
+\AddToShipoutPicture{\BannerPageHeader\BannerPageFooter}
+$endif$
+
+
 $body$
 
 $if(has-frontmatter)$
