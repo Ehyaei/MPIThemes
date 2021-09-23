@@ -1,0 +1,8 @@
+delete_merged_file: true
+tables: yes
+rmd_files:
+  - "index.Rmd"
+  - "chapters/Introduction.Rmd"
+  - "chapters/Markdown.Rmd"
+  - "chapters/Environment.Rmd"
+  - "chapters/Reference.Rmd"

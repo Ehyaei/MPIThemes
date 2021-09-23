@@ -634,11 +634,7 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 $if(geometry)$
 $else$
-$if(book)$
-\usepackage[left=42.5mm,right=42.5mm,top=54.5mm,bottom=53.5mm]{geometry}
-$else$
 \usepackage[margin=1.5cm,includehead=true,includefoot=true,centering]{geometry}
-$endif$
 $endif$
 
 % ----------------------------------------------------------------------------- %
@@ -771,40 +767,7 @@ $if(page-background-color)$
 }
 $endif$
 
-%......................................................................%
-% Remove Blank Page after Table of Contents and between chapter
 
-\let\cleardoublepage=\clearpage
-\let\cleardoublepage\clearpage\null\thispagestyle{empty}
-
-
-%----------------------------------------------------------------------------------------
-% Chapter Design
-$if(book)$
-\usepackage{titlesec}
-
-\titleformat{\chapter}[display]
-  {\bfseries\Large\color{mpiGreen}}
-  {\filright\huge\chaptertitlename \huge\thechapter}
-  {1ex}
-  {\Huge\titlerule[2.5pt]\vskip3pt\titlerule\vspace{1ex}\filleft}
-
-\titleformat{\section}[block]
-  {\Large\bfseries\color{mpiGreen}}
-  {\filright \thesection\vspace{1ex}}{12pt}
-  {}
-  [\titlerule]
-$endif$
-
-%----------------------------------------------------------------------------------------
-% Remove page number in toc and strange white first page
-
-$if(book)$
-\addtocontents{toc}{\protect\thispagestyle{empty}}
-\usepackage{atbegshi}
-\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
-
-$endif$
 %......................................................................%
 %
 %               End of Modifications
@@ -924,7 +887,7 @@ $endif$
 
 \end{tikzpicture}
 \end{titlepage}
-% \restoregeometry
+\restoregeometry
 $endif$
 
 % end design titlepage

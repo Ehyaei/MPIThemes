@@ -1,0 +1,30 @@
+bookdown::gitbook:
+  css:  [src/css/style.css]
+  config:
+    sharing: null
+    info: no
+    fontsettings:
+      theme: night
+      size: 3
+    toc:
+      collapse: section
+      before: |
+        <li><a href="./">Book Title</a></li>
+      scroll_highlight: yes
+  download: ["pdf", "epub","mobi"]
+bookdown::pdf_book:
+    latex_engine: xelatex
+    keep_tex: true
+    toc_depth: 5
+    pandoc_args:
+    - "--top-level-division=chapter"
+    - "--wrap=preserve"
+    - "--lua-filter=src/tex/template.lua"
+    dev: "cairo_pdf"
+    template: "src/tex/template.tex"
+    includes:
+      in_header: "src/tex/preamble.tex"
+      before_body: "src/tex/before_body.tex"
+      after_body: "src/tex/after_body.tex"
+bookdown::epub_book:
+  stylesheet: src/css/style.css
