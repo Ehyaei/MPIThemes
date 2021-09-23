@@ -19,16 +19,3 @@
 
 ```{r, child="07-acknowledgment.Rmd",eval=FALSE}
 ```
-
-
-```{=latex}
-\tableofcontents
-```
-
-```{=latex}
-\listoffigures
-```
-
-```{=latex}
-\listoftables
-```
