@@ -1,0 +1,54 @@
+/* ------------------------------------------ */
+/*                First Page Style            */
+/* ------------------------------------------ */
+
+.title, .subtitle,.author,.date {
+  color: #116656;
+  text-align: center;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 4em !important;
+  margin-top: 0.275em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.subtitle {
+    text-transform: capitalize;
+    font-size: 4em !important;
+    margin-top: 0.1em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.author {
+    text-transform: capitalize;
+    font-size: 2em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.date {
+    text-transform: uppercase;
+    font-size: 1.5em !important;
+    margin-bottom: 0.2em !important;
+    color: #116656;
+}
+
+/* ------------------------------------------ */
+/*                 Header Style               */
+/* ------------------------------------------ */
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5 {
+  padding-top: 3em !important; /*adding so much padding because theme adds a margin-top: -65px by default */
+  margin-bottom: 0.75em;
+  color:#E90649;
+}
+
+
+/* ------------------------------------------ */
+/*                   TOC Style                */
+/* ------------------------------------------ */
+
