@@ -1,1 +1,42 @@
 # Environment
+
+:::: {.rmdNote data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+::::
+
+:::: {.rmdnote data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+::::
+
+:::: {.rmdTip data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+::::
+
+:::: {.rmdtip data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+::::
+
+:::: {.rmdThink data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+::::
+
+:::: {.rmdthink data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+::::
+
+:::: {.rmdWarning data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+::::
+
+:::: {.rmdwarning data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+::::
+
+:::: {.rmdTodo data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+::::
+
+:::: {.rmdtodo data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+::::
+

@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css:  [src/css/style.css]
+  css:  [src/css/style.css,src/css/environments.css]
   config:
     sharing: null
     info: no

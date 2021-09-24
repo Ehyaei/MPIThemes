@@ -474,8 +474,8 @@ $endif$
 % https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html
 \usepackage{xcolor}
 
-\definecolor{mpiGreen}{HTML}{116656}
-\definecolor{mpiGray}{HTML}{DDDED6}
+\definecolor{MPIGreen}{HTML}{116656}
+\definecolor{MPIGray}{HTML}{DDDED6}
 \definecolor{MPIBlue}{HTML}{009EE2}
 \definecolor{MPIRed}{HTML}{E90649}
 \definecolor{MPILightBlue}{HTML}{40BDE8}
@@ -631,8 +631,10 @@ BoldItalicFont = UniversLTStd-Bold.otf
 \newtcolorbox{info-box}{colback=cyan!5!white,arc=0pt,outer arc=0pt,colframe=cyan!60!black}
 \newtcolorbox{warning-box}{colback=orange!5!white,arc=0pt,outer arc=0pt,colframe=orange!80!black}
 \newtcolorbox{error-box}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
+
+
 % Think
-\newenvironment{rmdthink}{
+\newenvironment{rmdThink}{
 	\vspace*{0.5\baselineskip}
     \par\noindent
     \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Think}},colback=MPIGreen!10!white, colframe=MPIGreen]
@@ -641,9 +643,10 @@ BoldItalicFont = UniversLTStd-Bold.otf
     \end{tcolorbox}
     \par\ignorespacesafterend
 }
+\newtcolorbox{rmdthink}{colback=MPIGreen!10!white,colframe=MPIGreen,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
 
 % Note
-\newenvironment{rmdnote}{
+\newenvironment{rmdNote}{
 	\vspace*{0.5\baselineskip}
     \par\noindent
     \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Note}},colback=MPIRed!10!white, colframe=MPIRed]
@@ -652,9 +655,10 @@ BoldItalicFont = UniversLTStd-Bold.otf
     \end{tcolorbox}
     \par\ignorespacesafterend
 }
+\newtcolorbox{rmdnote}{colback=MPIRed!10!white,colframe=MPIRed,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
 
 % Tip
-\newenvironment{rmdtip}{
+\newenvironment{rmdTip}{
 	\vspace*{0.5\baselineskip}
     \par\noindent
     \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Tip}},colback=MPILightGreen!10!white, colframe=MPILightGreen]
@@ -663,9 +667,10 @@ BoldItalicFont = UniversLTStd-Bold.otf
     \end{tcolorbox}
     \par\ignorespacesafterend
 }
+\newtcolorbox{rmdtip}{colback=MPILightGreen!10!white,colframe=MPILightGreen,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
 
 % warning
-\newenvironment{rmdwarning}{
+\newenvironment{rmdWarning}{
 	\vspace*{0.5\baselineskip}
     \par\noindent
     \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Warning}},colback=MPIOrange!10!white, colframe=MPIOrange]
@@ -674,8 +679,19 @@ BoldItalicFont = UniversLTStd-Bold.otf
     \end{tcolorbox}
     \par\ignorespacesafterend
 }
+\newtcolorbox{rmdwarning}{colback=MPIOrange!10!white,colframe=MPIOrange,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
 
-
+% todo
+\newenvironment{rmdTodo}{
+	\vspace*{0.5\baselineskip}
+    \par\noindent
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}To Do}},colback=MPIBlue!10!white, colframe=MPIBlue]
+    \itshape
+}{
+    \end{tcolorbox}
+    \par\ignorespacesafterend
+}
+\newtcolorbox{rmdtodo}{colback=MPIBlue!10!white,colframe=MPIBlue,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
 
 %......................................................................%
 % add packages for title page
@@ -834,13 +850,13 @@ $if(book)$
 \usepackage{titlesec}
 
 \titleformat{\chapter}[display]
-  {\bfseries\Large\color{mpiGreen}}
+  {\bfseries\Large\color{MPIGreen}}
   {\filright\huge\chaptertitlename \huge\thechapter}
   {1ex}
   {\Huge\titlerule[2.5pt]\vskip3pt\titlerule\vspace{1ex}\filleft}
 
 \titleformat{\section}[block]
-  {\Large\bfseries\color{mpiGreen}}
+  {\Large\bfseries\color{MPIGreen}}
   {\filright \thesection\vspace{1ex}}{12pt}
   {}
   [\titlerule]
