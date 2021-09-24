@@ -4,8 +4,7 @@ bookdown::gitbook:
     sharing: null
     info: no
     fontsettings:
-      theme: night
-      size: 3
+      size: 1
     toc:
       collapse: section
       before: |
