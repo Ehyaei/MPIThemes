@@ -1,0 +1,80 @@
+/* Design Enviroments --------------------------------------------*/
+
+.rmdWarning,.rmdwarning {
+  border: 1px solid #FF7300;
+  background: #FFF2F0;
+}
+
+.rmdNote, .rmdnote {
+  border: 1px solid #E90649;
+  background: #FFECEE;
+}
+
+.rmdTip, .rmdtip {
+  border: 1px solid #62BD19;
+  background: #DFFFD4;
+}
+
+.rmdThink, .rmdthink {
+  border: 1px solid #116656;
+  background: #BEF9E9;
+}
+
+.rmdTodo, .rmdtodo {
+  border: 1px solid #009EE2;
+  background: #EDF5FF;
+}
+
+.rmdThink, .rmdWarning, .rmdNote, .rmdTip, .rmdTodo, .rmdthink, .rmdwarning, .rmdnote, .rmdtip, .rmdtodo {
+  border-left-width: 10px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.rmdWarning::before {
+  display: block;
+  content: "Warning";
+  color: #FF7300;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.rmdNote::before {
+  display: block;
+  content: "Note";
+  color: #E90649;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.rmdTip::before {
+  display: block;
+  content: "Tip";
+  color: #62BD19;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.rmdThink::before {
+  display: block;
+  content: "Think";
+  color: #116656;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.rmdTodo::before {
+  display: block;
+  content: "To Do";
+  color: #009EE2;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+
