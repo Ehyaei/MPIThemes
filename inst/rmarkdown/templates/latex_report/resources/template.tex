@@ -483,6 +483,8 @@ $endif$
 \definecolor{MPIYellow}{HTML}{FFCE09}
 \definecolor{MPIPink}{HTML}{FA9FCC}
 \definecolor{MPILightGreen}{HTML}{62BD19}
+\definecolor{MPILivingCoral}{HTML}{FC766A}
+\definecolor{MPIPacificCoast}{HTML}{5B84B1}
 
 
 
@@ -692,6 +694,80 @@ BoldItalicFont = UniversLTStd-Bold.otf
     \par\ignorespacesafterend
 }
 \newtcolorbox{rmdtodo}{colback=MPIBlue!10!white,colframe=MPIBlue,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
+
+
+
+\newtcbtheorem[auto counter,number within=section]{Theorem}{Theorem}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIGreen!10!white,colframe=MPIGreen,
+                colbacktitle=MPIGreen, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{thm}
+
+\newtcbtheorem[auto counter,number within=section]{Definition}{Definition}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPILightGreen!10!white,colframe=MPILightGreen,
+                colbacktitle=MPILightGreen, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{defn}
+
+\newtcbtheorem[auto counter,number within=section]{Lemma}{Lemma}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPILightBlue!10!white,colframe=MPILightBlue,
+                colbacktitle=MPILightBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{lem}
+
+\newtcbtheorem[auto counter,number within=section]{Corollary}{Corollary}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIBlue!10!white,colframe=MPIBlue,
+                colbacktitle=MPIBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{cor}
+
+\newtcbtheorem[auto counter,number within=section]{Proposition}{Proposition}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIYellow!10!white,colframe=MPIYellow,
+                colbacktitle=MPIYellow, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{prop}
+
+\newtcbtheorem[auto counter,number within=section]{Exercise}{Exercise}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIBlue!10!white,colframe=MPIBlue,
+                colbacktitle=MPIBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{exer}
+
+\newtcbtheorem[auto counter,number within=section]{Example}{Example}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIOrange!10!white,colframe=MPIOrange,
+                colbacktitle=MPIOrange, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{exam}
+
+\newtcbtheorem[auto counter,number within=section]{Remark}{Remark}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIPink!20!white,colframe=MPIPink,
+                colbacktitle=MPIPink, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{rmk}
+
+
+\newtcbtheorem[auto counter,number within=section]{Proof}{Proof}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPILivingCoral!20!white,colframe=MPILivingCoral,
+                colbacktitle=MPILivingCoral, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{pr}
+
+\newtcbtheorem[auto counter,number within=section]{Solution}{Solution}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIPacificCoast!20!white,colframe=MPIPacificCoast,
+                colbacktitle=MPIPacificCoast, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{sol}
+
 
 %......................................................................%
 % add packages for title page
