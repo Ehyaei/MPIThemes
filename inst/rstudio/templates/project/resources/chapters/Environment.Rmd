@@ -40,3 +40,10 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 ::::
 
+::: {.Proof data-latex="{}{}"}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+:::
+
+::: {.Solution data-latex="{}{}"}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+:::

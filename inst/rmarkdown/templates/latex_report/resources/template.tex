@@ -734,8 +734,8 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 \newtcbtheorem[auto counter,number within=section]{Exercise}{Exercise}{%
                 lower separated=false,fonttitle=\bfseries,
-                colback=MPIBlue!10!white,colframe=MPIBlue,
-                colbacktitle=MPIBlue, coltitle=white,
+                colback=MPIRed!10!white,colframe=MPIRed,
+                colbacktitle=MPIRed, coltitle=white,
                 enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
                 }{exer}
 
@@ -748,7 +748,7 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 \newtcbtheorem[auto counter,number within=section]{Remark}{Remark}{%
                 lower separated=false,fonttitle=\bfseries,
-                colback=MPIPink!20!white,colframe=MPIPink,
+                colback=MPIPink!10!white,colframe=MPIPink,
                 colbacktitle=MPIPink, coltitle=white,
                 enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
                 }{rmk}
@@ -756,18 +756,28 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 \newtcbtheorem[auto counter,number within=section]{Proof}{Proof}{%
                 lower separated=false,fonttitle=\bfseries,
-                colback=MPILivingCoral!20!white,colframe=MPILivingCoral,
+                colback=MPILivingCoral!10!white,colframe=MPILivingCoral,
                 colbacktitle=MPILivingCoral, coltitle=white,
                 enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
                 }{pr}
 
 \newtcbtheorem[auto counter,number within=section]{Solution}{Solution}{%
                 lower separated=false,fonttitle=\bfseries,
-                colback=MPIPacificCoast!20!white,colframe=MPIPacificCoast,
+                colback=MPIPacificCoast!10!white,colframe=MPIPacificCoast,
                 colbacktitle=MPIPacificCoast, coltitle=white,
                 enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
                 }{sol}
 
+
+\newenvironment{rmdexer}{
+    \par\noindent
+    \textbf{\color{MPIRed}Exercise} \itshape
+}{\par}
+
+\newenvironment{rmdsol}{
+    \par\noindent
+    \textbf{\color{MPIPacificCoast}Solution} \itshape
+}{\par}
 
 %......................................................................%
 % add packages for title page
