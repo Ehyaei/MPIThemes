@@ -1,9 +1,20 @@
+@import 'https://fonts.googleapis.com/css?family=Istok+Web|Oxygen|Source+Sans+Pro';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css';
+body {
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  background-color: #f6f6f6 !important;
+  margin-top: 0;
+}
+.body-inner, .page-inner section.normal {
+  background-color: #f6f6f6 !important;
+}
+
 /* ------------------------------------------ */
 /*                First Page Style            */
 /* ------------------------------------------ */
 
 .title, .subtitle,.author,.date {
-  color: #116656;
+  color: #009EE2;
   text-align: center;
 }
 .title {
@@ -30,7 +41,6 @@
     text-transform: uppercase;
     font-size: 1.5em !important;
     margin-bottom: 0.2em !important;
-    color: #116656;
 }
 
 /* ------------------------------------------ */
@@ -45,6 +55,9 @@
   padding-top: 3em !important; /*adding so much padding because theme adds a margin-top: -65px by default */
   margin-bottom: 0.75em;
   color:#E90649;
+  border-bottom-color: #E90649;
+  border-bottom-style: solid;
+  padding-bottom: 0.5rem;
 }
 
 

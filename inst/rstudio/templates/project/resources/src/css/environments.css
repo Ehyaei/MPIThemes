@@ -172,7 +172,7 @@ body {
 
 .Theorem {
     counter-increment: thmnum;
-    border: 1px solid #BEF9E9;
+    border: 1px solid #116656;
     background-color: #BEF9E9;
 }
 
@@ -187,7 +187,7 @@ body {
 
 .Definition {
     counter-increment: defnnum;
-    border: 1px solid #DFFFD4;
+    border: 1px solid #62BD19;
     background-color: #DFFFD4;
 }
 
@@ -202,7 +202,7 @@ body {
 
 .Lemma {
     counter-increment: lemnum;
-    border: 1px solid #EEF9FF;
+    border: 1px solid #40BDE8;
     background-color: #EEF9FF;
 }
 
@@ -217,7 +217,7 @@ body {
 
 .Corollary {
     counter-increment: cornum;
-    border: 1px solid #EDF5FF;
+    border: 1px solid #009EE2;
     background-color: #EDF5FF;
 }
 
@@ -232,7 +232,7 @@ body {
 
 .Proposition {
     counter-increment: propnum;
-    border: 1px solid #FFFAF1;
+    border: 1px solid #FFCE09;
     background-color: #FFFAF1;
 }
 
@@ -247,7 +247,7 @@ body {
 
 .Exercise {
     counter-increment: exernum;
-    border: 1px solid #FFECEE;
+    border: 1px solid #E90649;
     background-color: #FFECEE;
 }
 
@@ -266,7 +266,7 @@ body {
 
 .Example {
     counter-increment: examnum;
-    border: 1px solid #FFF2F0;
+    border: 1px solid #FF7300;
     background-color: #FFF2F0;
 }
 
@@ -281,7 +281,7 @@ body {
 
 .Remark {
     counter-increment: rmknum;
-    border: 1px solid #FEF6FA;
+    border: 1px solid #FA9FCC;
     background-color: #FEF6FA;
 }
 
@@ -296,7 +296,7 @@ body {
 
 .Proof {
     counter-increment: prnum;
-    border: 1px solid #FEF3F2;
+    border: 1px solid #FC766A;
     background-color: #FEF3F2;
 }
 
@@ -311,7 +311,7 @@ body {
 
 .Solution {
     counter-increment: solnum;
-    border: 1px solid #EAF2FF;
+    border: 1px solid #5B84B1;
     background-color: #EAF2FF;
 }
 
