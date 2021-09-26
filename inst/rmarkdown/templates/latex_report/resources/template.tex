@@ -927,9 +927,10 @@ $endif$
 %......................................................................%
 % Remove Blank Page after Table of Contents and between chapter
 
+$if(book)$
 \let\cleardoublepage=\clearpage
 \let\cleardoublepage\clearpage\null\thispagestyle{empty}
-
+$endif$
 
 %----------------------------------------------------------------------------------------
 % Chapter Design
