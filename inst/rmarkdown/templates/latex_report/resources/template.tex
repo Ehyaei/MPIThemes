@@ -546,6 +546,11 @@ $else$
 \definecolor{bannerTextColor}{HTML}{000000}
 $endif$
 
+$if(chapter-title-color)$
+\definecolor{chapterTitleColor}{HTML}{$chapter-title-color$}
+$else$
+\definecolor{chapterTitleColor}{HTML}{116656}
+$endif$
 
 % Set Initial Values
 
@@ -938,13 +943,13 @@ $if(book)$
 \usepackage{titlesec}
 
 \titleformat{\chapter}[display]
-  {\bfseries\Large\color{MPIGreen}}
+  {\bfseries\Large\color{chapterTitleColor}}
   {\filright\huge\chaptertitlename \huge\thechapter}
   {1ex}
   {\Huge\titlerule[2.5pt]\vskip3pt\titlerule\vspace{1ex}\filleft}
 
 \titleformat{\section}[block]
-  {\Large\bfseries\color{MPIGreen}}
+  {\Large\bfseries\color{chapterTitleColor}}
   {\filright \thesection\vspace{1ex}}{12pt}
   {}
   [\titlerule]
