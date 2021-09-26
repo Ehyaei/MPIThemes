@@ -1,5 +1,9 @@
 # Environment
 
+Block content can be useful for informing or alerting your readers about a specific topic.
+We use the `awesomebox` and `tcolorbox` Latex packages for colored block content.
+For supplemental information, you can use notes, tips, info, error, and warning elements. Each block serves a specific semantic purpose.
+
 :::: {.rmdNote data-latex=""}
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 ::::

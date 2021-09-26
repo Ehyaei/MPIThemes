@@ -1,5 +1,5 @@
 --- 
-title: "Statistical analysis of behavioral data "
+title: "Statistical Analysis of Behavioral Data"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 author: [Ahmad Ehyaei, Sara Ershadmanesh]
 affiliation: Max Planck Institute for Biological Cybernetics 
@@ -15,6 +15,10 @@ bibliography: [chapters/bib/book.bib, chapters/bib/packages.bib]
 biblio-style: apalike
 link-citations: yes
 ---
+
+```{r,include=FALSE}
+source("manuscript/global.R")
+```
 
 \frontmatter
 
