@@ -11,8 +11,6 @@ To learn about the gt package features and see many examples, you can see
 An informative document, [gt-cookbook](https://themockup.blog/static/gt-cookbook.html#Introduction).
 
 ```{r}
-if (!require(gt)) install.packages('gt')
-library(gt)
 head(mtcars) %>% 
   gt(rownames_to_stub = TRUE) %>% 
   opt_row_striping() %>% 
@@ -71,8 +69,6 @@ strongly recommends using the `booktabs = T` option for pdf output.
 In the HTML manual, this option is removed.
 
 ```{r}
-if (!require(kableExtra)) install.packages('kableExtra')
-library(kableExtra)
 dt <- mtcars[1:5, 1:6]
 dt %>% 
 kbl() %>%

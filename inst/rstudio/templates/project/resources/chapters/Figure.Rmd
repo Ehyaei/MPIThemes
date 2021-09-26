@@ -1,21 +1,5 @@
 # Figure
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE, 
-  warning = F,
-  message = F,
-  error = F,
-  fig.align = "center",
-  comment = "#>"
-)
-library(MPIThemes)
-library(ggplot2)
-if (!require("dplyr")) install.packages("dplyr")
-library(dplyr)
-```
-
-
 This package includes several ggplot themes and palettes for creating plots with
 MPI custom design.
 
@@ -30,7 +14,6 @@ scales::show_col(palette_mpi(),ncol = 3)
 There are some examples here,
 
 ```{r mpithemes_colors,echo=TRUE,out.width="100%",echo=FALSE}
-set_color_theme()
 k = 9
 df1 = data.frame(x = rnorm(100*k), y = rnorm(100*k),type = letters[1:k]) %>% 
   mutate(x = x+ as.integer(as.factor(type)))
@@ -59,18 +42,14 @@ box_plot <- ggplot(df1, aes(x=x, fill=type)) +
   theme(legend.position = "none")
 
 # Display this figure:
-library(grid)
 gridExtra::grid.arrange(
-  point_plot,bar_plot,density_plot,box_plot,ncol = 2,
-  top = textGrob("Discrete Theme Examples",gp=gpar(fontsize=15,font=3))
-                        )
+  point_plot,bar_plot,density_plot,box_plot,ncol = 2)
+                        
 ```
 
 A continuous palette can be seen in the example below.  
 
 ```{r continous_palette, out.height="50%",echo=FALSE}
-if (!require(hexbin)) install.packages('hexbin')
-
 df <- data.frame(
   x = rnorm(10000),
   y = rnorm(10000)
