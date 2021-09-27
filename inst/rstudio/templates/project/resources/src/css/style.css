@@ -65,3 +65,19 @@ body {
 /*                   TOC Style                */
 /* ------------------------------------------ */
 
+.toc-logo {
+  width: 150px !important;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+.book-header.fixed {
+    background-color: #f6f6f6 !important;
+    border-bottom: 0px !important;
+}
+
