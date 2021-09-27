@@ -3,15 +3,14 @@ bookdown::gitbook:
   config:
     sharing: null
     info: no
-    fontsettings:
-      size: 1
+    fontsettings: null
     toc:
       collapse: section
       before: |
         <li class="toc-logo"><a href="./"><img src="src/icon/MPIBCGreen.png"></a></li>
-        <li class="toc-title"><a style="color: #116656;" href="./">MAX-PLANCK INSTITUTE</a></li>
+        <li class="toc-title"><a style="color: #116656;" href="./">Random Walk in Datasets</a></li>
       scroll_highlight: yes
-  download: ["pdf", "epub","mobi"]
+  download: ["pdf"]
 bookdown::pdf_book:
     latex_engine: xelatex
     keep_tex: true
@@ -26,5 +25,3 @@ bookdown::pdf_book:
       in_header: "src/tex/preamble.tex"
       before_body: "src/tex/before_body.tex"
       after_body: "src/tex/after_body.tex"
-bookdown::epub_book:
-  stylesheet: src/css/style.css
