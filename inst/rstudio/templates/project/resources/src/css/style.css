@@ -1,12 +1,41 @@
 @import 'https://fonts.googleapis.com/css?family=Istok+Web|Oxygen|Source+Sans+Pro';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css';
+
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/Univers-light-normal.ttf");
+}
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/UniversBlack.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/UniversLTStd.otf");
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/UniversLTStd-Bold.otf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+
 body {
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-family: 'Univers', Arial, Helvetica, sans-serif !important;
   background-color: #f6f6f6 !important;
   margin-top: 0;
 }
-.body-inner, .page-inner section.normal {
+.body-inner, .page-inner section.normal,.navigation,.book-body.fixed {
   background-color: #f6f6f6 !important;
+}
+.book.font-family-1,.book-summary, {
+  font-family: 'Univers', Arial, Helvetica, sans-serif !important;
+}
+
+.book.font-size-1 .book-body .page-inner section {
+    font-size: 1.8rem;
 }
 
 /* ------------------------------------------ */
@@ -19,16 +48,16 @@ body {
 }
 .title {
   text-transform: uppercase;
-  font-size: 4em !important;
-  margin-top: 0.275em !important;
-  margin-bottom: 0.2em !important;
+  font-size: 4rem !important;
+  margin-top: 0.275rem !important;
+  margin-bottom: 0.2rem !important;
 }
 
 .subtitle {
     text-transform: capitalize;
-    font-size: 4em !important;
-    margin-top: 0.1em !important;
-    margin-bottom: 0.2em !important;
+    font-size: 4rem !important;
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.2rem !important;
 }
 
 .author {
@@ -39,8 +68,8 @@ body {
 
 .date {
     text-transform: uppercase;
-    font-size: 1.5em !important;
-    margin-bottom: 0.2em !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.2rem !important;
 }
 
 /* ------------------------------------------ */
@@ -52,8 +81,8 @@ body {
 .section h3,
 .section h4,
 .section h5 {
-  padding-top: 3em !important; /*adding so much padding because theme adds a margin-top: -65px by default */
-  margin-bottom: 0.75em;
+  padding-top: 3rem !important; /*adding so much padding because theme adds a margin-top: -65px by default */
+  margin-bottom: 0.75rem;
   color:#E90649;
   border-bottom-color: #E90649;
   border-bottom-style: solid;
@@ -87,4 +116,6 @@ body {
 
 .book-summary {
   background: #f6f6f6 !important;
+  font-size: 1.8rem;
+
 }
