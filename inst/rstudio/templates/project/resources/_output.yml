@@ -9,6 +9,7 @@ bookdown::gitbook:
       collapse: section
       before: |
         <li class="toc-logo"><a href="./"><img src="src/icon/MPIBCGreen.png"></a></li>
+        <li class="toc-title"><a style="color: #116656;" href="./">MAX-PLANCK INSTITUTE</a></li>
       scroll_highlight: yes
   download: ["pdf", "epub","mobi"]
 bookdown::pdf_book:

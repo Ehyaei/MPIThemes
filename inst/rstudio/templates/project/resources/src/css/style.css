@@ -14,7 +14,7 @@ body {
 /* ------------------------------------------ */
 
 .title, .subtitle,.author,.date {
-  color: #009EE2;
+  color: #116656;
   text-align: center;
 }
 .title {
@@ -73,11 +73,18 @@ body {
 
 .toc-logo img {
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
+.toc-title {
+  text-align: center;
+  font-size: large;
+}
 .book-header.fixed {
     background-color: #f6f6f6 !important;
     border-bottom: 0px !important;
 }
 
+.book-summary {
+  background: #f6f6f6 !important;
+}
