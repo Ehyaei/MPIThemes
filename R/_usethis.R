@@ -59,6 +59,9 @@ usethis::use_package_doc()
 usethis::use_pkgdown()
 usethis::use_article("MPIThemes")
 usethis::use_article("ggplot2_themes", title = "ggplot2 themes")
+usethis::use_article("05_short_pdf_report", title = "Writing Short PDF Report")
+usethis::use_article("06_bookdown_document", title = "Write Book and long-form Report with Bookdown")
+
 pkgdown::build_site()
 
 
