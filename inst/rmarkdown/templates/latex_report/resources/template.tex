@@ -942,20 +942,20 @@ $if(book)$
 \usepackage{titlesec}
 
 \titleformat{\chapter}[display]
-  {\bfseries\Large\color{chapterTitleColor}}
+  {\Large\color{chapterTitleColor}}
   {\filright\huge\chaptertitlename \huge\thechapter}
   {1ex}
   {\Huge\titlerule[2.5pt]\vskip3pt\titlerule\vspace{1ex}\filleft}
 
 \titleformat{\section}[block]
-  {\Large\bfseries\color{chapterTitleColor}}
+  {\Large\color{chapterTitleColor}}
   {\filright \thesection\vspace{1ex}}{12pt}
   {}
   [\titlerule]
 
   \titleformat{\subsection}[block]
-  {\Large\bfseries\color{chapterTitleColor}}
-  {\filright \thesection\vspace{1ex}}{12pt}
+  {\Large\color{chapterTitleColor}}
+  {\filright \thesubsection\vspace{1ex}}{12pt}
   {}
   []
 
@@ -963,14 +963,14 @@ $else$
 \usepackage{titlesec}
 
 \titleformat{\section}[block]
-  {\Large\bfseries\color{chapterTitleColor}}
-  {\filright \thesection\vspace{1ex}}{12pt}
+  {\Large\color{chapterTitleColor}}
+  {\filright \textbf{\thesection}\vspace{1ex}}{12pt}
   {}
   [\titlerule]
 
 \titleformat{\subsection}[block]
-  {\Large\bfseries\color{chapterTitleColor}}
-  {\filright \thesection\vspace{1ex}}{12pt}
+  {\large\color{chapterTitleColor}}
+  {\filright \textbf{\thesubsection}\vspace{1ex}}{12pt}
   {}
   []
 
@@ -1153,32 +1153,32 @@ $else$
 \begin{center}
 \vspace{0.5cm}
 $if(title)$
-\huge{\uppercase{$title$}}
+\huge{\uppercase{\textbf{$title$}}}
 \vspace{0.2cm}
 $endif$
 
 $if(subtitle)$
 \Large{$subtitle$}
-\vspace{0.4cm}
 $endif$
+\vspace{0.4cm}
 
 $if(author)$
-\normalsize{\textsf{$for(author)$$author$$sep$, $endfor$}}
+\large{\textsf{$for(author)$$author$$sep$, $endfor$}}
 \vspace{0.2cm}
 $endif$
 
 $if(date)$
-\normalsize{\uppercase{$date$}}
+\large{\uppercase{$date$}}
 \vspace{0.4cm}
 $endif$
 
 $if(affiliation)$
-\normalsize{ $affiliation$}
+\large{ $affiliation$}
 \vspace{0.1cm}
 $endif$
 
 $if(location)$
-\normalsize{$location$}
+\large{$location$}
 $endif$
 \vspace{0.5cm}
 \end{center}
