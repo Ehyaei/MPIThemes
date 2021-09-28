@@ -2,13 +2,6 @@
 title: "Colored Box Latex Environments"
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 Block content can be useful for informing or alerting your readers about a specific topic.
 We use the `awesomebox` and `tcolorbox` Latex packages for colored block content.
 For supplemental information, you can use notes, tips, info, error, and warning elements. Each block serves a specific semantic purpose.
