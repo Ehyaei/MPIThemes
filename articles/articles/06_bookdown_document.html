@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colored Box Latex Environments • MPIThemes</title>
+<title>Write Book and long-form Report with Bookdown • MPIThemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
-<script src="../../pkgdown.js"></script><meta property="og:title" content="Colored Box Latex Environments">
+<script src="../../pkgdown.js"></script><meta property="og:title" content="Write Book and long-form Report with Bookdown">
 <meta property="og:description" content="MPIThemes">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -101,78 +101,126 @@
 
       
 
-      </header><script src="04_Latex-Environments_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="06_bookdown_document_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Colored Box Latex Environments</h1>
+      <h1 data-toc-skip>Write Book and long-form Report with Bookdown</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/04_Latex-Environments.Rmd"><code>vignettes/articles/04_Latex-Environments.Rmd</code></a></small>
-      <div class="hidden name"><code>04_Latex-Environments.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/06_bookdown_document.Rmd"><code>vignettes/articles/06_bookdown_document.Rmd</code></a></small>
+      <div class="hidden name"><code>06_bookdown_document.Rmd</code></div>
 
     </div>
 
     
     
-<p>Block content can be useful for informing or alerting your readers about a specific topic. We use the <code>awesomebox</code> and <code>tcolorbox</code> Latex packages for colored block content. For supplemental information, you can use notes, tips, info, error, and warning elements. Each block serves a specific semantic purpose.</p>
-<div id="awesomebox" class="section level1">
-<h1 class="hasAnchor">
-<a href="#awesomebox" class="anchor"></a>awesomebox</h1>
-<p><code>awesomebox</code>’s aim is to use <code>FontAwesome 5</code> icons to simplify the illustration of these boxes. Some examples of block environments are shown below.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.noteblock data-latex=""}</span>
-<span id="cb1-2"><a href="#cb1-2"></a>Lorem Ipsum ...</span>
-<span id="cb1-3"><a href="#cb1-3"></a>:::</span></code></pre></div>
+<p>Using the MPI Book Template, you could create complex documents in HTML and PDF. This template is built using the <code>bookdown</code> package. <code>bookdown</code>’s primary goal is to generate books and ebooks from R Markdown files, which is simpler than LaTeX. Another benefit of using this template is that it is well-structured for producing documents with several chapters and handling a big number of files.</p>
+<p>To open this template, you first go to <code>Projects &gt; New Project &gt; New Directory</code></p>
 <p align="center">
-<img src="../../man/figures/note_block.png" width="100%"></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {.tipblock data-latex=""}</span>
-<span id="cb2-2"><a href="#cb2-2"></a>Lorem Ipsum ...</span>
-<span id="cb2-3"><a href="#cb2-3"></a>:::</span></code></pre></div>
+<img src="../../man/figures/new_project.png" width="50%"></p>
+<p>This will lead you to the list of projects. scrol list and find the MPI Book Template. Click on it.</p>
 <p align="center">
-<img src="../../man/figures/tip_block.png" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>::: {.warningblock data-latex=""}</span>
-<span id="cb3-2"><a href="#cb3-2"></a>Lorem Ipsum ...</span>
-<span id="cb3-3"><a href="#cb3-3"></a>:::</span></code></pre></div>
+<img src="../../man/figures/select_project.png" width="50%"></p>
+<p>After that, enter the name of the directory and set path and click “Create Project”. This will generate a new directory with an.Rproj file and the name you specified in the directory name.</p>
 <p align="center">
-<img src="../../man/figures/warning_block.png" width="100%"></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.cautionblock data-latex=""}</span>
-<span id="cb4-2"><a href="#cb4-2"></a>Lorem Ipsum ...</span>
-<span id="cb4-3"><a href="#cb4-3"></a>:::</span></code></pre></div>
+<img src="../../man/figures/name_path_setting.png" width="50%"></p>
+<p>After the restart session, a project with the following structure will be opened.</p>
 <p align="center">
-<img src="../../man/figures/caution_block.png" width="100%"></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a>::: {.importantblock data-latex=""}</span>
-<span id="cb5-2"><a href="#cb5-2"></a>Lorem Ipsum ...</span>
-<span id="cb5-3"><a href="#cb5-3"></a>:::</span></code></pre></div>
+<img src="../../man/figures/gitbook_structures.png" width="50%"></p>
+<p>Each component of this project is required to set up one of the bookdown’s features, which we shall detail below.</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>index.Rmd</strong> The primary document information, such as the title, author’s name, and data, are entered in this file.You can also use the PDF report features to design a book PDF output format. For more information, you can see (PDF Report Template Customization)[<a href="https://ehyaei.github.io/MPIThemes/articles/articles/01_pdf_report_template_customization.html" class="uri">https://ehyaei.github.io/MPIThemes/articles/articles/01_pdf_report_template_customization.html</a>]</li>
+</ol>
+<pre><code>--- 
+title: "Statistical Analysis of Behavioral Data"
+date: "28 September, 2021"
+author: [Ahmad Ehyaei, Sara Ershadmanesh]
+affiliation: Max Planck Institute for Biological Cybernetics 
+location: Tübingen
+titlepage: true
+book: true
+page-background-color: f6f6f6
+logo-primary: src/icon/MPILogoWhite.eps
+titlepage-top-color: f03e4c
+titlepage-text-color: FFFFFF
+titlepage-author-text-color: f03e4c
+author-vjust: 80
+chapter-title-color: E90649
+titlepage-bottom-background: src/img/bottom_background.png
+site: bookdown::bookdown_site
+bibliography: [chapters/bib/book.bib, chapters/bib/packages.bib]
+biblio-style: apalike
+link-citations: yes
+---</code></pre>
+<p>The following figure illustrates the important features of the title page.</p>
 <p align="center">
-<img src="../../man/figures/important_block.png" width="100%"></p>
-</div>
-<div id="tcolorbox" class="section level1">
-<h1 class="hasAnchor">
-<a href="#tcolorbox" class="anchor"></a>tcolorbox</h1>
-<p>tcolorbox is a well-known latex package that generates a configuration for colored and framed text boxes with a heading line.</p>
-<p>We use simple colored boxes in MPIThems. In the future, appropriate blocks will be added. look at some simple examples</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>::: {.info-box data-latex=""}</span>
-<span id="cb6-2"><a href="#cb6-2"></a>Lorem Ipsum ...</span>
-<span id="cb6-3"><a href="#cb6-3"></a>:::</span></code></pre></div>
+<img src="../../man/figures/bookdown_manual.png" width="100%"></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>output.yml</strong></li>
+</ol>
+<p>Output formats can be set in the YAML metadata of the book’s initial Rmd file, or in a separate YAML file named "_output.yml." We specified various settings for HTML, PDF, and ePubs. <code>toc-logo</code> and <code>toc-title</code> are related to the logo and tex at the top of the gitbook table of content. In the following gitbook output parameters.</p>
+<pre><code>--- 
+bookdown::gitbook:
+  css:  [src/css/style.css,src/css/environments.css]
+  config:
+    sharing: null
+    info: no
+    fontsettings: null
+    toc:
+      collapse: section
+      before: |
+        &lt;li class="toc-logo"&gt;&lt;a href="./"&gt;&lt;img src="src/icon/MPIBCGreen.png"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="toc-title"&gt;&lt;a style="color: #116656;" href="./"&gt;Max-Planck Institute&lt;/a&gt;&lt;/li&gt;
+      scroll_highlight: yes
+    download: ["pdf"]
+---</code></pre>
+<p>In the YAML’s PDF part, we set the path of the latex template and other files.</p>
+<pre><code>--- 
+bookdown::pdf_book:
+    latex_engine: xelatex
+    keep_tex: true
+    toc_depth: 5
+    pandoc_args:
+    - "--top-level-division=chapter"
+    - "--wrap=preserve"
+    - "--lua-filter=src/tex/template.lua"
+    dev: "cairo_pdf"
+    template: "src/tex/template.tex"
+    includes:
+      in_header: "src/tex/preamble.tex"
+      before_body: "src/tex/before_body.tex"
+      after_body: "src/tex/after_body.tex"
+---</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>chapters &amp; bookdown.yml</strong></li>
+</ol>
+<p>This folder contains RMarkdown files. Each of these files is one of the chapters of the book. You can set the chapters order with a <code>_bookdown.yml</code> file.</p>
+<pre><code>--- 
+book_filename: "Report"
+delete_merged_file: true
+tables: yes
+rmd_files:
+  - "index.Rmd"
+  - "chapters/Introduction.Rmd"
+  - "chapters/Markdown.Rmd"
+  - "chapters/Code_Formula.Rmd"
+  - "chapters/Figure.Rmd"
+  - "chapters/Table.Rmd"
+  - "chapters/Environment.Rmd"
+  - "chapters/Reference.Rmd"
+---</code></pre>
+<p>We may start the project after inputting the document information and setting the output style by clicking the build button in the rstodio toolbar.</p>
 <p align="center">
-<img src="../../man/figures/info_box.png" width="100%"></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a>::: {.warning-box data-latex=""}</span>
-<span id="cb7-2"><a href="#cb7-2"></a>Lorem Ipsum ...</span>
-<span id="cb7-3"><a href="#cb7-3"></a>:::</span></code></pre></div>
+<img src="../../man/figures/rstudio_build.png" width="100%"></p>
+<p>We may also use the short key <code>Shift+Ctrl+B</code> to do this. Following the completion of the project, two PDF files and a gateway are created at the same time. To view the PDF, you can click on the PDF icon at the top of the gitbook.</p>
 <p align="center">
-<img src="../../man/figures/warning_box.png" width="100%"></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>::: {.error-box data-latex=""}</span>
-<span id="cb8-2"><a href="#cb8-2"></a>Lorem Ipsum ...</span>
-<span id="cb8-3"><a href="#cb8-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/error_box.png" width="100%"></p>
-</div>
+<img src="../../man/figures/bookdown.png" width="100%"></p>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
