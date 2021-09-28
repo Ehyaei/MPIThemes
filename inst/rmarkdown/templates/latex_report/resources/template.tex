@@ -953,6 +953,29 @@ $if(book)$
   {\filright \thesection\vspace{1ex}}{12pt}
   {}
   [\titlerule]
+
+  \titleformat{\subsection}[block]
+  {\Large\bfseries\color{chapterTitleColor}}
+  {\filright \thesection\vspace{1ex}}{12pt}
+  {}
+  []
+
+$else$
+\usepackage{titlesec}
+
+\titleformat{\section}[block]
+  {\Large\bfseries\color{chapterTitleColor}}
+  {\filright \thesection\vspace{1ex}}{12pt}
+  {}
+  [\titlerule]
+
+\titleformat{\subsection}[block]
+  {\Large\bfseries\color{chapterTitleColor}}
+  {\filright \thesection\vspace{1ex}}{12pt}
+  {}
+  []
+
+
 $endif$
 
 %----------------------------------------------------------------------------------------
