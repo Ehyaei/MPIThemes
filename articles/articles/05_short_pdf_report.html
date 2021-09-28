@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colored Box Latex Environments • MPIThemes</title>
+<title>Writing Short PDF Report • MPIThemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
-<script src="../../pkgdown.js"></script><meta property="og:title" content="Colored Box Latex Environments">
+<script src="../../pkgdown.js"></script><meta property="og:title" content="Writing Short PDF Report">
 <meta property="og:description" content="MPIThemes">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -104,78 +104,26 @@
 
       
 
-      </header><script src="04_Latex-Environments_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="05_short_pdf_report_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Colored Box Latex Environments</h1>
+      <h1 data-toc-skip>Writing Short PDF Report</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/04_Latex-Environments.Rmd"><code>vignettes/articles/04_Latex-Environments.Rmd</code></a></small>
-      <div class="hidden name"><code>04_Latex-Environments.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/05_short_pdf_report.Rmd"><code>vignettes/articles/05_short_pdf_report.Rmd</code></a></small>
+      <div class="hidden name"><code>05_short_pdf_report.Rmd</code></div>
 
     </div>
 
     
     
-<p>Block content can be useful for informing or alerting your readers about a specific topic. We use the <code>awesomebox</code> and <code>tcolorbox</code> Latex packages for colored block content. For supplemental information, you can use notes, tips, info, error, and warning elements. Each block serves a specific semantic purpose.</p>
-<div id="awesomebox" class="section level1">
-<h1 class="hasAnchor">
-<a href="#awesomebox" class="anchor"></a>awesomebox</h1>
-<p><code>awesomebox</code>’s aim is to use <code>FontAwesome 5</code> icons to simplify the illustration of these boxes. Some examples of block environments are shown below.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.noteblock data-latex=""}</span>
-<span id="cb1-2"><a href="#cb1-2"></a>Lorem Ipsum ...</span>
-<span id="cb1-3"><a href="#cb1-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/note_block.png" width="100%"></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {.tipblock data-latex=""}</span>
-<span id="cb2-2"><a href="#cb2-2"></a>Lorem Ipsum ...</span>
-<span id="cb2-3"><a href="#cb2-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/tip_block.png" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>::: {.warningblock data-latex=""}</span>
-<span id="cb3-2"><a href="#cb3-2"></a>Lorem Ipsum ...</span>
-<span id="cb3-3"><a href="#cb3-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/warning_block.png" width="100%"></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.cautionblock data-latex=""}</span>
-<span id="cb4-2"><a href="#cb4-2"></a>Lorem Ipsum ...</span>
-<span id="cb4-3"><a href="#cb4-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/caution_block.png" width="100%"></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a>::: {.importantblock data-latex=""}</span>
-<span id="cb5-2"><a href="#cb5-2"></a>Lorem Ipsum ...</span>
-<span id="cb5-3"><a href="#cb5-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/important_block.png" width="100%"></p>
-</div>
-<div id="tcolorbox" class="section level1">
-<h1 class="hasAnchor">
-<a href="#tcolorbox" class="anchor"></a>tcolorbox</h1>
-<p>tcolorbox is a well-known latex package that generates a configuration for colored and framed text boxes with a heading line.</p>
-<p>We use simple colored boxes in MPIThems. In the future, appropriate blocks will be added. look at some simple examples</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>::: {.info-box data-latex=""}</span>
-<span id="cb6-2"><a href="#cb6-2"></a>Lorem Ipsum ...</span>
-<span id="cb6-3"><a href="#cb6-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/info_box.png" width="100%"></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a>::: {.warning-box data-latex=""}</span>
-<span id="cb7-2"><a href="#cb7-2"></a>Lorem Ipsum ...</span>
-<span id="cb7-3"><a href="#cb7-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/warning_box.png" width="100%"></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>::: {.error-box data-latex=""}</span>
-<span id="cb8-2"><a href="#cb8-2"></a>Lorem Ipsum ...</span>
-<span id="cb8-3"><a href="#cb8-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/error_box.png" width="100%"></p>
-</div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Ehyaei/MPIThemes">MPIThemes</a></span><span class="op">)</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
