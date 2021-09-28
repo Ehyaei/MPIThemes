@@ -830,7 +830,6 @@ $endif$
 
 $if(disable-header-and-footer)$
 $else$
-
 $if(banner-color)$
 % Add Style
 \usepackage{fancyhdr}
@@ -1146,7 +1145,6 @@ $else$
 %......................................................................%
 % start short report titlepage
 
-\thispagestyle{plain}
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] at (page cs:0.8,0.85){$if(logo-primary)$\includegraphics[height=0.1\paperheight]{$logo-primary$}$endif$};
 \node[inner sep=0pt] at (page cs:-0.8,0.85){$if(logo-secondary)$\includegraphics[height=0.1\paperheight]{$logo-secondary$}$endif$};
