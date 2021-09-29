@@ -101,6 +101,8 @@ include:
     package
 -   David Carayon’s
     [InraeThemes](https://github.com/davidcarayon/InraeThemes) package
+-   [ElegantBook](https://github.com/ElegantLaTeX/ElegantBook) LaTeX
+    Template for Books
 
 ## TODO
 
@@ -109,8 +111,8 @@ pull request to the Github repository. The following templates will be
 gradually added to the bundle.
 
 -   [x] PDF Report (LaTeX)
--   [ ] Short PDF note (LaTeX)
--   [ ] Long Document (Gitbook/Bookdown)
+-   [x] Short PDF note (LaTeX)
+-   [x] Long Document (Gitbook/Bookdown)
 -   [ ] Editable Report (Word)
 -   [ ] PhD Thesis (LaTeX/Bookdown)
 -   [ ] Beamer Presentation (LaTeX)
