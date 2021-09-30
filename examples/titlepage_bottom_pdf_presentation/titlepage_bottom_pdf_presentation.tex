@@ -1,0 +1,570 @@
+\documentclass[10pt,ignorenonframetext,]{beamer}
+% ------------------------------ %
+% Add Some pacakges
+\usepackage[most]{tcolorbox}
+\usepackage{awesomebox}
+
+% Remode Defined Environments
+\let\Theorem\relax
+\let\endTheorem\relax
+
+\let\Definition\relax
+\let\endDefinition\relax
+
+\let\Lemma\relax
+\let\endLemma\relax
+
+\let\Corollary\relax
+\let\endCorollary\relax
+
+\let\Proposition\relax
+\let\endProposition\relax
+
+\let\Exercise\relax
+\let\endExercise\relax
+
+\let\Example\relax
+\let\endExample\relax
+
+\let\Remark\relax
+\let\endRemark\relax
+
+\let\Proof\relax
+\let\endProof\relax
+
+\let\Solution\relax
+\let\endSolution\relax
+
+% ------------------------------ %
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \let\insertsectionnumber\relax
+  \let\sectionname\relax
+  \frame{\sectionpage}
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\title{Daily Report}
+\author{Ahmad Ehyaei \and Sara Ershadmanesh}
+\date{2012-01-19}
+
+% ----------------------------------------------- %
+% Start Customization
+% ----------------------------------------------- %
+
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{positioning}
+% ...................................................................... %
+% Add MPI Colors
+
+\usepackage{xcolor}
+\definecolor{MPIGreen}{HTML}{116656}
+\definecolor{MPIGray}{HTML}{DDDED6}
+\definecolor{MPIBlue}{HTML}{009EE2}
+\definecolor{MPIRed}{HTML}{E90649}
+\definecolor{MPILightBlue}{HTML}{40BDE8}
+\definecolor{MPIOrange}{HTML}{FF7300}
+\definecolor{MPIYellow}{HTML}{FFCE09}
+\definecolor{MPIPink}{HTML}{FA9FCC}
+\definecolor{MPILightGreen}{HTML}{62BD19}
+\definecolor{MPILivingCoral}{HTML}{FC766A}
+\definecolor{MPIPacificCoast}{HTML}{5B84B1}
+
+% Some optional color adjustments and features to Beamer.
+%------------------------------------------------------------------
+
+% Title Page
+% feature: titlepage-fg-color
+% feature: titlepage-bg-color
+
+
+\definecolor{titlepageFgColor}{HTML}{009EE2}
+
+\definecolor{titlepageBgColor}{HTML}{ffffff}
+
+\setbeamercolor{titlepage text}{fg=titlepageFgColor, bg=titlepageBgColor}
+
+\setbeamercolor{title}{use=titlepage text,parent=titlepage text}
+\setbeamercolor{subtitle}{use=titlepage text,parent=titlepage text}
+\setbeamercolor{author}{use=titlepage text,parent=titlepage text}
+\setbeamercolor{date}{use=titlepage text,parent=titlepage text}
+
+
+% feature: frametitle-fg-color
+% feature: frametitle-bg-color
+
+\definecolor{frametitleFgColor}{HTML}{ffffff}
+
+\definecolor{frametitleBgColor}{HTML}{009EE2}
+
+\setbeamercolor{frametitle}{fg=frametitleFgColor, bg=frametitleBgColor}
+
+% Section Page
+% feature: section-title-fg-color
+% feature: section-title-bg-color
+
+\definecolor{sectionTitleFgColor}{HTML}{ffffff}
+
+\definecolor{sectionTitleBgColor}{HTML}{009EE2}
+
+\setbeamercolor{section title}{fg=sectionTitleFgColor,bg=sectionTitleBgColor}
+
+%......................................................................%
+% Add Main Fonts
+
+\usepackage{fontspec}
+% set main font univers
+\setmainfont[ Path = src/fonts/]{Univers-light-normal.ttf}[
+BoldFont = UniversBlack.ttf,
+ItalicFont = UniversLTStd.otf,
+BoldItalicFont = UniversLTStd-Bold.otf
+]
+
+%......................................................................%
+%                                   Set Geometry                                %
+
+\makeatletter
+\def\parsecomma#1,#2\endparsecomma{\def\page@x{#1}\def\page@y{#2}}
+\tikzdeclarecoordinatesystem{page}{
+    \parsecomma#1\endparsecomma
+    \pgfpointanchor{current page}{north east}
+    % Save the upper right corner
+    \pgf@xc=\pgf@x%
+    \pgf@yc=\pgf@y%
+    % save the lower left corner
+    \pgfpointanchor{current page}{south west}
+    \pgf@xb=\pgf@x%
+    \pgf@yb=\pgf@y%
+    % Transform to the correct placement
+    \pgfmathparse{(\pgf@xc-\pgf@xb)/2.*\page@x+(\pgf@xc+\pgf@xb)/2.}
+    \expandafter\pgf@x\expandafter=\pgfmathresult pt
+    \pgfmathparse{(\pgf@yc-\pgf@yb)/2.*\page@y+(\pgf@yc+\pgf@yb)/2.}
+    \expandafter\pgf@y\expandafter=\pgfmathresult pt
+}
+\makeatother
+
+%......................................................................%
+%                         Design Title Page                            %
+
+% feature: titlepate-portrait: Boolean
+% feature: titlepage-top-color: Hex color witout #
+% feature: titlepage-bottom-color: Hex color witout #
+
+\definecolor{titlepageTopColor}{HTML}{DDDED6}
+
+\definecolor{titlepageBottomColor}{HTML}{009EE2}
+
+% feature: titlepage-text-color
+% feature: titlepage-author-text-color
+
+\definecolor{titlepageTextColor}{HTML}{7F7F7F}
+
+\definecolor{titlepageAuthorTextColor}{HTML}{ffa500}
+
+% --------------------------------------------------- %
+%                   Portrait
+% --------------------------------------------------- %
+
+\setbeamertemplate{title page}{%
+\begin{tikzpicture}[remember picture,overlay]
+
+
+% feature: titlepage-top-background: image path
+\fill[titlepageTopColor] (page cs:-1,0.224) rectangle (current page.north east);
+
+% feature: titlepage-bottom-background: image path
+\node[anchor=south] at ([yshift=-0.15cm]current page.south) {\includegraphics[keepaspectratio=false,width=\paperwidth,height = 0.616\paperheight]{src/img/clouds.png}};
+
+% add main logo
+\node[inner sep=0pt] at (page cs:0.8,0.78){\includegraphics[height=0.17\paperheight]{src/icon/MPILogoGray.eps}};
+% add secondary logo
+\node[inner sep=0pt] at (page cs:0.8,-0.78){};
+
+% ------------------------ %
+%         Add Text         %
+% ------------------------ %
+
+% feature: title-vjust
+\def\titleVjust{95}
+% feature: title-hjust
+\def\titleHjust{0}
+% feature: author-vjust
+\def\authorVjust{-110}
+% feature: author-hjust
+\def\authorHjust{0}
+
+\node[below,text width=0.9\paperwidth,align=left,font=\color{titlepageTextColor}] at (page cs:0.0+\titleHjust,0.0+\titleVjust) {
+
+    \Large{\uppercase{Daily Report}}
+  
+  
+  % add bodoni font to date
+    \vspace{0.2cm}
+  \normalsize{\uppercase{2012-01-19}}
+  
+  \vspace{0.3cm}
+    \scriptsize{ Max-Planck Institute}
+  
+  };
+
+\node[below,text width=0.9\paperwidth,align=left,font=\color{titlepageTextColor}] at (page cs:0.0+\authorHjust,0.0+\authorVjust) {
+    \small{\textcolor{titlepageAuthorTextColor}{Ahmad
+Ehyaei}\textcolor{titlepageAuthorTextColor}{,} \textcolor{titlepageAuthorTextColor}{Sara
+Ershadmanesh}}
+  \vspace{0.3cm}
+  };
+
+\end{tikzpicture}
+}
+
+% ----------------------------------------
+% paga number
+
+% feature: footline-color
+\definecolor{footlineColor}{HTML}{009EE2}
+
+\setbeamercolor{footline}{fg=footlineColor}
+\setbeamerfont{footline}{size=\tiny}
+
+
+\setbeamertemplate{footline}{
+    \ifnum \theframenumber=1
+    \else
+        \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2ex,dp=2ex,leftskip=4ex,rightskip=4ex]{page footer}%
+        \usebeamerfont{title in head/foot}%
+        \insertsection \hfill
+        \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}}%
+
+    \fi
+}
+
+% ----------------------------------------
+% Design Section Page
+
+
+
+
+% page background
+% feature: page-background-color
+
+\definecolor{pageBackgroundColor}{HTML}{f6f6f6}
+\setbeamercolor{background canvas}{bg=pageBackgroundColor}
+
+
+% ------------------- Frametitle ---------------------
+% Add Logo to frame title
+% feature: frametitle-logo
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[%
+      wd=\paperwidth,%
+      ht=4ex,
+      sep = 0.1cm,
+      leftskip=0.5cm,%
+      rightskip=0.5cm,%
+    ]{frametitle}%
+  \insertframetitle%
+  \nolinebreak%
+  \hfill
+  \raisebox{-0.9ex}{\includegraphics[height=3.3ex,keepaspectratio]{src/icon/MPIBCNNWhite.eps}}
+  \end{beamercolorbox}%
+}
+\makeatother
+
+% ----------------------------------------------- %
+% Add Environments
+
+
+% Think
+\newenvironment{rmdThink}{
+\begin{tcolorbox}[enhanced, title={\textbf{\color{white}Think}},colback=MPIGreen!10!white, colframe=MPIGreen,boxrule=0.2mm]}{
+\end{tcolorbox}}
+
+\newtcolorbox{rmdthink}{colback=MPIGreen!10!white,colframe=MPIGreen,coltext=black,leftrule= 1mm,rightrule=0.1mm,bottomrule=0.1mm,toprule=0.1mm, boxsep=0.5pt,arc=2pt}
+
+% Note
+\newenvironment{rmdNote}{
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Note}},colback=MPIRed!10!white, colframe=MPIRed,boxrule=0.2mm]}{
+    \end{tcolorbox}}
+\newtcolorbox{rmdnote}{colback=MPIRed!10!white,colframe=MPIRed,coltext=black,leftrule= 1mm,rightrule=0.1mm,bottomrule=0.1mm,toprule=0.1mm, boxsep=0.5pt,arc=2pt}
+
+% Tip
+\newenvironment{rmdTip}{
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Tip}},colback=MPILightGreen!10!white, colframe=MPILightGreen,boxrule=0.2mm]}{
+    \end{tcolorbox}}
+\newtcolorbox{rmdtip}{colback=MPILightGreen!10!white,colframe=MPILightGreen,coltext=black,leftrule= 1mm,rightrule=0.1mm,bottomrule=0.1mm,toprule=0.1mm, boxsep=0.5pt,arc=2pt}
+
+% warning
+\newenvironment{rmdWarning}{
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Warning}},colback=MPIOrange!10!white, colframe=MPIOrange,boxrule=0.2mm]}{
+    \end{tcolorbox}}
+\newtcolorbox{rmdwarning}{colback=MPIOrange!10!white,colframe=MPIOrange,coltext=black,leftrule= 1mm,rightrule=0.1mm,bottomrule=0.1mm,toprule=0.1mm, boxsep=0.5pt,arc=2pt}
+
+% todo
+\newenvironment{rmdTodo}{
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}To Do}},colback=MPIBlue!10!white, colframe=MPIBlue,boxrule=0.2mm]}{
+    \end{tcolorbox}}
+\newtcolorbox{rmdtodo}{colback=MPIBlue!10!white,colframe=MPIBlue,coltext=black,leftrule= 1mm,rightrule=0.1mm,bottomrule=0.1mm,toprule=0.1mm, boxsep=0.5pt,arc=2pt}
+
+\newtcbtheorem[auto counter,number within=section]{Theorem}{Theorem}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIGreen!10!white,colframe=MPIGreen,
+                colbacktitle=MPIGreen, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{thm}
+
+\newtcbtheorem[auto counter,number within=section]{Definition}{Definition}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPILightGreen!10!white,colframe=MPILightGreen,
+                colbacktitle=MPILightGreen, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{defn}
+
+\newtcbtheorem[auto counter,number within=section]{Lemma}{Lemma}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPILightBlue!10!white,colframe=MPILightBlue,
+                colbacktitle=MPILightBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{lem}
+
+\newtcbtheorem[auto counter,number within=section]{Corollary}{Corollary}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIBlue!10!white,colframe=MPIBlue,
+                colbacktitle=MPIBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{cor}
+
+\newtcbtheorem[auto counter,number within=section]{Proposition}{Proposition}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIYellow!10!white,colframe=MPIYellow,
+                colbacktitle=MPIYellow, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{prop}
+
+\newtcbtheorem[auto counter,number within=section]{Exercise}{Exercise}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIRed!10!white,colframe=MPIRed,
+                colbacktitle=MPIRed, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{exer}
+
+\newtcbtheorem[auto counter,number within=section]{Example}{Example}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIOrange!10!white,colframe=MPIOrange,
+                colbacktitle=MPIOrange, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{exam}
+
+\newtcbtheorem[auto counter,number within=section]{Remark}{Remark}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIPink!10!white,colframe=MPIPink,
+                colbacktitle=MPIPink, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{rmk}
+
+
+\newtcbtheorem[auto counter,number within=section]{Proof}{Proof}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPILivingCoral!10!white,colframe=MPILivingCoral,
+                colbacktitle=MPILivingCoral, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{pr}
+
+\newtcbtheorem[auto counter,number within=section]{Solution}{Solution}{%
+                lower separated=false,boxrule=0.2mm,
+                colback=MPIPacificCoast!10!white,colframe=MPIPacificCoast,
+                colbacktitle=MPIPacificCoast, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{sol}
+
+
+% --------------------------- %
+%       Remove Navigate
+% --------------------------- %
+
+\beamertemplatenavigationsymbolsempty
+
+% ----------------------------------------------- %
+% End Customization
+% ----------------------------------------------- %
+
+
+\begin{document}
+\frame{\titlepage}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\begin{frame}[fragile]{Start Presentation}
+\protect\hypertarget{start-presentation}{}
+This is simple an R Markdown document to show MPIThemes features. use
+\texttt{\#} sign to define chapter. For definition subsection add
+\texttt{\#\#} to first line and add name of sub chapter.
+\end{frame}
+
+\begin{frame}[fragile]{Code Embedding}
+\protect\hypertarget{code-embedding}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(cars)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     speed           dist       
+ Min.   : 4.0   Min.   :  2.00  
+ 1st Qu.:12.0   1st Qu.: 26.00  
+ Median :15.0   Median : 36.00  
+ Mean   :15.4   Mean   : 42.98  
+ 3rd Qu.:19.0   3rd Qu.: 56.00  
+ Max.   :25.0   Max.   :120.00  
+\end{verbatim}
+
+We can run inline R code \texttt{2\^{}10\ =} 1024
+\end{frame}
+
+\begin{frame}[fragile]{Markdown}
+\protect\hypertarget{markdown}{}
+In RMarkdown we can use markdown syntax, such as unordered list items
+
+\begin{itemize}
+\tightlist
+\item
+  item
+\item
+  item
+
+  \begin{itemize}
+  \tightlist
+  \item
+    more item
+  \end{itemize}
+\end{itemize}
+
+Or use block quotes are written after \texttt{\textgreater{}}, e.g.,
+
+\begin{quote}
+To be, or not to be, that is the question!
+\end{quote}
+\end{frame}
+
+\begin{frame}{Math Formula}
+\protect\hypertarget{math-formula}{}
+We can easily write math expressions by latex syntax. Inline LateX
+equations can be written in a pair of dollar signs
+\[f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}\]
+\end{frame}
+
+\begin{frame}{Plot}
+\protect\hypertarget{plot}{}
+\begin{center}\includegraphics{figure/scatterPlot-1} \end{center}
+\end{frame}
+
+\begin{frame}{Block Environments}
+\protect\hypertarget{block-environments}{}
+\begin{rmdThink}
+Lorem Ipsum is simply dummy text of the printing and typesetting
+industry.
+
+\end{rmdThink}
+
+\begin{rmdthink}
+Lorem Ipsum is simply dummy text of the printing and typesetting
+industry.
+
+\end{rmdthink}
+
+\begin{Theorem}{Pythagorean theorem}
+This is a theorem about right triangles and can be summarised in the
+next equation \[ x^2 + y^2 = z^2 \]
+
+\end{Theorem}
+\end{frame}
+
+
+\end{document}
