@@ -4,7 +4,10 @@
 \alias{set_color_theme}
 \title{Set ggplot default theme and palette}
 \usage{
-set_color_theme()
+set_color_theme(base_size = 12)
+}
+\arguments{
+\item{base_size}{base font size, given in pts.}
 }
 \value{
 set theme and color to all ggplot figures

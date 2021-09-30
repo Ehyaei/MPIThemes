@@ -9,7 +9,8 @@ latex_presentation(
   keep_tex = TRUE,
   highlight = "tango",
   latex_engine = "xelatex",
-  fig_caption = TRUE
+  fig_caption = TRUE,
+  slide_level = 2
 )
 }
 \arguments{

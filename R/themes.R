@@ -114,6 +114,8 @@ bottom_legend = function(){
 
 #' Set ggplot default theme and palette
 #'
+#' @param base_size base font size, given in pts.
+#'
 #' @return set theme and color to all ggplot figures
 #' @export
 #'
@@ -124,10 +126,10 @@ bottom_legend = function(){
 #' ggplot(data = mtcars, aes(x = cyl)) +
 #'   geom_bar(aes(y = ..count..,fill = as.character(cyl)))
 #'   }
-set_color_theme <- function() {
+set_color_theme <- function(base_size = 12) {
   # continuous_color = c(lighten(MPIBlue,0.6),MPIBlue,MPIYellow,MPIRed,darken(MPIRed,0.4),darken(MPIRed,0.8))
   continuous_color = c("#B5E6FF", "#40BDE8", "#FFCE09", "#E90649",  "#900129", "#41000C")
-  ggplot2::theme_set(MPIThemes::theme_scientific())
+  ggplot2::theme_set(MPIThemes::theme_scientific(base_size=base_size))
   assign("scale_colour_discrete", function(..., values = MPIThemes::palette_colors$HTML) scale_colour_manual(..., values = values), globalenv())
   assign("scale_fill_discrete", function(..., values = MPIThemes::palette_colors$HTML) scale_fill_manual(..., values = values), globalenv())
   assign("scale_fill_continuous", function(..., values = continuous_color) scale_fill_gradientn(..., colours = values), globalenv())
