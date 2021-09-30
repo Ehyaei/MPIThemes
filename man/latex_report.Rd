@@ -2,7 +2,7 @@
 % Please edit documentation in R/latex_templates.R
 \name{latex_report}
 \alias{latex_report}
-\title{PDF Repolrt Latex Template}
+\title{PDF Report Latex Template}
 \usage{
 latex_report(
   ...,
@@ -29,10 +29,4 @@ R Markdown output format.
 \description{
 latex_report function includes many features to customize your latex template
 and produce pdf report output.
-}
-\examples{
-\dontrun{
-rmarkdown::draft("report.Rmd", template = "latex_report", package = "MPIThemes")
-rmarkdown::render("report.Rmd")
-}
 }

@@ -5,6 +5,12 @@ inherit_pdf_document <- function(...) {
 }
 
 
+inherit_pdf_presentation <- function(...) {
+  fmt <- rmarkdown::beamer_presentation(...)
+  fmt$inherits <- "beamer_presentation"
+  fmt
+}
+
 pretty_number <- function(x) {
   dplyr::case_when(
     x < 1e3 ~ as.character(x),
