@@ -17,6 +17,6 @@ library(ggplot2)
 #                                                          #
 ############################################################
 
-set_color_theme()
+set_color_theme(base_size = 8)
 
 
