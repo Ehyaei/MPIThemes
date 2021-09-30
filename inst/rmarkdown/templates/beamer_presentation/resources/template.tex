@@ -359,14 +359,16 @@ $if(titlepate-portrait)$
 
 
 $if(titlepage-top-background)$
-\node[anchor=west] at ([xshift=-0.1cm]current page.west) {\includegraphics[keepaspectratio=false,width=0.616\paperwidth,height =\paperheight]{$titlepage-top-background$}};
+\node[anchor=east] at ([xshift=0.1cm]current page.east) {\includegraphics[keepaspectratio=false,width=0.385\paperwidth,height =\paperheight]{$titlepage-top-background$}}
 $else$
 \fill[titlepageTopColor] (page cs:0.25,-1) rectangle (current page.north east);
 $endif$
 
 % feature: titlepage-bottom-background: image path
 $if(titlepage-bottom-background)$
-\node[anchor=east] at ([xshift=0.1cm]current page.east) {\includegraphics[keepaspectratio=false,width=0.385\paperwidth,height =\paperheight]{$titlepage-top-background$}};
+\node[anchor=west] at ([xshift=-0.15cm]current page.west) {\includegraphics[keepaspectratio=false,width=0.63\paperwidth,height =\paperheight]{$titlepage-bottom-background$}};
+
+;
 $else$
 \fill[titlepageBottomColor] (current page.south west) rectangle (page cs:0.25,1);
 $endif$
@@ -446,7 +448,7 @@ $endif$
 
 % feature: titlepage-bottom-background: image path
 $if(titlepage-bottom-background)$
-\node[anchor=south] at ([yshift=-0.15cm]current page.south) {\includegraphics[keepaspectratio=false,width=\paperwidth,height = 0.616\paperheight]{$titlepage-top-background$}};
+\node[anchor=south] at ([yshift=-0.15cm]current page.south) {\includegraphics[keepaspectratio=false,width=\paperwidth,height = 0.616\paperheight]{$titlepage-bottom-background$}};
 $else$
 \fill[titlepageBottomColor] (current page.south west) rectangle (page cs:1,0.224);
 $endif$
