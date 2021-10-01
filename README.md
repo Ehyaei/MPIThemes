@@ -7,7 +7,7 @@
 
 [![R build
 status](https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ehyaei/MPIThemes/actions)
-[![](https://img.shields.io/badge/devel%20version-0.0.1-orange.svg)](https://github.com/Ehyaei/MPIThemes)
+[![](https://img.shields.io/badge/devel%20version-0.0.2-orange.svg)](https://github.com/Ehyaei/MPIThemes)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg)](https://github.com/Ehyaei/MPIThemes/commits/master)
 
@@ -114,7 +114,7 @@ gradually added to the bundle.
 -   [x] Short PDF note (LaTeX)
 -   [x] Long Document (Gitbook/Bookdown)
 -   [ ] Editable Report (Word)
--   [ ] PhD Thesis (LaTeX/Bookdown)
+-   [x] PhD Thesis (LaTeX/Bookdown)
 -   [ ] Beamer Presentation (LaTeX)
 -   [ ] HTML Presentation (RevealJS)
 -   [ ] Editable Presentation (Powerpoint)

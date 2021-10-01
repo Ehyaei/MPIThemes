@@ -97,7 +97,7 @@ The following templates will be gradually added to the bundle.
 -   [x] Short PDF note (LaTeX)
 -   [x] Long Document (Gitbook/Bookdown)
 -   [ ] Editable Report (Word)
--   [ ] PhD Thesis (LaTeX/Bookdown)
+-   [x] PhD Thesis (LaTeX/Bookdown)
 -   [ ] Beamer Presentation (LaTeX)
 -   [ ] HTML Presentation (RevealJS)
 -   [ ] Editable Presentation (Powerpoint)

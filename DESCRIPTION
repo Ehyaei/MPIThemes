@@ -1,6 +1,6 @@
 Package: MPIThemes
 Title: Unofficial MAX PLANCK INSTITUTE RMarkdown templates and ggplot themes
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Ahmad",
            family = "Ehyaei",
