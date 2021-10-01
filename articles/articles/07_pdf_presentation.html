@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF Report Template Customization • MPIThemes</title>
+<title>PDF Presentation with Beamer • MPIThemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
-<script src="../../pkgdown.js"></script><meta property="og:title" content="PDF Report Template Customization">
+<script src="../../pkgdown.js"></script><meta property="og:title" content="PDF Presentation with Beamer">
 <meta property="og:description" content="MPIThemes">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -107,166 +107,125 @@
 
       
 
-      </header><script src="01_pdf_report_template_customization_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="07_pdf_presentation_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>PDF Report Template Customization</h1>
+      <h1 data-toc-skip>PDF Presentation with Beamer</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/01_pdf_report_template_customization.Rmd"><code>vignettes/articles/01_pdf_report_template_customization.Rmd</code></a></small>
-      <div class="hidden name"><code>01_pdf_report_template_customization.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/Ehyaei/MPIThemes/blob/master/vignettes/articles/07_pdf_presentation.Rmd"><code>vignettes/articles/07_pdf_presentation.Rmd</code></a></small>
+      <div class="hidden name"><code>07_pdf_presentation.Rmd</code></div>
 
     </div>
 
     
     
-<p>Set several YAML settings at the top of the Rmd file to customize the template’s output. The following is a list of MPIThems-specific options. Other YAML choices are available; for additional information, see the <a href="https://pandoc.org/MANUAL.html#variables-for-latex">the pandoc manual</a>. All of the parameters are optional. The template is also running if it doesn’t fill in.</p>
-<div id="document-metadata" class="section level2">
+<p>In Latex settings, the <strong>Beamer</strong> is a well-known class for making slides. In the <em>pdf presentation</em> template, this class was modified with the MPI theme. To build a presentation from R Markdown, you specify the <code>latex_presentation</code> output format and configure YAML metadata to use template features. Using the <code>#</code> and <code>##</code> heading tags, you may construct a slide show that is divided into chapters and sections. Here’s an example of YAML and output presentation.</p>
+<pre><code>--- 
+title: Daily Report
+author: [Ahmad Ehyaei, Sara Ershadmanesh]
+date: "2012-01-19"
+affiliation: Max-Planck Institute 
+fontsize: 10pt
+titlepate-portrait: false
+titlepage-author-text-color: ffffff
+logo-primary: src/icon/MPILogoGray.eps
+frametitle-logo: src/icon/MPIBCNNWhite.eps
+output:
+  MPIThemes::latex_presentation
+---</code></pre>
+<p align="center">
+<img src="../../man/figures/simple_pdf_presentation.png" width="100%"></p>
+<p>The two main features in the presentation are <code>titlepate-portrait</code> and <code>titlepage-bottom-background</code>. The titlepage style can be defined in two ways: landscape or portrait, and is controlled by <code>titlepate-portrait</code>. You can also put an image in the bottom background by using <code>titlepage-bottom-background</code>, as you see in the below examples.</p>
+<table class="table">
+<tr>
+<td>
+<img src="../../man/figures/simple_pdf_presentation.png" align="left">
+</td>
+<td>
+<img src="../../man/figures/simple_portrait_pdf_presentation.png" align="center">
+</td>
+</tr>
+<tr>
+<td>
+<img src="../../man/figures/titlepage_bottom_pdf_presentation.png" align="left">
+</td>
+<td>
+<img src="../../man/figures/titlepage_bottom_portrait_pdf_presentation.png" align="center">
+</td>
+</tr>
+</table>
+<p>For best output customization, there are many features for the title page and section pages that are embedded in the template that can be set in YAML configuration.</p>
+<div id="title-page" class="section level2">
 <h2 class="hasAnchor">
-<a href="#document-metadata" class="anchor"></a>Document Metadata</h2>
+<a href="#title-page" class="anchor"></a>Title Page</h2>
 <ul>
 <li>
-<code>title</code>: The main title of your document.</li>
+<code>titlepate-portrait</code>: a Boolean variable that determines the style of the first page to be displayed as either a portrait or a landscape.</li>
 <li>
-<code>subtitle</code>: The subtitle of the document.</li>
+<code>titlepage-top-color</code>: Hex color code without # for fill top title page.</li>
 <li>
-<code>author</code>: includes the name of authors. you can write authors name in <code>["Ahmad Ehyaei","Sara Ershadmanes"]</code>
+<code>titlepage-bottom-color</code>: Hex color code without # for fill bottom title page.</li>
+<li>
+<code>titlepage-top-background</code>: image path for the background of the top title page.</li>
+<li>
+<code>titlepage-bottom-background</code>: image path for the background of the bottom title page.<br>
 </li>
 <li>
-<code>data</code>: The report’s publication date. It generated automatically from system time by default.</li>
+<code>logo-primary</code>: image path for the main logo on the top right title page.</li>
 <li>
-<code>affiliation</code>: Relates to the name of the organization or entity of the person producing the report.</li>
+<code>logo-secondary</code>: image path for the second logo on the bottom right title page.</li>
 <li>
-<code>location</code>: City or location of organization.</li>
+<code>titlepage-text-color</code>: Hex color code without # for the title page text without an author.</li>
+<li>
+<code>title-vjust</code>: An integer number used to determine the vertical position of the first page’s title text. This value is somewhere between -200 and 200. This number changes depending on the document. It takes some trial and error to find its exact placement.</li>
+<li>
+<code>title-hjust</code>: An integer number used to determine the horizontal position of the first page’s title text like as <code>title-vjust</code>.</li>
+<li>
+<code>titlepage-author-text-color</code>: Hex color code without # for the author in title page.</li>
+<li>
+<code>author-vjust</code>: An integer number used to determine the vertical position of the first page’s author text like as <code>title-vjust</code>.</li>
+<li>
+<code>author-hjust</code>: An integer number used to determine the horizontal position of the first page’s author text like as <code>title-vjust</code>.</li>
 </ul>
-<table class="table">
-<colgroup>
-<col span="1" style="width: 60%;">
-<col span="1" style="width: 40%;">
-</colgroup>
-<tr>
-<td>
-<pre><code>---
-title: Statistical analysis of behavioral data
-date: "01 October, 2021"
+<p>Below is an example of using the titlepage settings.</p>
+<pre><code>--- 
+title: Daily Report
 author: [Ahmad Ehyaei, Sara Ershadmanesh]
-affiliation: Max Planck Institute for Biological Cybernetics 
-location: Tübingen
+date: "2012-01-19"
+affiliation: Max-Planck Institute 
+fontsize: 10pt
+titlepate-portrait: true
+titlepage-bottom-background: src/img/damavand.png
+logo-primary: src/icon/MPILogoGray.eps
+frametitle-logo: src/icon/MPIBCNNWhite.eps
+output:
+  MPIThemes::latex_presentation
 ---</code></pre>
-</td>
-<td>
-<img src="../../man/figures/basic_pdf_report.png" align="left">
-</td>
-</tr>
-</table>
-<ul>
-<li>
-<code>title-vjust</code>: vjust stands for title location vertical adjustment.</li>
-<li>
-<code>title-hjust</code>: hjust stands for title location horizontal adjustment.</li>
-<li>
-<code>author-hjust</code>: hjust stands for author location horizontal adjustment.</li>
-<li>
-<code>author-vjust</code>: vjust stands for author location vertical adjustment.</li>
-<li>
-<code>titlepage-text-color</code>: the text color of the title page.</li>
-<li>
-<code>titlepage-author-text-color</code>: the text color of the author in title page.</li>
-</ul>
-<table class="table">
-<colgroup>
-<col span="1" style="width: 60%;">
-<col span="1" style="width: 40%;">
-</colgroup>
-<tr>
-<td>
-<pre><code>---
-title-vjust: 40
-author-vjust: -150
-titlepage-text-color: 116656
-titlepage-author-text-color: 116656 
----</code></pre>
-</td>
-<td>
-<img src="../../man/figures/titlepage_background_pdf_report.png" align="left">
-</td>
-</tr>
-</table>
+<p align="center">
+<img src="../../man/figures/presentation_title.svg" width="100%"></p>
 </div>
-<div id="title-page-background" class="section level2">
+<div id="frame-page" class="section level2">
 <h2 class="hasAnchor">
-<a href="#title-page-background" class="anchor"></a>Title Page Background</h2>
+<a href="#frame-page" class="anchor"></a>Frame Page</h2>
 <ul>
 <li>
-<code>titlepage</code>: When true, the title page is displayed. The default value is false.</li>
+<code>page-background-color</code>: Hex color code without # for background of pages.</li>
 <li>
-<code>titlepage-color</code>: The color of the title page’s background The color value must be specified in HTML hex format, such as D8DE2C, without the leading number sign (#). It’s best to put color it in quotes, such as “D8DE2C”.</li>
+<code>section-title-fg-color</code>: Hex color code for section title.</li>
 <li>
-<code>titlepage-top-color</code>: The color of the top title page’s background.</li>
+<code>section-title-bg-color</code>: Hex color code for background section title.</li>
 <li>
-<code>titlepage-bottom-color</code>: The color of the bottom title page’s background.</li>
+<code>frametitle-fg-color</code>: Hex color code for frame title.</li>
 <li>
-<code>titlepage-rule-color</code>: The rule’s color at the top of the title page.</li>
+<code>frametitle-bg-color</code>: Hex color code for background frame title.</li>
 <li>
-<code>titlepage-rule-height</code>: The rule’s height at the top of the title page.</li>
+<code>frametitle-logo</code>: image path for the logo on the top right frame title.</li>
 <li>
-<code>titlepage-twocolor-rule</code>: It is a Boolean variable. If set to true, then add the rule line between the top and bottom parts.</li>
-<li>
-<code>titlepage-twocolor-rule-height</code>: The rule’s height of two color rule.</li>
-<li>
-<code>titlepage-background</code>: The path to a title page background image The background image has been resized to fill the entire page.</li>
-<li>
-<code>titlepage-top-background</code>: The path to a top title page background.</li>
-<li>
-<code>titlepage-bottom-background</code>: The path to a bottom title page background.</li>
-<li>
-<code>logo-primary</code>: The path to the main logo is at the top of the title page.</li>
-<li>
-<code>logo-secondary</code>: The path to the second logo is at the bottom of the title page.</li>
+<code>footline-color</code>: Hex color code for footline.</li>
 </ul>
-<table class="table">
-<colgroup>
-<col span="1" style="width: 60%;">
-<col span="1" style="width: 40%;">
-</colgroup>
-<tr>
-<td>
-<pre><code>---
-logo-primary: src/icon/MPILogoWhite.eps
-titlepage-top-color: f03e4c
-titlepage-text-color: FFFFFF
-titlepage-bottom-background: src/img/bottom_background.png
----</code></pre>
-</td>
-<td>
-<img src="../../man/figures/titlepage_bottom_background_pdf_report.png" align="left">
-</td>
-</tr>
-</table>
-</div>
-<div id="page-content-variables" class="section level2">
-<h2 class="hasAnchor">
-<a href="#page-content-variables" class="anchor"></a>Page Content Variables</h2>
-<ul>
-<li>
-<code>content-has-page</code>: If true, then begin a new page after the table of contents, tables, and figures.</li>
-<li>
-<code>preface-logo</code>: The path logo or small image in top a table of contents.</li>
-<li>
-<code>toc</code>: The Boolean variable, if true, shows the table of contents.</li>
-<li>
-<code>lof</code>: The Boolean variable, if true, shows the list of figures.</li>
-<li>
-<code>lot</code>: The Boolean variable, if true, shows the list of tables.</li>
-<li>
-<code>disable-header-and-footer</code>: On all pages, the header and footer are disabled. False is the default setting.</li>
-<li>
-<code>page-background</code>: The path to a background image for any page. The background image has been stretched to fill the entire page.</li>
-<li>
-<code>page-background-opacity</code>: The background image opacity.</li>
-<li>
-<code>page-background-color</code>: hex color to fill to a background image for any page.</li>
-</ul>
+<p align="center">
+<img src="../../man/figures/presentation_page_features.svg" width="100%"></p>
 </div>
   </div>
 
