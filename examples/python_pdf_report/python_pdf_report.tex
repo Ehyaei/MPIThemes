@@ -1,0 +1,650 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{setspace} % add line to default template
+\setstretch{1.2}      % add line to default template
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Use Python To Generate PDF Report},
+  pdfauthor={Ahmad Ehyaei},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Use Python To Generate PDF Report}
+\author{Ahmad Ehyaei}
+\date{03 Oktober, 2021}
+
+% ...................................................................... %
+%
+%               Add MPI Custom Template For Long Reprt
+%
+% ...................................................................... %
+\usepackage{float}
+
+% ...................................................................... %
+% Load Packages
+% tables requirement kableExtra packages2
+% TODO: table striped dont work
+
+% ...................................................................... %
+% Add MPI Colors
+
+% Colors extract from Max-Planck Society CD Manula
+% https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html
+\usepackage{xcolor}
+
+\definecolor{MPIGreen}{HTML}{116656}
+\definecolor{MPIGray}{HTML}{DDDED6}
+\definecolor{MPIBlue}{HTML}{009EE2}
+\definecolor{MPIRed}{HTML}{E90649}
+\definecolor{MPILightBlue}{HTML}{40BDE8}
+\definecolor{MPIOrange}{HTML}{FF7300}
+\definecolor{MPIYellow}{HTML}{FFCE09}
+\definecolor{MPIPink}{HTML}{FA9FCC}
+\definecolor{MPILightGreen}{HTML}{62BD19}
+\definecolor{MPILivingCoral}{HTML}{FC766A}
+\definecolor{MPIPacificCoast}{HTML}{5B84B1}
+
+
+
+% set titlepage top, bottom, text and rule color
+
+\definecolor{titlepageTopColor}{HTML}{DDDED6}
+
+
+\definecolor{titlepageBottomColor}{HTML}{009EE2}
+
+
+\definecolor{titlepageTextColor}{HTML}{706d6e}
+
+\definecolor{titlepageAuthorTextColor}{HTML}{FFFFFF}
+
+
+\definecolor{titlePageColor}{HTML}{009EE2}
+
+\definecolor{titlePageRuleColor}{HTML}{000000}
+
+\definecolor{pageBackgroundColor}{HTML}{000000}
+
+\definecolor{bannerColor}{HTML}{40BDE8}
+
+\definecolor{bannerTextColor}{HTML}{000000}
+
+\definecolor{chapterTitleColor}{HTML}{116656}
+
+% Set Initial Values
+
+\def\titlepageRuleHeight{10}
+
+
+\def\titleVjust{250}
+
+\def\titleHjust{30}
+
+
+\def\authorVjust{-345}
+
+\def\authorHjust{30}
+
+
+% end of color and value definition
+%......................................................................%
+
+%......................................................................%
+% set default hold position of figure and table
+\makeatletter
+  \providecommand*\setfloatlocations[2]{\@namedef{fps@#1}{#2}}
+\makeatother
+\setfloatlocations{figure}{H}
+\setfloatlocations{table}{H}
+%......................................................................%
+
+
+%......................................................................%
+% Add Main Fonts
+
+\usepackage{fontspec}
+% set main font univers
+\setmainfont[ Path = src/fonts/]{Univers-light-normal.ttf}[
+BoldFont = UniversBlack.ttf,
+ItalicFont = UniversLTStd.otf,
+BoldItalicFont = UniversLTStd-Bold.otf
+]
+% define Bodoni font for title
+\newfontfamily\Bodoni[
+  Path=src/fonts/,
+  LetterSpace=2.0,
+  WordSpace={10,0,0},
+  HyphenChar=None,
+  PunctuationSpace=WordSpace
+  ]{BodoniFLF-Roman.ttf}
+% \newfontfamily\BodoniBold[Path=src/fonts/]{BodoniFLF-Bold.ttf}
+% \newfontfamily\BodoniBoldItalic[Path=src/fonts/]{BodoniFLF-BoldItalic.ttf}
+% \newfontfamily\BodoniItalic[Path=src/fonts/]{BodoniFLF-Italic.ttf}
+
+
+%......................................................................%
+% add colored box environments
+
+\usepackage[most]{tcolorbox}
+\usepackage{awesomebox}
+
+\newtcolorbox{info-box}{colback=cyan!5!white,arc=0pt,outer arc=0pt,colframe=cyan!60!black}
+\newtcolorbox{warning-box}{colback=orange!5!white,arc=0pt,outer arc=0pt,colframe=orange!80!black}
+\newtcolorbox{error-box}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
+
+
+% Think
+\newenvironment{rmdThink}{
+	\vspace*{0.5\baselineskip}
+    \par\noindent
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Think}},colback=MPIGreen!10!white, colframe=MPIGreen]
+    \itshape
+}{
+    \end{tcolorbox}
+    \par\ignorespacesafterend
+}
+\newtcolorbox{rmdthink}{colback=MPIGreen!10!white,colframe=MPIGreen,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
+
+% Note
+\newenvironment{rmdNote}{
+	\vspace*{0.5\baselineskip}
+    \par\noindent
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Note}},colback=MPIRed!10!white, colframe=MPIRed]
+    \itshape
+}{
+    \end{tcolorbox}
+    \par\ignorespacesafterend
+}
+\newtcolorbox{rmdnote}{colback=MPIRed!10!white,colframe=MPIRed,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
+
+% Tip
+\newenvironment{rmdTip}{
+	\vspace*{0.5\baselineskip}
+    \par\noindent
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Tip}},colback=MPILightGreen!10!white, colframe=MPILightGreen]
+    \itshape
+}{
+    \end{tcolorbox}
+    \par\ignorespacesafterend
+}
+\newtcolorbox{rmdtip}{colback=MPILightGreen!10!white,colframe=MPILightGreen,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
+
+% warning
+\newenvironment{rmdWarning}{
+	\vspace*{0.5\baselineskip}
+    \par\noindent
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}Warning}},colback=MPIOrange!10!white, colframe=MPIOrange]
+    \itshape
+}{
+    \end{tcolorbox}
+    \par\ignorespacesafterend
+}
+\newtcolorbox{rmdwarning}{colback=MPIOrange!10!white,colframe=MPIOrange,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
+
+% todo
+\newenvironment{rmdTodo}{
+	\vspace*{0.5\baselineskip}
+    \par\noindent
+    \begin{tcolorbox}[enhanced, title={\textbf{\color{white}To Do}},colback=MPIBlue!10!white, colframe=MPIBlue]
+    \itshape
+}{
+    \end{tcolorbox}
+    \par\ignorespacesafterend
+}
+\newtcolorbox{rmdtodo}{colback=MPIBlue!10!white,colframe=MPIBlue,coltext=black,leftrule= 2mm,rightrule=0.5mm,bottomrule=0.5mm,toprule=0.5mm, boxsep=0.5pt,arc=2pt}
+
+
+
+\newtcbtheorem[auto counter,number within=section]{Theorem}{Theorem}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIGreen!10!white,colframe=MPIGreen,
+                colbacktitle=MPIGreen, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{thm}
+
+\newtcbtheorem[auto counter,number within=section]{Definition}{Definition}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPILightGreen!10!white,colframe=MPILightGreen,
+                colbacktitle=MPILightGreen, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{defn}
+
+\newtcbtheorem[auto counter,number within=section]{Lemma}{Lemma}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPILightBlue!10!white,colframe=MPILightBlue,
+                colbacktitle=MPILightBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{lem}
+
+\newtcbtheorem[auto counter,number within=section]{Corollary}{Corollary}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIBlue!10!white,colframe=MPIBlue,
+                colbacktitle=MPIBlue, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{cor}
+
+\newtcbtheorem[auto counter,number within=section]{Proposition}{Proposition}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIYellow!10!white,colframe=MPIYellow,
+                colbacktitle=MPIYellow, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{prop}
+
+\newtcbtheorem[auto counter,number within=section]{Exercise}{Exercise}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIRed!10!white,colframe=MPIRed,
+                colbacktitle=MPIRed, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{exer}
+
+\newtcbtheorem[auto counter,number within=section]{Example}{Example}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIOrange!10!white,colframe=MPIOrange,
+                colbacktitle=MPIOrange, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{exam}
+
+\newtcbtheorem[auto counter,number within=section]{Remark}{Remark}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIPink!10!white,colframe=MPIPink,
+                colbacktitle=MPIPink, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{rmk}
+
+
+\newtcbtheorem[auto counter,number within=section]{Proof}{Proof}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPILivingCoral!10!white,colframe=MPILivingCoral,
+                colbacktitle=MPILivingCoral, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{pr}
+
+\newtcbtheorem[auto counter,number within=section]{Solution}{Solution}{%
+                lower separated=false,fonttitle=\bfseries,
+                colback=MPIPacificCoast!10!white,colframe=MPIPacificCoast,
+                colbacktitle=MPIPacificCoast, coltitle=white,
+                enhanced,attach boxed title to top left={xshift=0.5cm,yshift=-2mm}
+                }{sol}
+
+
+\newenvironment{rmdexer}{
+    \par\noindent
+    \textbf{\color{MPIRed}Exercise} \itshape
+}{\par}
+
+\newenvironment{rmdsol}{
+    \par\noindent
+    \textbf{\color{MPIPacificCoast}Solution} \itshape
+}{\par}
+
+%......................................................................%
+% add packages for title page
+
+\usepackage{tikz}
+
+\usepackage[margin=1.5cm,includehead=true,includefoot=true,centering]{geometry}
+
+% ----------------------------------------------------------------------------- %
+%                                   Set Geometry                                %
+% ----------------------------------------------------------------------------- %
+
+\makeatletter
+\def\parsecomma#1,#2\endparsecomma{\def\page@x{#1}\def\page@y{#2}}
+\tikzdeclarecoordinatesystem{page}{
+    \parsecomma#1\endparsecomma
+    \pgfpointanchor{current page}{north east}
+    % Save the upper right corner
+    \pgf@xc=\pgf@x%
+    \pgf@yc=\pgf@y%
+    % save the lower left corner
+    \pgfpointanchor{current page}{south west}
+    \pgf@xb=\pgf@x%
+    \pgf@yb=\pgf@y%
+    % Transform to the correct placement
+    \pgfmathparse{(\pgf@xc-\pgf@xb)/2.*\page@x+(\pgf@xc+\pgf@xb)/2.}
+    \expandafter\pgf@x\expandafter=\pgfmathresult pt
+    \pgfmathparse{(\pgf@yc-\pgf@yb)/2.*\page@y+(\pgf@yc+\pgf@yb)/2.}
+    \expandafter\pgf@y\expandafter=\pgfmathresult pt
+}
+\makeatother
+
+
+% ---------------------------------------------------------------------------- %
+% header and footer
+% ---------------------------------------------------------------------------- %
+
+
+% ---------------------------------------------------------------------------- %
+% Banner Page Header and Footer Style
+
+
+
+% ---------------------------------------------------------------------------- %
+% Add Page Background
+
+
+% ---------------------------------------------------------------------------- %
+% Add Page Background Color
+
+
+%......................................................................%
+% Remove Blank Page after Table of Contents and between chapter
+
+
+%----------------------------------------------------------------------------------------
+% Chapter Design
+\usepackage{titlesec}
+
+\titleformat{\section}[block]
+  {\Large\color{chapterTitleColor}}
+  {\filright \textbf{\thesection}\vspace{1ex}}{12pt}
+  {}
+  [\titlerule]
+
+\titleformat{\subsection}[block]
+  {\large\color{chapterTitleColor}}
+  {\filright \textbf{\thesubsection}\vspace{1ex}}{12pt}
+  {}
+  []
+
+
+
+%----------------------------------------------------------------------------------------
+% Remove page number in toc and strange white first page
+
+%......................................................................%
+%
+%               End of Modifications
+%
+%......................................................................%
+
+
+\begin{document}
+%......................................................................%
+%               Add Titlepage
+%......................................................................%
+
+
+% end design titlepage
+%......................................................................%
+
+%......................................................................%
+% Add Page Background
+
+
+
+% add these lines for simple report template
+
+%......................................................................%
+% start short report titlepage
+
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] at (page cs:0.8,0.85){\includegraphics[height=0.1\paperheight]{src/icon/MPILogoGray.eps}};
+\node[inner sep=0pt] at (page cs:-0.8,0.85){};
+\end{tikzpicture}
+{\color{titlepageTextColor}
+\begin{center}
+\vspace{0.5cm}
+\huge{\uppercase{\textbf{Use Python To Generate PDF Report}}}
+\vspace{0.2cm}
+
+\vspace{0.4cm}
+
+\large{\textsf{Ahmad Ehyaei}}
+\vspace{0.2cm}
+
+\large{\uppercase{03 Oktober, 2021}}
+\vspace{0.4cm}
+
+
+\vspace{0.5cm}
+\end{center}
+}
+% end short report titlepage
+%......................................................................%
+
+% end add
+
+
+
+% add from eisvogel template
+
+
+
+% Add Table of Contents
+
+
+
+
+\hypertarget{reticulate}{%
+\section{Reticulate}\label{reticulate}}
+
+The \texttt{MPIThems} templates aren't just for R programmers; due to
+the \href{https://rstudio.github.io/reticulate/index.html}{reticulate}
+package, Python programmers may use them as well. The
+\texttt{reticulate} package offers a Python engine for R Markdown,
+allowing for simple interchange between Python and R chunks. for install
+reticulte use cran repository as below:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"reticulate"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{choose-python-version}{%
+\subsection{Choose Python version}\label{choose-python-version}}
+
+The first step to running Python code is to choose the Python engine or
+environment. There are two ways to choose a Python environment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  By default, reticulate uses the system Python found on your OS. To
+  find the path, run the R command \texttt{Sys.which("python")} on the
+  console. Alternatively, to use your installed Python, add your Python
+  path with the command \texttt{use\_python()} to set the default
+  engine.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(reticulate)}
+\FunctionTok{use\_python}\NormalTok{(}\StringTok{"/usr/local/bin/python"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  If you have an Anaconda or Miniconda, you may use the use
+  \texttt{use\_condaenv()} or use \texttt{use\_virtualenv()} to run
+  Python code in any of these environments.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{use\_condaenv}\NormalTok{(}\StringTok{"Python3.8"}\NormalTok{, }\AttributeTok{required =} \ConstantTok{TRUE}\NormalTok{) }\CommentTok{\# Name of environment}
+\end{Highlighting}
+\end{Shaded}
+
+The Conda environment \texttt{r-reticulate} will be created when the
+\texttt{reticulate} package is installed. To see the list of your conda
+environment, run in \texttt{conda\ list\ env} bash or R command
+\texttt{retculate::conda\_list()}. Run the \texttt{py\_config()} command
+to ensure that reticulate is utilizing your updated conda env.
+
+\hypertarget{install-python-package}{%
+\subsection{Install Python Package}\label{install-python-package}}
+
+The \texttt{reticulate} env has mininl Python pacakges. In order to
+install a new package, use \texttt{py\_install()} command. The packages
+will be installed by default in \texttt{r-reticulate} env. For more
+information you can see reticulate's vignette
+\href{https://rstudio.github.io/reticulate/articles/python_packages.html}{Installing
+Python Packages}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{py\_install}\NormalTok{(}\StringTok{"pandas"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{check-python-working}{%
+\subsection{Check Python working}\label{check-python-working}}
+
+To ensure that everything is working properly, try writing a basic
+Python code in RMarkdown. Set the Python command in the Python chunk
+\texttt{\{python\}} for this.
+
+\begin{verbatim}
+'''{python}
+import numpy as np
+import pandas as pd
+np.arange(1, 10)
+\end{verbatim}
+
+'\,'\,'
+
+\begin{verbatim}
+\end{verbatim}
+
+array({[}1, 2, 3, 4, 5, 6, 7, 8, 9{]})
+
+\begin{verbatim}
+For the convenience of Python coding in RMarkdown, it is recommended that you create a shortcut to generate the python chunks.
+To create shortcut go to `Tools -> Modify Keyboard Shortcuts` and search `python` word to find `Insert Chunk Python`. 
+Then click on it and set a suitable shortcut for it. `Ctrl + Alt + P` sounds a good option. 
+
+In the following example, we use the `pandas` package to construct a data frame and `matplolib` to plot the data.
+
+
+```python
+import matplotlib as plt
+df = pd.DataFrame(data = {"x":np.arange(1,10,.01)})
+df = df.assign(y=np.cos(df["x"]))
+df.plot(x="x", y = "y", title = "Simple Matplotlib Plot in RMarkdown")
+\end{verbatim}
+
+\begin{center}\includegraphics[width=6.5in]{figure/matplotlib-1} \end{center}
+
+Fortunately, Package \texttt{ggplot2} has also been implemented for
+Python. Below is an example of drawing a ggplot in Python
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ plotnine.data }\ImportTok{import}\NormalTok{ economics}
+\ImportTok{from}\NormalTok{ plotnine }\ImportTok{import}\NormalTok{ ggplot, aes, geom\_line}
+\NormalTok{ggplot(df) }\OperatorTok{+}\NormalTok{ aes(x}\OperatorTok{=}\StringTok{"x"}\NormalTok{, y}\OperatorTok{=}\StringTok{"y"}\NormalTok{) }\OperatorTok{+}\NormalTok{ geom\_line()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+<ggplot: (-9223363304618956698)>
+\end{verbatim}
+
+\begin{center}\includegraphics[width=6.39in]{figure/ggplot-3} \end{center}
+
+\hypertarget{calling-python-from-r}{%
+\subsection{Calling Python from R}\label{calling-python-from-r}}
+
+All objects created within Python chunks are available to R by calling
+the \texttt{py\$object}. In the below example, we plot the previously
+Python-produced data with ggplot in R.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(py}\SpecialCharTok{$}\NormalTok{df, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{x, }\AttributeTok{y=}\NormalTok{y)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{figure/ggplot2R-5} \end{center}
+
+\end{document}
