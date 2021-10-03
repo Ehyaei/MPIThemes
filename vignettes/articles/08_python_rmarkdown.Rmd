@@ -6,6 +6,7 @@ title: "Use Python To Generate PDF Report"
 
 ```{r,include=FALSE}
 source("../../examples/python_pdf_report/manuscript/global.R")
+if (!require("reticulate")) install.packages("reticulate")
 library(reticulate)
 ```
 
