@@ -49,6 +49,7 @@ The `reticulate` env has minimal Python packages. In order to install a new pack
 For more information you can see `reticulate`'s vignette [Installing Python Packages](https://rstudio.github.io/reticulate/articles/python_packages.html)
 
 ```{r}
+use_condaenv("r-reticulate", required = TRUE)
 py_install("pandas")
 py_install("numpy")
 py_install("mapplotlib")
