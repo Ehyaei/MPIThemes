@@ -48,6 +48,13 @@ Run the `py_config()` command to ensure that `reticulate` is utilizing your upda
 The `reticulate` env has minimal Python packages. In order to install a new package, use `py_install()` command. The packages will be installed by default in `r-reticulate` env.
 For more information you can see `reticulate`'s vignette [Installing Python Packages](https://rstudio.github.io/reticulate/articles/python_packages.html)
 
+```{r}
+py_install("pandas")
+py_install("numpy")
+py_install("mapplotlib")
+py_install("plotnine")
+```
+
 ```{r,eval=FALSE,echo=TRUE}
 py_install("pandas")
 ```
