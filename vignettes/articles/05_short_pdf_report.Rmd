@@ -24,7 +24,7 @@ logo-secondary: src/icon/MPIBCGray.eps
 ```
 
 <p align="center">
-<img src="../../man/figures/short_report_features.png" width="100%"/>
+<img src="../../man/figures/short_report_features.svg" width="100%"/>
 </p>
 
 Colors and text may be assigned to the header, footer, and chapters to make the short report more visually appealing. The following is an example of a customized report.
@@ -46,6 +46,6 @@ chapter-title-color: 009EE2
 ```
 
 <p align="center">
-<img src="../../man/figures/short_report_style_features.png" width="100%"/>
+<img src="../../man/figures/short_report_style_features.svg" width="100%"/>
 </p>
 

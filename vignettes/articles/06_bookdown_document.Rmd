@@ -62,7 +62,7 @@ link-citations: yes
 The following figure illustrates the important features of the title page.
 
 <p align="center">
-<img src="../../man/figures/bookdown_manual.png" width="100%"/>
+<img src="../../man/figures/bookdown_manual.svg" width="100%"/>
 </p>
 
 
@@ -90,7 +90,7 @@ bookdown::gitbook:
 ---
 ```
 
-In the YAML's PDF part, we set the path of the latex template and other files.
+In the YAML's PDF part, we set the path of the latex template and other files.
 
 ```
 --- 
