@@ -48,7 +48,7 @@ Run the `py_config()` command to ensure that `reticulate` is utilizing your upda
 The `reticulate` env has minimal Python packages. In order to install a new package, use `py_install()` command. The packages will be installed by default in `r-reticulate` env.
 For more information you can see `reticulate`'s vignette [Installing Python Packages](https://rstudio.github.io/reticulate/articles/python_packages.html)
 
-```{r}
+```{r,eval=FALSE,echo=FALSE}
 use_condaenv("r-reticulate", required = TRUE)
 py_install("pandas")
 py_install("numpy")
@@ -73,7 +73,7 @@ np.arange(1, 10)
 '''
 ```
 
-```{python,eval=TRUE, echo=FALSE}
+```{python,eval=FALSE, echo=FALSE}
 import numpy as np
 import pandas as pd
 np.arange(1, 10)
@@ -85,30 +85,40 @@ Then click on it and set a suitable shortcut for it. `Ctrl + Alt + P` sounds a g
 
 In the following example, we use the `pandas` package to construct a data frame and `matplolib` to plot the data.
 
-```{python matplotlib,echo=TRUE,fig.height=2}
+```{python matplotlib,eval = FALSE,echo=TRUE,fig.height=2}
 import matplotlib as plt
 df = pd.DataFrame(data = {"x":np.arange(1,10,.01)})
 df = df.assign(y=np.cos(df["x"]))
 df.plot(x="x", y = "y", title = "Simple Matplotlib Plot in RMarkdown")
 ```
+<p align="center">
+<img src="../../examples/python_pdf_report/figure/matplotlib-1.png"/>
+</p>
+
 
 Fortunately, Package `ggplot2` has also been implemented for Python. 
 Below is an example of drawing a ggplot in Python.
 
-```{python ggplot,echo=TRUE,fig.height=2}
+```{python ggplot,eval = FALSE,echo=TRUE,fig.height=2}
 from plotnine.data import economics
 from plotnine import ggplot, aes, geom_line
 ggplot(df) + aes(x="x", y="y") + geom_line()
 ```
+
+<p align="center">
+<img src="../../examples/python_pdf_report/figure/ggplot2R-5.png"/>
+</p>
 
 ## Calling Python from R
 
 All objects created within Python chunks are available to R by calling the `py$object`. 
 In the below example, we plot the previously Python-produced data with ggplot in R.
 
-
-```{r ggplot2R,echo=T}
+```{r ggplot2R,eval = FALSE,echo=T}
 ggplot(py$df, aes(x=x, y=y)) + 
   geom_line()
 ```
 
+<p align="center">
+<img src="../../examples/python_pdf_report/figure/ggplot-3.png"/>
+</p>
