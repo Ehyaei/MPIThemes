@@ -124,56 +124,78 @@
     
     
 <p>Block content can be useful for informing or alerting your readers about a specific topic. We use the <code>awesomebox</code> and <code>tcolorbox</code> Latex packages for colored block content. For supplemental information, you can use notes, tips, info, error, and warning elements. Each block serves a specific semantic purpose.</p>
+<div id="tcolorbox" class="section level1">
+<h1 class="hasAnchor">
+<a href="#tcolorbox" class="anchor"></a>tcolorbox</h1>
+<p><code>tcolorbox</code> is a well-known latex package that generates a configuration for colored and framed text boxes with a heading line. Many special colored boxes are designed for the MPIThemes package. The first part of the boxes is about highlighting the texts in the report. These environments include:</p>
+<ul>
+<li>rmdThink</li>
+<li>rmdNote</li>
+<li>rmdTip</li>
+<li>rmdWarning</li>
+<li>rmdTodo</li>
+</ul>
+<p>The above blocks have two versions, with and without titles. To use the second type, it is sufficient to write the block’ name with a small letter like rmdtip.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.rmdThink data-latex=""}</span>
+<span id="cb1-2"><a href="#cb1-2"></a>Lorem Ipsum ...</span>
+<span id="cb1-3"><a href="#cb1-3"></a>:::</span></code></pre></div>
+<p align="center">
+<img src="../../man/figures/Think.png" width="100%"></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {.rmdthink data-latex=""}</span>
+<span id="cb2-2"><a href="#cb2-2"></a>Lorem Ipsum ...</span>
+<span id="cb2-3"><a href="#cb2-3"></a>:::</span></code></pre></div>
+<p align="center">
+<img src="../../man/figures/think.png" width="100%"></p>
+<p>The other type of block is related to mathematical writing. The list of these blocks includes:</p>
+<ul>
+<li>Theorem</li>
+<li>Definition</li>
+<li>Lemma</li>
+<li>Corollary</li>
+<li>Proposition</li>
+<li>Exercise</li>
+<li>Example</li>
+<li>Remark</li>
+<li>Proof</li>
+<li>Solution</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>:::: {.Theorem data-latex="{Pythagorean theorem}"}</span>
+<span id="cb3-2"><a href="#cb3-2"></a>This is a theorem about right triangles and can be summarised in the next </span>
+<span id="cb3-3"><a href="#cb3-3"></a>equation </span>
+<span id="cb3-4"><a href="#cb3-4"></a>\[ x^2 + y^2 = z^2 \]</span>
+<span id="cb3-5"><a href="#cb3-5"></a>::::</span></code></pre></div>
+<p align="center">
+<img src="../../man/figures/Theorem.png" width="100%"></p>
+</div>
 <div id="awesomebox" class="section level1">
 <h1 class="hasAnchor">
 <a href="#awesomebox" class="anchor"></a>awesomebox</h1>
 <p><code>awesomebox</code>’s aim is to use <code>FontAwesome 5</code> icons to simplify the illustration of these boxes. Some examples of block environments are shown below.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.noteblock data-latex=""}</span>
-<span id="cb1-2"><a href="#cb1-2"></a>Lorem Ipsum ...</span>
-<span id="cb1-3"><a href="#cb1-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/note_block.png" width="100%"></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {.tipblock data-latex=""}</span>
-<span id="cb2-2"><a href="#cb2-2"></a>Lorem Ipsum ...</span>
-<span id="cb2-3"><a href="#cb2-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/tip_block.png" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>::: {.warningblock data-latex=""}</span>
-<span id="cb3-2"><a href="#cb3-2"></a>Lorem Ipsum ...</span>
-<span id="cb3-3"><a href="#cb3-3"></a>:::</span></code></pre></div>
-<p align="center">
-<img src="../../man/figures/warning_block.png" width="100%"></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.cautionblock data-latex=""}</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.noteblock data-latex=""}</span>
 <span id="cb4-2"><a href="#cb4-2"></a>Lorem Ipsum ...</span>
 <span id="cb4-3"><a href="#cb4-3"></a>:::</span></code></pre></div>
 <p align="center">
-<img src="../../man/figures/caution_block.png" width="100%"></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a>::: {.importantblock data-latex=""}</span>
+<img src="../../man/figures/note_block.png" width="100%"></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a>::: {.tipblock data-latex=""}</span>
 <span id="cb5-2"><a href="#cb5-2"></a>Lorem Ipsum ...</span>
 <span id="cb5-3"><a href="#cb5-3"></a>:::</span></code></pre></div>
 <p align="center">
-<img src="../../man/figures/important_block.png" width="100%"></p>
-</div>
-<div id="tcolorbox" class="section level1">
-<h1 class="hasAnchor">
-<a href="#tcolorbox" class="anchor"></a>tcolorbox</h1>
-<p>tcolorbox is a well-known latex package that generates a configuration for colored and framed text boxes with a heading line.</p>
-<p>We use simple colored boxes in MPIThems. In the future, appropriate blocks will be added. look at some simple examples</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>::: {.info-box data-latex=""}</span>
+<img src="../../man/figures/tip_block.png" width="100%"></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>::: {.warningblock data-latex=""}</span>
 <span id="cb6-2"><a href="#cb6-2"></a>Lorem Ipsum ...</span>
 <span id="cb6-3"><a href="#cb6-3"></a>:::</span></code></pre></div>
 <p align="center">
-<img src="../../man/figures/info_box.png" width="100%"></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a>::: {.warning-box data-latex=""}</span>
+<img src="../../man/figures/warning_block.png" width="100%"></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a>::: {.cautionblock data-latex=""}</span>
 <span id="cb7-2"><a href="#cb7-2"></a>Lorem Ipsum ...</span>
 <span id="cb7-3"><a href="#cb7-3"></a>:::</span></code></pre></div>
 <p align="center">
-<img src="../../man/figures/warning_box.png" width="100%"></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>::: {.error-box data-latex=""}</span>
+<img src="../../man/figures/caution_block.png" width="100%"></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>::: {.importantblock data-latex=""}</span>
 <span id="cb8-2"><a href="#cb8-2"></a>Lorem Ipsum ...</span>
 <span id="cb8-3"><a href="#cb8-3"></a>:::</span></code></pre></div>
 <p align="center">
-<img src="../../man/figures/error_box.png" width="100%"></p>
+<img src="../../man/figures/important_block.png" width="100%"></p>
 </div>
   </div>
 
