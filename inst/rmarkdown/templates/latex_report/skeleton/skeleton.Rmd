@@ -48,7 +48,8 @@ Or use block quotes are written after `>`, e.g.,
 We can easily write math expressions by latex syntax. 
 Inline LateX equations can be written in a pair of dollar signs
 $$f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}$$
-## plot
+
+## Plot
 
 By using ggplot package, we can  
 
@@ -59,4 +60,22 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point(aes(color=Species, size=Sepal.Width),alpha = 0.5) +
   geom_smooth(aes(col=Species), method="lm", se=F)
 ```
+
+
+## Block Environments
+
+:::: {.rmdThink data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+::::
+
+:::: {.rmdthink data-latex=""}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+::::
+
+:::: {.Theorem data-latex="{Pythagorean theorem}"}
+This is a theorem about right triangles and can be summarised in the next 
+equation 
+\[ x^2 + y^2 = z^2 \]
+::::
+
 

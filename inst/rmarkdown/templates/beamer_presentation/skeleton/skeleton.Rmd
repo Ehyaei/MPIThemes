@@ -58,8 +58,7 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   labs(subtitle="Sepal Length vs Petal Length",
        title="Bubble chart") + 
   geom_point(aes(color=Species, size=Sepal.Width),alpha = 0.5) +
-  geom_smooth(aes(col=Species), method="lm", se=F)+
-  theme_scientific(base_size = 8)
+  geom_smooth(aes(col=Species), method="lm", se=F)
 ```
 
 ## Block Environments
