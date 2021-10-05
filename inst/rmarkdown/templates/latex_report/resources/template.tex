@@ -525,13 +525,13 @@ $endif$
 $if(titlepage-rule-color)$
 \definecolor{titlePageRuleColor}{HTML}{$titlepage-rule-color$}
 $else$
-\definecolor{titlePageRuleColor}{HTML}{000000}
+\definecolor{titlePageRuleColor}{HTML}{ffffff}
 $endif$
 
 $if(page-background-color)$
 \definecolor{pageBackgroundColor}{HTML}{$page-background-color$}
 $else$
-\definecolor{pageBackgroundColor}{HTML}{000000}
+\definecolor{pageBackgroundColor}{HTML}{ffffff}
 $endif$
 
 $if(banner-color)$
@@ -919,14 +919,12 @@ $endif$
 % ---------------------------------------------------------------------------- %
 % Add Page Background Color
 
-$if(page-background-color)$
 \usepackage{eso-pic}
 \newcommand\BackPage{%
 \begin{tikzpicture}[remember picture,overlay]
 \fill[pageBackgroundColor](current page.south west) rectangle (\paperwidth,\paperheight);
 \end{tikzpicture}%
 }
-$endif$
 
 %......................................................................%
 % Remove Blank Page after Table of Contents and between chapter
@@ -963,13 +961,13 @@ $else$
 \usepackage{titlesec}
 
 \titleformat{\section}[block]
-  {\Large\color{chapterTitleColor}}
+  {\huge\color{chapterTitleColor}}
   {\filright \textbf{\thesection}\vspace{1ex}}{12pt}
   {}
   [\titlerule]
 
 \titleformat{\subsection}[block]
-  {\large\color{chapterTitleColor}}
+  {\Large\color{chapterTitleColor}}
   {\filright \textbf{\thesubsection}\vspace{1ex}}{12pt}
   {}
   []
@@ -1126,7 +1124,7 @@ $endif$
 $if(content-has-page)$
 $if(preface-logo)$
 \begin{center}
-\includegraphics[width=2cm]{$preface-logo$}
+\includegraphics[width=4cm]{$preface-logo$}
 \end{center}
 $endif$
 $endif$
@@ -1268,7 +1266,7 @@ $endif$
 
 $if(banner-color)$
 \ClearShipoutPicture
-\AddToShipoutPicture{\BannerPageHeader\BannerPageFooter}
+\AddToShipoutPicture{\BackPage\BannerPageHeader\BannerPageFooter}
 $endif$
 
 
