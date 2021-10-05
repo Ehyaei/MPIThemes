@@ -67,25 +67,25 @@
       <a href="../../articles/articles/01_pdf_report_template_customization.html">PDF Report Template Customization</a>
     </li>
     <li>
-      <a href="../../articles/articles/02_ggplot2_themes.html">GGPLOT2 Themes &amp; Palettes</a>
+      <a href="../../articles/articles/02_short_pdf_report.html">Writing Short PDF Report</a>
     </li>
     <li>
-      <a href="../../articles/articles/03_Add-Table-to-PDF-Reports.html">Add Table to Reports</a>
+      <a href="../../articles/articles/03_bookdown_document.html">Write Book and long-form Report with Bookdown</a>
     </li>
     <li>
-      <a href="../../articles/articles/04_Latex-Environments.html">Colored Box Latex Environments</a>
+      <a href="../../articles/articles/04_pdf_presentation.html">PDF Presentation with Beamer</a>
     </li>
     <li>
-      <a href="../../articles/articles/05_short_pdf_report.html">Writing Short PDF Report</a>
+      <a href="../../articles/articles/11_ggplot2_themes.html">GGPLOT2 Themes &amp; Palettes</a>
     </li>
     <li>
-      <a href="../../articles/articles/06_bookdown_document.html">Write Book and long-form Report with Bookdown</a>
+      <a href="../../articles/articles/12_Add-Table-to-PDF-Reports.html">Add Table to Reports</a>
     </li>
     <li>
-      <a href="../../articles/articles/07_pdf_presentation.html">PDF Presentation with Beamer</a>
+      <a href="../../articles/articles/13_Latex-Environments.html">Colored Box Latex Environments</a>
     </li>
     <li>
-      <a href="../../articles/articles/08_python_rmarkdown.html">Use Python To Generate PDF Report</a>
+      <a href="../../articles/articles/21_python_rmarkdown.html">Use Python To Generate PDF Report</a>
     </li>
   </ul>
 </li>
@@ -123,85 +123,63 @@
 
     
     
-<p>Set several YAML settings at the top of the Rmd file to customize the template’s output. The following is a list of MPIThems-specific options. Other YAML choices are available; for additional information, see the <a href="https://pandoc.org/MANUAL.html#variables-for-latex">the pandoc manual</a>. All of the parameters are optional. The template is also running if it doesn’t fill in.</p>
-<div id="document-metadata" class="section level2">
+<p>You can use the YAML configuration at the top of the Rmd to customize the template’s output. For designing the title page, chapters, and colors, there are design options that are listed below. Also pandoc default template YAML options are available; for additional information, see the <a href="https://pandoc.org/MANUAL.html#variables-for-latex">the pandoc manual</a>. All of the parameters are optional. The template is also running if it doesn’t fill in. Before explaining the options, a few examples of title page designs are given. For more details, click on the image and see the full document for each example.</p>
+<table class="table">
+<tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/basic_pdf_report"> <img src="../../man/figures/basic_pdf_report.png" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_bottom_background_pdf_report"> <img src="../../man/figures/titlepage_bottom_background_pdf_report.png" align="center"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_background_pdf_report"> <img src="../../man/figures/titlepage_background_pdf_report.png" align="right"></a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage%D9%80color%D9%80pdf_report"> <img src="../../man/figures/titlepage%D9%80color%D9%80pdf_report.png" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_top_background_pdf_report"> <img src="../../man/figures/titlepage_top_background_pdf_report.png" align="center"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/two_color_pdf_report"> <img src="../../man/figures/two_color_pdf_report.png" align="right"></a>
+</td>
+</tr>
+</table>
+<div id="title-page" class="section level2">
 <h2 class="hasAnchor">
-<a href="#document-metadata" class="anchor"></a>Document Metadata</h2>
+<a href="#title-page" class="anchor"></a>Title Page</h2>
+<p>Options for designing the title page are listed below:</p>
 <ul>
+<li>
+<code>titlepage</code>: When true, the title page is displayed. The default value is false.</li>
 <li>
 <code>title</code>: The main title of your document.</li>
 <li>
 <code>subtitle</code>: The subtitle of the document.</li>
 <li>
-<code>author</code>: includes the name of authors. you can write authors name in <code>["Ahmad Ehyaei","Sara Ershadmanes"]</code>
+<code>author</code>: Set the name of authors. you can write authors name in list like <code>["Ahmad","Sara"]</code>
 </li>
 <li>
-<code>data</code>: The report’s publication date. It generated automatically from system time by default.</li>
+<code>date</code>: The report’s publication date. It generated automatically from system time by default.</li>
 <li>
 <code>affiliation</code>: Relates to the name of the organization or entity of the person producing the report.</li>
 <li>
 <code>location</code>: City or location of organization.</li>
-</ul>
-<table class="table">
-<colgroup>
-<col span="1" style="width: 60%;">
-<col span="1" style="width: 40%;">
-</colgroup>
-<tr>
-<td>
-<pre><code>---
-title: Statistical analysis of behavioral data
-date: "05 October, 2021"
-author: [Ahmad Ehyaei, Sara Ershadmanesh]
-affiliation: Max Planck Institute for Biological Cybernetics 
-location: Tübingen
----</code></pre>
-</td>
-<td>
-<img src="../../man/figures/basic_pdf_report.png" align="left">
-</td>
-</tr>
-</table>
-<ul>
 <li>
-<code>title-vjust</code>: vjust stands for title location vertical adjustment.</li>
+<code>titlepage-text-color</code>: Hex color code without # for the title page text without an author.</li>
 <li>
-<code>title-hjust</code>: hjust stands for title location horizontal adjustment.</li>
+<code>title-vjust</code>: An integer number used to determine the vertical position of the first page’s title text. This value is somewhere between -200 and 200. This number changes depending on the document. It takes some trial and error to find its exact placement.</li>
 <li>
-<code>author-hjust</code>: hjust stands for author location horizontal adjustment.</li>
+<code>title-hjust</code>: An integer number used to determine the horizontal position of the first page’s title text like as <code>title-vjust</code>.</li>
 <li>
-<code>author-vjust</code>: vjust stands for author location vertical adjustment.</li>
+<code>titlepage-author-text-color</code>: Hex color code without # for the author in title page.</li>
 <li>
-<code>titlepage-text-color</code>: the text color of the title page.</li>
+<code>author-vjust</code>: An integer number used to determine the vertical position of the first page’s author text like as <code>title-vjust</code>.</li>
 <li>
-<code>titlepage-author-text-color</code>: the text color of the author in title page.</li>
-</ul>
-<table class="table">
-<colgroup>
-<col span="1" style="width: 60%;">
-<col span="1" style="width: 40%;">
-</colgroup>
-<tr>
-<td>
-<pre><code>---
-title-vjust: 40
-author-vjust: -150
-titlepage-text-color: 116656
-titlepage-author-text-color: 116656 
----</code></pre>
-</td>
-<td>
-<img src="../../man/figures/titlepage_background_pdf_report.png" align="left">
-</td>
-</tr>
-</table>
-</div>
-<div id="title-page-background" class="section level2">
-<h2 class="hasAnchor">
-<a href="#title-page-background" class="anchor"></a>Title Page Background</h2>
-<ul>
-<li>
-<code>titlepage</code>: When true, the title page is displayed. The default value is false.</li>
+<code>author-hjust</code>: An integer number used to determine the horizontal position of the first page’s author text like as <code>title-vjust</code>.</li>
 <li>
 <code>titlepage-color</code>: The color of the title page’s background The color value must be specified in HTML hex format, such as D8DE2C, without the leading number sign (#). It’s best to put color it in quotes, such as “D8DE2C”.</li>
 <li>
@@ -227,29 +205,13 @@ titlepage-author-text-color: 116656
 <li>
 <code>logo-secondary</code>: The path to the second logo is at the bottom of the title page.</li>
 </ul>
-<table class="table">
-<colgroup>
-<col span="1" style="width: 60%;">
-<col span="1" style="width: 40%;">
-</colgroup>
-<tr>
-<td>
-<pre><code>---
-logo-primary: src/icon/MPILogoWhite.eps
-titlepage-top-color: f03e4c
-titlepage-text-color: FFFFFF
-titlepage-bottom-background: src/img/bottom_background.png
----</code></pre>
-</td>
-<td>
-<img src="../../man/figures/titlepage_bottom_background_pdf_report.png" align="left">
-</td>
-</tr>
-</table>
+<p align="center">
+<img src="../../man/figures/pdf_report_yaml.svg" width="100%"></p>
 </div>
-<div id="page-content-variables" class="section level2">
+<div id="section-page" class="section level2">
 <h2 class="hasAnchor">
-<a href="#page-content-variables" class="anchor"></a>Page Content Variables</h2>
+<a href="#section-page" class="anchor"></a>Section Page</h2>
+<p>To make the report more beautiful, some configurations have been considered for the internal pages, the explanations are given below:</p>
 <ul>
 <li>
 <code>content-has-page</code>: If true, then begin a new page after the table of contents, tables, and figures.</li>
@@ -268,8 +230,42 @@ titlepage-bottom-background: src/img/bottom_background.png
 <li>
 <code>page-background-opacity</code>: The background image opacity.</li>
 <li>
-<code>page-background-color</code>: hex color to fill to a background image for any page.</li>
+<code>page-background-color</code>: Hex color code to fill to a background image for any page.</li>
+<li>
+<code>banner-color</code>: Hex color code to fill to a banner on header of any page.</li>
+<li>
+<code>banner-logo</code>: The path to a banner image that is located in the top right.</li>
+<li>
+<code>banner-text</code>: The text to a banner image that is shown in the top left.</li>
+<li>
+<code>banner-text-color</code>: Hex color code for banner-text</li>
+<li>
+<code>chapter-title-color</code>: Hex color code for chapter title</li>
 </ul>
+<p align="center">
+<img src="../../man/figures/pdf_report_interior_yaml.svg" width="100%"></p>
+<p>This example was generated by below YAML configuration. For more details see example <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/interior_feature_pdf_report">interior page design</a>.</p>
+<pre><code>---
+title: "Statistical analysis of behavioral data"
+date: "05 October, 2021"
+author: [Ahmad Ehyaei, Sara Ershadmanesh]
+affiliation: Max Planck Institute for Biological Cybernetics 
+location: Tübingen
+titlepage: true
+toc: true
+content-has-page: true
+logo-primary: src/icon/MPILogoGray.eps
+logo-secondary: src/icon/MPIBCWhite.eps
+preface-logo: src/icon/MPIBCNNBlack.eps
+page-background-color: f6f6f6
+banner-color: 009EE2
+banner-logo: src/icon/MPIBCNNWhite.eps
+banner-text: Max-Planck Institute
+banner-text-color: ffffff
+chapter-title-color: E90649
+output:
+  MPIThemes::latex_report
+---</code></pre>
 </div>
   </div>
 
