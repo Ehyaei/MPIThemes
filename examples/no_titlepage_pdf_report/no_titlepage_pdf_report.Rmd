@@ -3,7 +3,8 @@ title: "Statistical analysis of behavioral data "
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 author: [Ahmad Ehyaei, Sara Ershadmanesh]
 logo-primary: src/icon/MPILogoGray.eps
-logo-secondary: src/icon/MPIBCWhite.eps
+logo-secondary: src/icon/MPIBCGray.eps
+disable-header-and-footer: true
 output:
   MPIThemes::latex_report
 ...
