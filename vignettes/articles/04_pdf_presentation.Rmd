@@ -33,16 +33,32 @@ output:
 
 The two main features in the presentation are `titlepate-portrait` and `titlepage-bottom-background`.
 The titlepage style can be defined in two ways: landscape or portrait, and is controlled by `titlepate-portrait`. You can also put an image in the bottom background by using `titlepage-bottom-background`, as you see in the below examples.
-
+For more details, click on the image and see the full document for each example.
 
 <table width="100%" border="0">
   <tr>    
-  <td><img src="../../man/figures/simple_pdf_presentation.png" align="left" /></td>
-  <td><img src="../../man/figures/simple_portrait_pdf_presentation.png" align="center" /></td>
+  <td>
+  <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/simple_pdf_presentation">
+  <img src="../../man/figures/simple_pdf_presentation.png" align="left" />
+  </a>
+  </td>
+  <td>
+  <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/simple_portrait_pdf_presentation">
+  <img src="../../man/figures/simple_portrait_pdf_presentation.png" align="center" />
+  </a>
+  </td>
   </tr>
     <tr>    
-  <td><img src="../../man/figures/titlepage_bottom_pdf_presentation.png" align="left" /></td>
-  <td><img src="../../man/figures/titlepage_bottom_portrait_pdf_presentation.png" align="center" /></td>
+  <td>
+  <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_bottom_pdf_presentation">
+  <img src="../../man/figures/titlepage_bottom_pdf_presentation.png" align="left" />
+  </a>
+  </td>
+  <td>
+  <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/basic_pdf_report">
+  <img src="../../man/figures/titlepage_bottom_portrait_pdf_presentation.png" align="center" />
+  </a>
+  </td>
   </tr>
 </table>
 
