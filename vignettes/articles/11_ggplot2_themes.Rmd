@@ -66,16 +66,13 @@ density_plot <- ggplot(df1, aes(x=x, fill=type)) +
   theme(legend.position = "none")
 
 box_plot <- ggplot(df1, aes(x=x, fill=type)) + 
-  geom_boxplot(alpha = 0.8,size = 0.1) +
+  geom_boxplot(alpha = 0.8,size = 0.1,color = "gray") +
   theme_void()+
   theme(legend.position = "none")
 
 # Display this figure:
 library(grid)
-gridExtra::grid.arrange(
-  point_plot,bar_plot,density_plot,box_plot,ncol = 2,
-  top = textGrob("Discrete Theme Examples",gp=gpar(fontsize=15,font=3))
-                        )
+gridExtra::grid.arrange(point_plot,bar_plot,density_plot,box_plot,ncol = 2)
 ```
 
 A continuous palette can be seen in the example below.  
