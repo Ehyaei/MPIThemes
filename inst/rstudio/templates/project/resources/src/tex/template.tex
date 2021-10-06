@@ -487,8 +487,6 @@ $endif$
 \definecolor{MPILivingCoral}{HTML}{FC766A}
 \definecolor{MPIPacificCoast}{HTML}{5B84B1}
 
-
-
 % set titlepage top, bottom, text and rule color
 
 $if(titlepage-top-color)$
@@ -525,13 +523,13 @@ $endif$
 $if(titlepage-rule-color)$
 \definecolor{titlePageRuleColor}{HTML}{$titlepage-rule-color$}
 $else$
-\definecolor{titlePageRuleColor}{HTML}{000000}
+\definecolor{titlePageRuleColor}{HTML}{ffffff}
 $endif$
 
 $if(page-background-color)$
 \definecolor{pageBackgroundColor}{HTML}{$page-background-color$}
 $else$
-\definecolor{pageBackgroundColor}{HTML}{000000}
+\definecolor{pageBackgroundColor}{HTML}{ffffff}
 $endif$
 
 $if(banner-color)$
@@ -549,7 +547,7 @@ $endif$
 $if(chapter-title-color)$
 \definecolor{chapterTitleColor}{HTML}{$chapter-title-color$}
 $else$
-\definecolor{chapterTitleColor}{HTML}{116656}
+\definecolor{chapterTitleColor}{HTML}{000000}
 $endif$
 
 % Set Initial Values
@@ -785,6 +783,35 @@ BoldItalicFont = UniversLTStd-Bold.otf
     \textbf{\color{MPIPacificCoast}Solution} \itshape
 }{\par}
 
+
+%......................................................................%
+% add packages for title page
+
+\definecolor{rcolor}{HTML}{2165B6}
+\definecolor{rconsole}{HTML}{7E7E7E}
+
+\newtcolorbox{rmdconsole}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={4pt}{0pt}{rconsole},
+  colback=rconsole!5!white,
+  sharp corners
+  }
+\newtcolorbox{rmdcode}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={4pt}{0pt}{rcolor},
+  colback=rcolor!5!white,
+  sharp corners
+  }
+
+\BeforeBeginEnvironment{verbatim}{\begin{rmdconsole}}
+\AfterEndEnvironment{verbatim}{\end{rmdconsole}}
+
+\BeforeBeginEnvironment{Highlighting}{\begin{rmdcode}}
+\AfterEndEnvironment{Highlighting}{\end{rmdcode}}
+\definecolor{shadecolor}{HTML}{ffffff}
+
 %......................................................................%
 % add packages for title page
 
@@ -919,14 +946,12 @@ $endif$
 % ---------------------------------------------------------------------------- %
 % Add Page Background Color
 
-$if(page-background-color)$
 \usepackage{eso-pic}
 \newcommand\BackPage{%
 \begin{tikzpicture}[remember picture,overlay]
 \fill[pageBackgroundColor](current page.south west) rectangle (\paperwidth,\paperheight);
 \end{tikzpicture}%
 }
-$endif$
 
 %......................................................................%
 % Remove Blank Page after Table of Contents and between chapter
@@ -963,13 +988,13 @@ $else$
 \usepackage{titlesec}
 
 \titleformat{\section}[block]
-  {\Large\color{chapterTitleColor}}
+  {\huge\color{chapterTitleColor}}
   {\filright \textbf{\thesection}\vspace{1ex}}{12pt}
   {}
   [\titlerule]
 
 \titleformat{\subsection}[block]
-  {\large\color{chapterTitleColor}}
+  {\Large\color{chapterTitleColor}}
   {\filright \textbf{\thesubsection}\vspace{1ex}}{12pt}
   {}
   []
@@ -1126,7 +1151,7 @@ $endif$
 $if(content-has-page)$
 $if(preface-logo)$
 \begin{center}
-\includegraphics[width=2cm]{$preface-logo$}
+\includegraphics[width=4cm]{$preface-logo$}
 \end{center}
 $endif$
 $endif$
@@ -1268,7 +1293,7 @@ $endif$
 
 $if(banner-color)$
 \ClearShipoutPicture
-\AddToShipoutPicture{\BannerPageHeader\BannerPageFooter}
+\AddToShipoutPicture{\BackPage\BannerPageHeader\BannerPageFooter}
 $endif$
 
 
