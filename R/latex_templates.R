@@ -69,6 +69,8 @@ latex_presentation <- function(..., keep_tex = TRUE, highlight = "tango",
   base$knitr$opts_chunk$message <- F
   base$knitr$opts_chunk$error <- FALSE
   base$knitr$opts_chunk$screenshot.opts <- list(delay=1)
+  base$knitr$opts_chunk$fig.width=5
+  base$knitr$opts_chunk$fig.height=3.5
   base$knitr$opts_chunk$warning <- FALSE
   base$knitr$opts_chunk$fig.align <- "center"
   base$knitr$opts_chunk$dev <- "cairo_pdf"
