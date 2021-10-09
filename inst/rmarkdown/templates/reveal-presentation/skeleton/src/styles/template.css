@@ -1,0 +1,127 @@
+/* Style sheet for Reveal.js Presentations
+Author : Ahmad Ehyaei
+*/
+
+/* -------------------------------------- */
+/*               Add Font                 */
+
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/Univers-light-normal.ttf");
+}
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/UniversBlack.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/UniversLTStd.otf");
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "Univers";
+    src: url("../fonts/UniversLTStd-Bold.otf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+
+/* -------------------------------------- */
+/*                   Text                 */
+
+/* Headers */
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #009EE2!important;
+  font-family: "Univers" !important;
+  font-weight: bold !important;
+}
+
+.reveal h3.data, .reveal h1.subtitle, .reveal h2.author {
+  font-weight: normal!important;
+}
+.reveal h1.title {
+  margin-top: 3em;
+}
+
+/* Text Align */
+
+#left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+#right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}
+
+/* Slide content area */
+
+.reveal .slides {
+  text-align: left;
+  font-size: 80%;
+}
+
+.reveal .slides section>* {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+
+
+/* -------------------------------------- */
+/*         Images and Backgrounds         */
+
+/* Backgrounds */
+
+body {
+    background: #f6f6f6;
+    background-color: #f6f6f6;
+}
+
+/* Add Logo */
+
+.pagetitle-logo {
+    position: absolute!important;
+    top: -100px!important;
+    right: -50px!important;
+}
+
+/* Remove Image Border  */
+
+.reveal section img{
+  border: 0px;
+  box-shadow: none;
+}
+
+/* Remove Image Border  */
+
+.reveal .controls .navigate-left.enabled {
+    border-right-color: #009EE2!important;
+}
+
+.reveal .controls .navigate-right.enabled {
+    border-left-color: #009EE2!important;
+}
+
+.reveal .controls .navigate-down.enabled {
+    border-top-color: #009EE2!important;
+}
+
+.reveal .controls .navigate-up.enabled {
+    border-bottom-color: #009EE2!important;
+}
