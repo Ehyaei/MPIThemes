@@ -12,9 +12,8 @@ knitr::opts_chunk$set(
   error = FALSE,
   echo = FALSE,
   dev = "svg",
-  # fig.dim = c(5, 3),
-  fig.retina = 0.5,
-  out.height = "90%",
+  fig.retina = 2,
+  fig.height = 4, out.width="100%",
   fig.align = "center",
   fig.pos ="H",
   comment = "",
@@ -39,11 +38,11 @@ library(dplyr)
 library(grid)
 library(gt)
 library(kableExtra)
-
+library(reticulate)
 ############################################################
 #                                                          #
 #                   Set Color and Theme                    #
 #                                                          #
 ############################################################
 
-set_color_theme(7)
+set_color_theme(12)

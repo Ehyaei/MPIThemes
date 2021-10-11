@@ -6,11 +6,11 @@ Author : Ahmad Ehyaei
   --mpigreen: #116656;
   --mpigray: #DDDED6;
   --mpiblue: #009EE2;
-  --mpired: #E90649; 
+  --mpired: #E90649;
+  --mpilightgray: #F6F6F6;
   --logo: url(../img/MPILogoWhite.png);
-  --banerlogo: url(../img/MPILogoWhite.png);
+  --secondlogo: url();
 }
-
 
 /* -------------------------------------- */
 /*               Add Font                 */
@@ -40,23 +40,77 @@ Author : Ahmad Ehyaei
 /*                   Text                 */
 
 
-
-/******************************
-  Header 
-******************************/
-
 /* Headers */
-h1, h2,h3, h4, h5, p {
+h1, h2,h3, h4, h5, p,.remark-slide-number {
     font-family: Univers!important;
 }
 
+/*
+CSS template https://github.com/pat-s/xaringan-metropolis
+*/
 
-.remark-slide-content h1 { color: var(--mpired);}
-.remark-slide-content h2 { color: var(--mpired);}
-.remark-slide-content h3 { color: var(--mpired);}
+/* Slide Header */
+.remark-slide-content {
+  background-color: var(--mpilightgray);
+  border-top: 80px solid var(--mpigreen);
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
 
-body {
-    background-color: #f6f6f6!important;
+.title-slide .inverse .remark-slide-content {
+  background-color: var(--mpilightgray);
+}
+
+.inverse {
+  background-color: var(--mpigreen);
+  text-shadow: none;
+}
+
+.clear{
+  border-top: 0px solid var(--mpilightgray);
+}
+
+h1 {
+  font-weight: normal;
+  margin-top: -90px;
+  margin-left: -00px;
+  color: var(--mpilightgray);
+}
+
+h2, h3, h4 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: var(--mpigreen);
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 00px;
+  margin-bottom: -10px;
+}
+
+.remark-slide-content h1 {
+  font-size: 40px;
+}
+
+.remark-slide-content h2 {
+  font-size: 35px;
+}
+
+.remark-slide-content h3 {
+  font-size: 30px;
+}
+
+.remark-slide-number {
+  font-size: 13pt;
+  color: #272822;
+  opacity: 1;
+}
+.inverse .remark-slide-number {
+  font-size: 13pt;
+  color: #FAFAFA;
+  opacity: 1;
 }
 
 /******************************
@@ -66,9 +120,6 @@ body {
 /*
 CSS template inspired by InraeTheme pacakge
 */
-.title-slide .remark-slide-number {
-  display: none;
-}
 
 .title-slide {
   background-color: var(--mpigreen);
@@ -76,9 +127,13 @@ CSS template inspired by InraeTheme pacakge
 }
 
 .title-slide {
-  background-image: var(--logo); /* logo */
-  background-position: right 30px top 30px;
-  background-size: 200px;
+  background-image: var(--logo),var(--secondlogo); /* logo */
+  background-position: right 25px top 25px,right 25px bottom 25px;
+  background-size: 180px,180px;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
 }
 
 .title-slide h1  {
@@ -89,7 +144,7 @@ CSS template inspired by InraeTheme pacakge
   text-align: left;
   margin-left: 15px;
   margin-right: 30px;
-  padding-top: 100px;
+  padding-top: 250px;
 }
 
 .title-slide h2  {
@@ -128,21 +183,6 @@ hr, .title-slide h2::after, .mline h1::after {
   margin: 10px 15px 0 15px;
 }
 
-
-/******************************
-  Code and link formatting
-******************************/
-
-a, a > code {
-  color: var(--mpiblue);
-  text-decoration: none;
-}
-
-.remark-code-line-highlighted {
-  background-color: #ffff88;
-}
-
-
 /******************************
   Two-column layout
 ******************************/
@@ -171,4 +211,59 @@ a, a > code {
 }
 .pull-right ~ * {
   clear: both;
+}
+
+/* code block */
+
+.code40 .remark-code {
+  font-size: 40%;
+}
+
+.code50 .remark-code {
+  font-size: 50%;
+}
+
+.code60 .remark-code {
+  font-size: 60%;
+}
+
+/* code color */
+
+.r {
+  background-color: #c1e1ec !important;
+  border-radius: 5px!important;
+}
+
+.python {
+  background-color: #ffffd4 !important;
+  border-radius: 5px!important;
+}
+
+.scala {
+  background-color: #FFECEC !important;
+  border-radius: 5px!important;
+}
+
+/* blockquote */
+
+blockquote, .blockquote {
+  display: block;
+  margin-top: 0.05em;
+  margin-bottom: 0.1em;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-left: solid 2px var(--mpiblue);
+  border-top: solid 2px var(--mpiblue);
+  border-bottom: solid 2px var(--mpiblue);
+  border-right: solid 2px var(--mpiblue);
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  color: #838383;
+  padding: 0.5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.blockquote p {
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
