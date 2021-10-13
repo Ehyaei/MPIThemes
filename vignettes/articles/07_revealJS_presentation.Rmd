@@ -33,25 +33,34 @@ output:
   <tr>
   <td>
   <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_revealJS_presentation">
-  <img src="../../man/figures/html_revealJS_presentation_1.png" align="left" />
+  <img src="../../man/figures/html_revealJS_presentation1.png" align="left" />
   </a></td>
   <td>
   <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_revealJS_presentation">
-  <img src="../../man/figures/html_revealJS_presentation_2.png" align="center" />
+  <img src="../../man/figures/html_revealJS_presentation2.png" align="center" />
   </a></td>
   <td>
   </tr>
   <tr>
   <td>
   <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_revealJS_presentation">
-  <img src="../../man/figures/html_revealJS_presentation_3.png" align="left" />
+  <img src="../../man/figures/html_revealJS_presentation3.png" align="left" />
   </a></td>
   <td>
   <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_revealJS_presentation">
-  <img src="../../man/figures/html_revealJS_presentation_4.png" align="center" />
+  <img src="../../man/figures/html_revealJS_presentation4.png" align="center" />
   </a></td>
   <td>
   </tr>
 </table>
 
 
+To configure a custom style, you can change `template.css` inside the path `src/styles` in the template.
+
+You can also add the title page logo by changing the image path:
+
+```
+class="pagetitle-logo" src="src/img/MPILogoGreen.png">
+```
+
+In the YAML RMarkdown header.
