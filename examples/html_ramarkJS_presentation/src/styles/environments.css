@@ -1,0 +1,330 @@
+/* ------------------------------------------ */
+/*             Design Enviroments             */
+/* ------------------------------------------ */
+
+.rmdWarning,.rmdwarning {
+  border: 1px solid #FF7300!important;
+  background: #FFF2F0!important;
+}
+
+.rmdNote, .rmdnote {
+  border: 1px solid #E90649!important;
+  background: #FFECEE!important;
+}
+
+.rmdTip, .rmdtip {
+  border: 1px solid #62BD19!important;
+  background: #DFFFD4!important;
+}
+
+.rmdThink, .rmdthink {
+  border: 1px solid #116656!important;
+  background: #BEF9E9!important;
+}
+
+.rmdTodo, .rmdtodo {
+  border: 1px solid #009EE2!important;
+  background: #EDF5FF!important;
+}
+
+.rmdThink, .rmdWarning, .rmdNote, .rmdTip, .rmdTodo, .rmdthink, .rmdwarning, .rmdnote, .rmdtip, .rmdtodo {
+  border-left-width: 10px!important;
+  border-radius: 5px!important;
+  padding-left: 0.5em!important;
+  padding-right: 0.5em!important;
+  margin: 1em 0!important;
+}
+
+.rmdWarning::before {
+  display: block!important;
+  content: "Warning"!important;
+  color: #FF7300!important;
+  font-size: 1.1em!important;
+  font-weight: bold!important;
+  margin-bottom: 0.25em!important;
+}
+
+.rmdNote::before {
+  display: block!important;
+  content: "Note"!important;
+  color: #E90649!important;
+  font-size: 1.1em!important;
+  font-weight: bold!important;
+  margin-bottom: 0.25em!important;
+}
+
+.rmdTip::before {
+  display: block!important;
+  content: "Tip"!important;
+  color: #62BD19!important;
+  font-size: 1.1em!important;
+  font-weight: bold!important;
+  margin-bottom: 0.25em!important;
+}
+
+.rmdThink::before {
+  display: block!important;
+  content: "Think"!important;
+  color: #116656!important;
+  font-size: 1.1em!important;
+  font-weight: bold!important;
+  margin-bottom: 0.25em!important;
+}
+
+.rmdTodo::before {
+  display: block!important;
+  content: "To Do"!important;
+  color: #009EE2!important;
+  font-size: 1.1em!important;
+  font-weight: bold!important;
+  margin-bottom: 0.25em!important;
+}
+
+
+/* ------------------------------------------ */
+/*               Math Enviroments             */
+/* ------------------------------------------ */
+
+
+:root {
+    --thm: "Theorem ";
+    --defn: "Definition ";
+    --lem: "Lemma ";
+    --cor: "Corollary ";
+    --prop: "Proposition ";
+    --exer: "Exercise ";
+    --exam: "Example ";
+    --rmk: "Remark ";
+    --pr: "Proof ";
+    --sol: "Solution ";
+}
+
+/* ------------------------------------------ */
+/*              Counter Settings              */
+
+body {
+    --chapnum: 0;
+    counter-reset: thmnum 0;
+    counter-reset: lemnum 0;
+    counter-reset: cornum 0;
+    counter-reset: propnum 0;
+    counter-reset: defnnum 0;
+    counter-reset: rmknum 0;
+    counter-reset: examnum 0;
+    counter-reset: exernum 0;
+}
+.section.level1 {
+    counter-reset: chapter var(--chapnum);
+}
+
+/* ------------------------------------------ */
+/*              Block Settings                */
+
+.Theorem, .Definition, .Lemma, .Corollary,
+.Proposition, .Exercise, .Example, .Remark,
+.Proof, .Solution {
+    display: block!important;
+    margin-bottom: 1em!important;
+    margin-top: 2em!important;
+    padding: 0 0.5em!important;
+    -moz-border-radius: 5px!important;
+    -webkit-border-radius: 5px!important;
+    border-radius: 5px!important;
+}
+
+.rmdexer, .rmdsol {
+    display: block!important;
+    margin-bottom: 1em!important;
+    margin-top: 2em!important;
+    padding: 0 0.5em!important;
+}
+
+.Theorem::before, .Definition::before, .Lemma::before, .Corollary::before,
+.Proposition::before, .Exercise::before, .Example::before, .Remark::before,
+.Proof::before, .Solution::before {
+    display: block!important;
+    font-weight: bold!important;
+    font-style: normal!important;
+    float: left!important;
+    -moz-border-radius: 5px!important;
+    -webkit-border-radius: 5px!important;
+    border-radius: 5px!important;
+    margin-left: 1em!important;
+    margin-top: -1em!important;
+    padding: 0 7px!important;
+}
+
+.rmdexer::before, .rmdsol::before{
+    font-style: normal!important;
+    font-weight: bold!important;
+    float: left!important;
+    padding-right:1em!important;
+}
+
+
+.Theorem > p:first-child, .Definition > p:first-child, .Lemma > p:first-child, .Corollary > p:first-child,
+.Proposition > p:first-child, .Exercise > p:first-child, .Example > p:first-child, .Remark > p:first-child,
+.Proof > p:first-child, .Solution > p:first-child {
+    clear: both!important;
+}
+
+
+/*              Theorem              */
+
+.Theorem {
+    counter-increment: thmnum!important;
+    border: 1px solid #116656!important;
+    background-color: #BEF9E9!important;
+}
+
+.Theorem::before {
+    color:white;
+    border: 1px solid #116656!important;
+    background: #116656!important;
+    content: var(--thm) counter(chapter)"."counter(thmnum) " " attr(title);
+}
+
+/*              Definition              */
+
+.Definition {
+    counter-increment: defnnum!important;
+    border: 1px solid #62BD19!important;
+    background-color: #DFFFD4!important;
+}
+
+.Definition::before {
+    color:white!important;
+    border: 1px solid #62BD19!important;
+    background: #62BD19!important;
+    content: var(--defn) counter(chapter)"."counter(defnnum) " " attr(title)!important;
+}
+
+/*              Lemma              */
+
+.Lemma {
+    counter-increment: lemnum!important;
+    border: 1px solid #40BDE8!important;
+    background-color: #EEF9FF!important;
+}
+
+.Lemma::before {
+    color:white!important;
+    border: 1px solid #40BDE8!important;
+    background: #40BDE8!important;
+    content: var(--lem) counter(chapter)"."counter(lemnum) " " attr(title)!important;
+}
+
+/*              Corollary              */
+
+.Corollary {
+    counter-increment: cornum!important;
+    border: 1px solid #009EE2!important;
+    background-color: #EDF5FF!important;
+}
+
+.Corollary::before {
+    color:white!important;
+    border: 1px solid #009EE2!important;
+    background: #009EE2!important;
+    content: var(--cor) counter(chapter)"."counter(cornum) " " attr(title)!important;
+}
+
+/*              Proposition              */
+
+.Proposition {
+    counter-increment: propnum!important;
+    border: 1px solid #FFCE09!important;
+    background-color: #FFFAF1!important;
+}
+
+.Proposition::before {
+    color:white!important;
+    border: 1px solid #FFCE09!important;
+    background: #FFCE09!important;
+    content: var(--prop) counter(chapter)"."counter(propnum) " " attr(title)!important;
+}
+
+/*              Exercise              */
+
+.Exercise {
+    counter-increment: exernum!important;
+    border: 1px solid #E90649!important;
+    background-color: #FFECEE!important;
+}
+
+.Exercise::before {
+    color:white!important;
+    border: 1px solid #E90649!important;
+    background: #E90649!important;
+    content: var(--exer) counter(chapter)"."counter(exernum) " " attr(title)!important;
+}
+.rmdexer::before {
+    color: #E90649!important;
+    content: var(--exer)!important;
+}
+
+/*              Example              */
+
+.Example {
+    counter-increment: examnum!important;
+    border: 1px solid #FF7300!important;
+    background-color: #FFF2F0!important;
+}
+
+.Example::before {
+    color:white!important;
+    border: 1px solid #FF7300!important;
+    background: #FF7300!important;
+    content: var(--exam) counter(chapter)"."counter(examnum) " " attr(title)!important;
+}
+
+/*              Remark              */
+
+.Remark {
+    counter-increment: rmknum!important;
+    border: 1px solid #FA9FCC!important;
+    background-color: #FEF6FA!important;
+}
+
+.Remark::before {
+    color:white!important;
+    border: 1px solid #FA9FCC!important;
+    background: #FA9FCC!important;
+    content: var(--rmk) counter(chapter)"."counter(rmknum) " " attr(title)!important;
+}
+
+/*              Proof              */
+
+.Proof {
+    counter-increment: prnum!important;
+    border: 1px solid #FC766A!important;
+    background-color: #FEF3F2!important;
+}
+
+.Proof::before {
+    color:white!important;
+    border: 1px solid #FC766A!important;
+    background: #FC766A!important;
+    content: var(--pr) counter(chapter)"."counter(prnum) " " attr(title)!important;
+}
+
+/*              Solution              */
+
+.Solution {
+    counter-increment: solnum;
+    border: 1px solid #5B84B1!important;
+    background-color: #EAF2FF!important;
+}
+
+.Solution::before {
+    color:white!important;
+    border: 1px solid #5B84B1!important;
+    background: #5B84B1!important;
+    content: var(--sol) counter(chapter)"."counter(solnum) " " attr(title)!important;
+}
+
+.rmdsol::before {
+    color:#5B84B1!important;
+    content: var(--sol)!important;
+}
+
