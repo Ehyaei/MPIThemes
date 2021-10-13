@@ -2,6 +2,14 @@
 Author : Ahmad Ehyaei
 */
 
+:root {
+  --mpigreen: #116656;
+  --mpigray: #DDDED6;
+  --mpiblue: #009EE2;
+  --mpired: #E90649;
+  --mpilightgray: #F6F6F6;
+}
+
 /* -------------------------------------- */
 /*               Add Font                 */
 
@@ -32,7 +40,7 @@ Author : Ahmad Ehyaei
 /* Headers */
 
 .reveal h1, .reveal h2, .reveal h3 {
-  color: #009EE2!important;
+  color: var(--mpigreen)!important;
   font-family: "Univers" !important;
   font-weight: bold !important;
 }
@@ -111,17 +119,17 @@ body {
 /* Remove Image Border  */
 
 .reveal .controls .navigate-left.enabled {
-    border-right-color: #009EE2!important;
+    border-right-color: var(--mpigreen)!important;
 }
 
 .reveal .controls .navigate-right.enabled {
-    border-left-color: #009EE2!important;
+    border-left-color: var(--mpigreen)!important;
 }
 
 .reveal .controls .navigate-down.enabled {
-    border-top-color: #009EE2!important;
+    border-top-color: var(--mpigreen)!important;
 }
 
 .reveal .controls .navigate-up.enabled {
-    border-bottom-color: #009EE2!important;
+    border-bottom-color: var(--mpigreen)!important;
 }
