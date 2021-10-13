@@ -592,6 +592,25 @@ $else$
 $endif$
 
 
+$if(logo-primary-size)$
+\def\logoPrimarySize{$logo-primary-size$}
+$else$
+\def\logoPrimarySize{0.126}
+$endif$
+
+$if(logo-secondary-size)$
+\def\logoSecondarySize{$logo-secondary-size$}
+$else$
+\def\logoSecondarySize{0.126}
+$endif$
+
+$if(banner-logo-size)$
+\def\bannerLogoSize{$banner-logo-size$}
+$else$
+\def\bannerLogoSize{0.06}
+$endif$
+
+
 % end of color and value definition
 %......................................................................%
 
@@ -905,7 +924,7 @@ $if(banner-color)$
   ([yshift=40pt]current page.north west|-current page text area.north west) -- cycle;
 
 \node[inner sep=0pt] at (page cs:0.82,0.92){
-$if(banner-logo)$\includegraphics[height=0.06\paperheight]{$banner-logo$}$endif$
+$if(banner-logo)$\includegraphics[height=\bannerLogoSize\paperheight]{$banner-logo$}$endif$
 };
 \node[font=\color{bannerTextColor},anchor=west,
   xshift=1cm,yshift=-0.7cm] at (current page.north west)
@@ -1085,9 +1104,9 @@ $endif$
 
 
 % add main logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.672,0.795){$if(logo-primary)$\includegraphics[height=0.126\paperheight]{$logo-primary$}$endif$};
+\node[inner sep=0pt] at (page cs:0.672,0.795){$if(logo-primary)$\includegraphics[height=\logoPrimarySize\paperheight]{$logo-primary$}$endif$};
 % add secondary logo % TODO: add else
-\node[inner sep=0pt] at (page cs:0.672,-0.795){$if(logo-secondary)$\includegraphics[height=0.126\paperheight]{$logo-secondary$}$endif$};
+\node[inner sep=0pt] at (page cs:0.672,-0.795){$if(logo-secondary)$\includegraphics[height=\logoSecondarySize\paperheight]{$logo-secondary$}$endif$};
 
 % add title and subtitle
 % TODO: use bodoni font in title
