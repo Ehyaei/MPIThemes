@@ -135,7 +135,49 @@
 
     
     
-
+<p><a href="https://github.com/gnab/remark">remrak.js</a> is a simple Markdown-driven presentation tool that runs in the browser. You can create amazing presentations to fit your tastes if you have a basic understanding of HTML and CSS. For create slides, we use <a href="https://github.com/yihui/xaringan">xaringan</a> package, that has brought <code>remark.js</code> to RMarkdown. You can see <a href="https://slides.yihui.org/xaringan/#1">Yihui</a> demo. There are many introductions to Xaringan like <a href="https://arm.rbind.io/slides/xaringan.html#1">this</a>.</p>
+<p><code>moon_reader</code> is the main function that takes many options to generate HTML slides. To achieve the MPI theme, add custom CSS and other settings. In the below YAML, you can find theme configurations.</p>
+<pre><code>--- 
+title: Statistical Analysis of Behavioral Data
+subtitle: Data Driven Approach
+date: "13 October, 2021"
+author: Ahmad Ehyaei
+institute: Max-Planck Institute
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [src/styles/template.css, src/styles/environments.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:10" 
+      slideNumberFormat: "%current% / %total%"
+      navigation:
+        scroll: false
+--- </code></pre>
+<table class="table">
+<tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_remamrkJS_presentation"> <img src="../../man/figures/html_remarkJS_presentation_1.png" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_remarkJS_presentation"> <img src="../../man/figures/html_remarkJS_presentation_2.png" align="center"></a>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_remarkJS_presentation"> <img src="../../man/figures/html_remarkJS_presentation_3.png" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_remarkJS_presentation"> <img src="../../man/figures/html_remarkJS_presentation_4.png" align="center"></a>
+</td>
+<td>
+</td>
+</tr>
+</table>
+<p>There is no configuration settings than <code>template.css</code> inside the path <code>src/styles</code> in the template. In the <code>template.css</code>, colors, and figures can be set on top of the code.</p>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
