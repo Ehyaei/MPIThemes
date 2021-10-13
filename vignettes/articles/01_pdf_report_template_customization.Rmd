@@ -76,7 +76,9 @@ Options for designing the title page are listed below:
 - `titlepage-top-background`: The path to a top title page background.
 - `titlepage-bottom-background`: The path to a bottom title page background.
 - `logo-primary`: The path to the main logo is at the top of the title page.
+- `logo-primary-size`: The numeric value between 0 to 1, related to height of logo. 
 - `logo-secondary`: The path to the second logo is at the bottom of the title page.
+- `logo-secondary-size`: The numeric value between 0 to 1, related to height of logo.
 
 <p align="center">
 <img src="../../man/figures/pdf_report_yaml.svg" width="100%"/>
@@ -99,6 +101,7 @@ the explanations are given below:
 - `page-background-color`: Hex color code to fill to a background image for any page.
 - `banner-color`:  Hex color code to fill to a banner on header of any page.
 - `banner-logo`: The path to a banner image that is located in the top right.
+- `banner-logo-size`: The numeric value between 0 to 1, related to height of logo.
 - `banner-text`: The text to a banner image that is shown in the top left.
 - `banner-text-color`: Hex color code for banner-text
 - `chapter-title-color`: Hex color code for chapter title
