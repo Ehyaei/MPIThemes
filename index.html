@@ -132,28 +132,33 @@
 <a href="#mpithemes" class="anchor"></a>MPIThemes</h1></div>
 <p><a href="https://github.com/Ehyaei/MPIThemes/actions"><img src="https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://github.com/Ehyaei/MPIThemes"><img src="https://img.shields.io/badge/devel%20version-0.0.2-orange.svg"></a> <a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"></a> <a href="https://github.com/Ehyaei/MPIThemes/commits/master"><img src="https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg"></a></p>
 <p>RMarkdown enables you to write reproducible academic publications such as articles, PhD thesis, lab reports, posters, presentations, and a variety of other fascinating documents using the lightweight and plain-text Markdown syntax.</p>
-<p>In the Rmarkdown environment, you can write text, insert images, formulas, R and recently, Python scripts. When running your Rmd files with knitr, output plots, tables and code results are embedded in the md file. Then, Rstudio by using pandoc’s powerful engine can convert your documents to many formats, such as PDF, Docx, HTML, epub, and… In particular, you can create PDF reports without worrying about the lateX code.</p>
+<p>In the Rmarkdown environment, you can write text, insert images, formulas and simultaneously R and Python scripts.</p>
+<blockquote>
+<p>MPIThemes is not only for R users!. Python programmers can also run codes in Rmarkdown. This <a href="https://ehyaei.github.io/MPIThemes/articles/articles/21_python_rmarkdown.html">article</a> has additional information.</p>
+</blockquote>
+<p>When running your Rmd files with knitr, output plots, tables and code results are embedded in the md file. Then, Rstudio by using pandoc’s powerful engine can convert your documents to many formats, such as PDF, Docx, HTML, epub, and… In particular, you can create PDF reports without worrying about the lateX code.</p>
 <p align="center">
-</p>
-<p><img src="reference/figures/rmarkdown_overview.png" width="70%"></p>
-<a href="https://epirhandbook.com/reports-with-r-markdown.html">image source</a>
-
+<img src="reference/figures/TheLordofDocuments.svg" width="100%"></p>
 <p>The MPIThemes package’s objective is to provide a wide range of Rmarkdown templates with ggplot themes for scientific reproducible research with custom design for the MAX-PLANCK institute. For designing report templates, I found the CD manual (available <a href="https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html">here</a>)</p>
 <p align="center">
 <img src="reference/figures/cd_manual.png" width="30%"></p>
 <p>The manual sets out the standards for writing reports for Max-Planck society. The title page, logo, size, colors, and font guidelines are all described in this document. I attempted to meet the guidelines, but it still does not fully comply.</p>
-<p>The reports’ default format is based on the Maxi-Planck theme. We weren’t, however, constrained by this theme. Reports in various styles can be created by defining the relevant parameters in YAML. for more details see <a href="https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_template_customization.html">PDF Report Template Customization</a> Some Design can be found in the <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples">examples</a> section.</p>
-<table class="table"><tr>
-<td>
-<img src="reference/figures/basic_pdf_report.png" align="left">
-</td>
-<td>
-<img src="reference/figures/titlepage_bottom_background_pdf_report.png" align="center">
-</td>
-<td>
-<img src="reference/figures/titlepage_background_pdf_report.png" align="right">
-</td>
-</tr></table>
+</div>
+<div id="features" class="section level1">
+<h1 class="hasAnchor">
+<a href="#features" class="anchor"></a>Features</h1>
+<p>The <code>MPIThemes</code> package contains report and presentation templates in PDF, HTML, Office formats. In the articles area, you’ll find an introduction to each template as well as instructions on how to config it. The templates that have been implemented so far are as follows:</p>
+<ul>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/01_pdf_report_template_customization.html">PDF Report (LaTeX)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/02_short_pdf_report.html">Short PDF note (LaTeX)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/03_bookdown_document.html">Long Document (Gitbook/Bookdown)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/04_pdf_presentation.html">Beamer Presentation (LaTeX)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/05_editable_report.html">Editable Report (Word)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/06_editable_presentation.html">Editable Presentation (Powerpoint)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/08_remarkJS_presentation.html">HTML Presentation (RemarkJS)</a></li>
+<li><a href="https://ehyaei.github.io/MPIThemes/articles/articles/07_revealJS_presentation.html">HTML Presentation (RevealJS)</a></li>
+</ul>
+<p>The template’ default format is based on the Maxi-Planck theme. We weren’t, however, constrained by this theme. Reports in various styles can be created by defining the relevant parameters in YAML or templates. for more details see <a href="https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_template_customization.html">PDF Report Template Customization</a></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -165,11 +170,44 @@
 <div id="example-gallery" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example-gallery" class="anchor"></a>Example Gallery</h2>
-<p>PDF, HTML, and Office outputs are all supported by the template. See the outputs of the newest version of the templates in the examples below:</p>
-<ul>
-<li><a href="https://github.com/Ehyaei/MPIThemes/blob/master/examples/basic_pdf_report/basic_pdf_report.pdf">simple pdf report</a></li>
-<li><a href="https://github.com/Ehyaei/MPIThemes/blob/master/examples/titlepage_background_pdf_report/titlepage_background_pdf_report.pdf">custom design pdf report</a></li>
-</ul>
+<p>PDF, HTML, and Office outputs are all supported by the template. Some Design can be found in the <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples">examples</a> section. The full document details may be found by clicking on the image.</p>
+<table class="table"><tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/basic_pdf_report"> <img src="reference/figures/basic_pdf_report.png" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_bottom_background_pdf_report"> <img src="reference/figures/titlepage_bottom_background_pdf_report.png" align="center"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_background_pdf_report"> <img src="reference/figures/titlepage_background_pdf_report.png" align="right"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/no_titlepage_pdf_report"> <img src="reference/figures/short_report.png" align="right"></a>
+</td>
+</tr></table>
+<table class="table"><tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_bottom_pdf_presentation"> <img src="reference/figures/titlepage_bottom_pdf_presentation.png" width="300" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/titlepage_bottom_portrait_pdf_presentation"> <img src="reference/figures/titlepage_bottom_portrait_pdf_presentation.png" width="300" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_remarkJS_presentation"> <img src="reference/figures/html_remarkJS_presentation_1.png" width="300" align="center"></a>
+</td>
+</tr></table>
+<table class="table"><tr>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_revealJS_presentation"> <img src="reference/figures/html_revealJS_presentation1.png" width="300" align="right"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/editable_powerpoint_presentation"> <img src="reference/figures/powepoint.png" width="300" align="left"></a>
+</td>
+<td>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/editable_word_report"> <img src="reference/figures/word.png" width="300" align="center"></a>
+</td>
+</tr></table>
+<p>Comments and bug reports are welcome. Please submit a bug report or a pull request to the Github repository. The following templates will be gradually added to the bundle.</p>
 </div>
 <div id="attribution" class="section level2">
 <h2 class="hasAnchor">
@@ -182,40 +220,6 @@
 <li>David Carayon’s <a href="https://github.com/davidcarayon/InraeThemes">InraeThemes</a> package</li>
 <li>
 <a href="https://github.com/ElegantLaTeX/ElegantBook">ElegantBook</a> LaTeX Template for Books</li>
-</ul>
-</div>
-<div id="todo" class="section level2">
-<h2 class="hasAnchor">
-<a href="#todo" class="anchor"></a>TODO</h2>
-<p>Comments and bug reports are welcome. Please submit a bug report or a pull request to the Github repository. The following templates will be gradually added to the bundle.</p>
-<ul>
-<li>
-<input type="checkbox" disabled checked>
-PDF Report (LaTeX)</li>
-<li>
-<input type="checkbox" disabled checked>
-Short PDF note (LaTeX)</li>
-<li>
-<input type="checkbox" disabled checked>
-Long Document (Gitbook/Bookdown)</li>
-<li>
-<input type="checkbox" disabled>
-Editable Report (Word)</li>
-<li>
-<input type="checkbox" disabled>
-PhD Thesis (LaTeX/Bookdown)</li>
-<li>
-<input type="checkbox" disabled checked>
-Beamer Presentation (LaTeX)</li>
-<li>
-<input type="checkbox" disabled>
-HTML Presentation (RevealJS)</li>
-<li>
-<input type="checkbox" disabled>
-Editable Presentation (Powerpoint)</li>
-<li>
-<input type="checkbox" disabled>
-Conference Posters (HTML/LaTeX)</li>
 </ul>
 </div>
 </div>
