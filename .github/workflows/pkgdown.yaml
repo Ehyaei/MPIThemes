@@ -31,3 +31,7 @@ jobs:
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
+
+      - name: Load more R packages
+        run: |
+          Rscript -e 'devtools::install_github("amirmasoudabdol/preferably", upgrade = "never")'
