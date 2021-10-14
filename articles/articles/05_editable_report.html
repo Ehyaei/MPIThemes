@@ -135,6 +135,18 @@
 
     
     
+<p>Latex or HTML documents are so beautiful, but if you want to edit some part of them, you must render all document agein. For Microsoft users, the editable Word (.docx) templage is designed. It uses the <a href="https://davidgohel.github.io/officer/">officer</a> and <a href="https://github.com/davidgohel/officedown">officedown</a> R packages. The MPI template comes from template.docx, which is a word template. You can change it by setting your color or image. To create a word template, you can find it via <code>File &gt; New File &gt; Rmarkdown &gt; From Template &gt; Editable Report (Word)</code></p>
+<p>The YAML configurations and word output can be found below.</p>
+<pre><code>---
+title: "Statistical Analysis of Behavioral Data"
+subtitle: "Data Driven"
+date: "14 October, 2021"
+author: [Ahmad Ehyaei, Sara Ershadmanesh]
+output: 
+  officedown::rdocx_document:
+    reference_docx: src/styles/template.docx
+---</code></pre>
+<a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/editable_word_report"> <img src="../../man/figures/editable_word_report.png" align="left"></a>
 
   </div>
 
