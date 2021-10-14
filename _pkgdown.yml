@@ -1,3 +1,6 @@
 template:
-  params:
-    bootswatch: journal
+  bootstrap: 4
+  bootswatch: materia
+  bslib:
+    bg: "#202123"
+    fg: "#B8BCC2"
