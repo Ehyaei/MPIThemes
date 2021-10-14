@@ -2,7 +2,7 @@
 title: "Editable Report witn Word"
 ---
 
-Latex or HTML documents are so beautiful, but if you want to edit some part of them, you must render all document agein.
+Latex or HTML documents are so beautiful, but if you want to edit some part of them, you must render all document again.
 For Microsoft users, the editable Word (.docx) templage is designed. 
 It uses the [officer](https://davidgohel.github.io/officer/) and 
 [officedown](https://github.com/davidgohel/officedown) R packages.
