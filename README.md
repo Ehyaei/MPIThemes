@@ -41,7 +41,7 @@ report templates, I found the CD manual (available
 [here](https://docplayer.org/2328711-Max-planck-institut-das-erscheinungsbild-der-max-planck-gesellschaft-4-ueberarbeitete-auflage.html))
 
 <p align="center">
-<img src="man/figures/cd_manual.png" width="30%"/>
+<img src="man/figures/cd_manual.png" width="20%"/>
 </p>
 
 The manual sets out the standards for writing reports for Max-Planck
@@ -142,16 +142,16 @@ image.
 <tr>
 <td>
 <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/html_revealJS_presentation">
-<img src="man/figures/html_revealJS_presentation1.png"  width="300" align="right"/>
+<img src="man/figures/html_revealJS_presentation1.png"  height="150" align="right"/>
 </a>
 </td>
 <td>
 <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/editable_powerpoint_presentation">
-<img src="man/figures/powepoint.png" width="300" align="left" /> </a>
+<img src="man/figures/powepoint.png" height="150" align="left" /> </a>
 </td>
 <td>
 <a href="https://github.com/Ehyaei/MPIThemes/tree/master/examples/editable_word_report">
-<img src="man/figures/word.png" width="300" align="center"/> </a>
+<img src="man/figures/word.png" height="150" align="center"/> </a>
 </td>
 </tr>
 </table>
