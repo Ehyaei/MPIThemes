@@ -7,7 +7,7 @@
 
 [![R build
 status](https://github.com/Ehyaei/MPIThemes/workflows/R-CMD-check/badge.svg)](https://github.com/Ehyaei/MPIThemes/actions)
-[![](https://img.shields.io/badge/devel%20version-0.0.2-orange.svg)](https://github.com/Ehyaei/MPIThemes)
+[![](https://img.shields.io/badge/devel%20version-0.1-orange.svg)](https://github.com/Ehyaei/MPIThemes)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/last-commit/Ehyaei/MPIThemes.svg)](https://github.com/Ehyaei/MPIThemes/commits/master)
 
@@ -88,6 +88,9 @@ version from GitHub via the `devtools` or `remotes` packages.
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
 ```
+
+For find more details of package dependencies, you can see [Get
+Started](https://ehyaei.github.io/MPIThemes/articles/articles/MPIThemes.html).
 
 ## Example Gallery
 

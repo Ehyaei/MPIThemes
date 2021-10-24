@@ -82,6 +82,7 @@ via the `devtools` or `remotes` packages.
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
 ```
+For find more details of package dependencies, you can see [Get Started](https://ehyaei.github.io/MPIThemes/articles/articles/MPIThemes.html).
 
 ## Example Gallery
 
