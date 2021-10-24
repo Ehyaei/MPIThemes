@@ -34,7 +34,7 @@ This package is not (yet) available on CRAN.
 
 ```r
 if(!require(devtools)) install.packages("devtools") 
-devtools::install_github("lcreteig/amsterdown") 
+devtools::install_github("lcreteig/MPIThemes") 
 ```
 
 After installing the package, you may need to restart RStudio in order to add
