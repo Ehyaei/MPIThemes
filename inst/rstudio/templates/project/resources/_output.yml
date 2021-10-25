@@ -1,5 +1,7 @@
 bookdown::gitbook:
   css:  [src/css/style.css,src/css/environments.css]
+  inludes:
+    in_header: src/html/mathjax-number.html
   config:
     sharing: null
     info: no
