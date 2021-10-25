@@ -327,3 +327,19 @@ body {
     content: var(--sol);
 }
 
+.sourceCode {
+    background: #F4F7FF!important;
+    border: 1px solid #ddd;
+    border-left: 3px solid #2165B6;
+    border-radius: 5px;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    margin:0!important;
+    line-height: 1.6;
+    max-width: 100%;
+    overflow: auto;
+    display: block;
+    word-wrap: break-word;
+}
