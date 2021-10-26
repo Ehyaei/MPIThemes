@@ -811,14 +811,16 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 \newtcolorbox{rmdconsole}{
   enhanced,
-  boxrule=0pt,frame hidden,
+  boxrule=0pt,
+  colframe=rconsole,
   borderline west={4pt}{0pt}{rconsole},
   colback=rconsole!5!white,
   sharp corners
   }
 \newtcolorbox{rmdcode}{
   enhanced,
-  boxrule=0pt,frame hidden,
+  boxrule=0pt,
+  colframe=rcolor,
   borderline west={4pt}{0pt}{rcolor},
   colback=rcolor!5!white,
   sharp corners
@@ -829,14 +831,21 @@ BoldItalicFont = UniversLTStd-Bold.otf
 
 \BeforeBeginEnvironment{Highlighting}{\begin{rmdcode}}
 \AfterEndEnvironment{Highlighting}{\end{rmdcode}}
+
+
+$if(page-background-color)$
+\definecolor{shadecolor}{HTML}{$page-background-color$}
+$else$
 \definecolor{shadecolor}{HTML}{ffffff}
+$endif$
 
 % Add quote section
 \definecolor{quotecolor}{HTML}{989898}
 
 \newtcolorbox{rmdquote}{
   enhanced,
-  boxrule=0pt,frame hidden,
+  boxrule=0pt,
+  colframe=quotecolor,
   borderline west={4pt}{0pt}{quotecolor},
   colback=quotecolor!15!white,
   sharp corners
