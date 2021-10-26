@@ -831,6 +831,21 @@ BoldItalicFont = UniversLTStd-Bold.otf
 \AfterEndEnvironment{Highlighting}{\end{rmdcode}}
 \definecolor{shadecolor}{HTML}{ffffff}
 
+% Add quote section
+\definecolor{quotecolor}{HTML}{989898}
+
+\newtcolorbox{rmdquote}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={4pt}{0pt}{quotecolor},
+  colback=quotecolor!15!white,
+  sharp corners
+  }
+\BeforeBeginEnvironment{quote}{\begin{rmdquote}}
+\AfterEndEnvironment{quote}{\end{rmdquote}}
+
+
+
 %......................................................................%
 % add packages for title page
 
