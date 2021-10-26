@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 )
 
 options(scipen = 999)
-options(knggitr.kable.NA = '')
+options(knitr.kable.NA = '')
 options(htmltools.dir.version = FALSE)
 
 ##%######################################################%##

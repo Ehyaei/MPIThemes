@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 )
 
 options(scipen = 999)
-options(knggitr.kable.NA = '')
+options(knitr.kable.NA = '')
 
 ##%######################################################%##
 #                                                          #
