@@ -180,19 +180,19 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/">gt</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'gt'</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/">gt</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span>rownames_to_stub <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://gt.rstudio.com/reference/opt_row_striping.html">opt_row_striping</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span>rownames_to_stub <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://gt.rstudio.com/reference/opt_row_striping.html">opt_row_striping</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://gt.rstudio.com/reference/tab_header.html">tab_header</a></span><span class="op">(</span>
     title <span class="op">=</span> <span class="st">"Motor Trend Car Road Tests"</span>,
     subtitle <span class="op">=</span> <span class="st">"From the 1974 Motor Trend US magazine"</span>
   <span class="op">)</span></code></pre></div>
-<div id="oinvkveitf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="kynklvnnme" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#oinvkveitf .gt_table {
+#kynklvnnme .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -217,7 +217,7 @@
   border-left-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_heading {
+#kynklvnnme .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -229,7 +229,7 @@
   border-right-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_title {
+#kynklvnnme .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -239,7 +239,7 @@
   border-bottom-width: 0;
 }
 
-#oinvkveitf .gt_subtitle {
+#kynklvnnme .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -249,13 +249,13 @@
   border-top-width: 0;
 }
 
-#oinvkveitf .gt_bottom_border {
+#kynklvnnme .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_col_headings {
+#kynklvnnme .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -270,7 +270,7 @@
   border-right-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_col_heading {
+#kynklvnnme .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -290,7 +290,7 @@
   overflow-x: hidden;
 }
 
-#oinvkveitf .gt_column_spanner_outer {
+#kynklvnnme .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -302,15 +302,15 @@
   padding-right: 4px;
 }
 
-#oinvkveitf .gt_column_spanner_outer:first-child {
+#kynklvnnme .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oinvkveitf .gt_column_spanner_outer:last-child {
+#kynklvnnme .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oinvkveitf .gt_column_spanner {
+#kynklvnnme .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -322,7 +322,7 @@
   width: 100%;
 }
 
-#oinvkveitf .gt_group_heading {
+#kynklvnnme .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -344,7 +344,7 @@
   vertical-align: middle;
 }
 
-#oinvkveitf .gt_empty_group_heading {
+#kynklvnnme .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -359,15 +359,15 @@
   vertical-align: middle;
 }
 
-#oinvkveitf .gt_from_md > :first-child {
+#kynklvnnme .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oinvkveitf .gt_from_md > :last-child {
+#kynklvnnme .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oinvkveitf .gt_row {
+#kynklvnnme .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -386,7 +386,7 @@
   overflow-x: hidden;
 }
 
-#oinvkveitf .gt_stub {
+#kynklvnnme .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -398,7 +398,7 @@
   padding-left: 12px;
 }
 
-#oinvkveitf .gt_summary_row {
+#kynklvnnme .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -408,7 +408,7 @@
   padding-right: 5px;
 }
 
-#oinvkveitf .gt_first_summary_row {
+#kynklvnnme .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -418,7 +418,7 @@
   border-top-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_grand_summary_row {
+#kynklvnnme .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -428,7 +428,7 @@
   padding-right: 5px;
 }
 
-#oinvkveitf .gt_first_grand_summary_row {
+#kynklvnnme .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -438,11 +438,11 @@
   border-top-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_striped {
+#kynklvnnme .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oinvkveitf .gt_table_body {
+#kynklvnnme .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -451,7 +451,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_footnotes {
+#kynklvnnme .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -465,13 +465,13 @@
   border-right-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_footnote {
+#kynklvnnme .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#oinvkveitf .gt_sourcenotes {
+#kynklvnnme .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -485,41 +485,41 @@
   border-right-color: #D3D3D3;
 }
 
-#oinvkveitf .gt_sourcenote {
+#kynklvnnme .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#oinvkveitf .gt_left {
+#kynklvnnme .gt_left {
   text-align: left;
 }
 
-#oinvkveitf .gt_center {
+#kynklvnnme .gt_center {
   text-align: center;
 }
 
-#oinvkveitf .gt_right {
+#kynklvnnme .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oinvkveitf .gt_font_normal {
+#kynklvnnme .gt_font_normal {
   font-weight: normal;
 }
 
-#oinvkveitf .gt_font_bold {
+#kynklvnnme .gt_font_bold {
   font-weight: bold;
 }
 
-#oinvkveitf .gt_font_italic {
+#kynklvnnme .gt_font_italic {
   font-style: italic;
 }
 
-#oinvkveitf .gt_super {
+#kynklvnnme .gt_super {
   font-size: 65%;
 }
 
-#oinvkveitf .gt_footnote_marks {
+#kynklvnnme .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -644,39 +644,39 @@
 <li>Change table style.</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">gtcars</span> <span class="op">%&gt;%</span>
-    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">ctry_origin</span> <span class="op">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"United States"</span>, <span class="st">"Japan"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-    <span class="fu">select</span><span class="op">(</span><span class="va">mfr</span><span class="op">:</span><span class="va">year</span>, <span class="va">mpg_c</span>, <span class="va">mpg_h</span>, <span class="va">ctry_origin</span>, <span class="va">msrp</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+<code class="sourceCode R"><span class="va">gtcars</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">ctry_origin</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"United States"</span>, <span class="st">"Japan"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu">select</span><span class="op">(</span><span class="va">mfr</span><span class="op">:</span><span class="va">year</span>, <span class="va">mpg_c</span>, <span class="va">mpg_h</span>, <span class="va">ctry_origin</span>, <span class="va">msrp</span><span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span> 
     <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span>
         rowname_col <span class="op">=</span> <span class="st">"ctry_origin"</span>,
         groupname_col <span class="op">=</span> <span class="st">"year"</span>
-    <span class="op">)</span> <span class="op">%&gt;%</span>
+    <span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span>
     <span class="fu"><a href="https://gt.rstudio.com/reference/summary_rows.html">summary_rows</a></span><span class="op">(</span>
         groups <span class="op">=</span> <span class="cn">TRUE</span>,
         columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"msrp"</span><span class="op">)</span>,
         fns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>Total <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span><span class="op">)</span>
-    <span class="op">)</span> <span class="op">%&gt;%</span>
+    <span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span>
     <span class="fu"><a href="https://gt.rstudio.com/reference/grand_summary_rows.html">grand_summary_rows</a></span><span class="op">(</span>
         columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"msrp"</span><span class="op">)</span>,
         fns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>Overall <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span><span class="op">)</span>
-    <span class="op">)</span> <span class="op">%&gt;%</span> 
+    <span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://gt.rstudio.com/reference/data_color.html">data_color</a></span><span class="op">(</span>
     columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mpg_c"</span>, <span class="st">"mpg_h"</span><span class="op">)</span>,
     colors <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/col_numeric.html">col_numeric</a></span><span class="op">(</span>
       palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
         <span class="st">"white"</span>, <span class="st">"green"</span><span class="op">)</span>,
       domain <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span>
-  <span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="op">)</span> <span class="op"><a href="https://gt.rstudio.com/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_missing.html">fmt_missing</a></span><span class="op">(</span>
         columns <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">contains</a></span><span class="op">(</span><span class="st">"mpg"</span><span class="op">)</span>,
         missing_text <span class="op">=</span> <span class="st">""</span>
     <span class="op">)</span></code></pre></div>
-<div id="exkrnqxbxj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="retrjiyqaf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#exkrnqxbxj .gt_table {
+#retrjiyqaf .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -701,7 +701,7 @@
   border-left-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_heading {
+#retrjiyqaf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -713,7 +713,7 @@
   border-right-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_title {
+#retrjiyqaf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -723,7 +723,7 @@
   border-bottom-width: 0;
 }
 
-#exkrnqxbxj .gt_subtitle {
+#retrjiyqaf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -733,13 +733,13 @@
   border-top-width: 0;
 }
 
-#exkrnqxbxj .gt_bottom_border {
+#retrjiyqaf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_col_headings {
+#retrjiyqaf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -754,7 +754,7 @@
   border-right-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_col_heading {
+#retrjiyqaf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -774,7 +774,7 @@
   overflow-x: hidden;
 }
 
-#exkrnqxbxj .gt_column_spanner_outer {
+#retrjiyqaf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -786,15 +786,15 @@
   padding-right: 4px;
 }
 
-#exkrnqxbxj .gt_column_spanner_outer:first-child {
+#retrjiyqaf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#exkrnqxbxj .gt_column_spanner_outer:last-child {
+#retrjiyqaf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#exkrnqxbxj .gt_column_spanner {
+#retrjiyqaf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -806,7 +806,7 @@
   width: 100%;
 }
 
-#exkrnqxbxj .gt_group_heading {
+#retrjiyqaf .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -828,7 +828,7 @@
   vertical-align: middle;
 }
 
-#exkrnqxbxj .gt_empty_group_heading {
+#retrjiyqaf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -843,15 +843,15 @@
   vertical-align: middle;
 }
 
-#exkrnqxbxj .gt_from_md > :first-child {
+#retrjiyqaf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#exkrnqxbxj .gt_from_md > :last-child {
+#retrjiyqaf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#exkrnqxbxj .gt_row {
+#retrjiyqaf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -870,7 +870,7 @@
   overflow-x: hidden;
 }
 
-#exkrnqxbxj .gt_stub {
+#retrjiyqaf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -882,7 +882,7 @@
   padding-left: 12px;
 }
 
-#exkrnqxbxj .gt_summary_row {
+#retrjiyqaf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -892,7 +892,7 @@
   padding-right: 5px;
 }
 
-#exkrnqxbxj .gt_first_summary_row {
+#retrjiyqaf .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -902,7 +902,7 @@
   border-top-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_grand_summary_row {
+#retrjiyqaf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -912,7 +912,7 @@
   padding-right: 5px;
 }
 
-#exkrnqxbxj .gt_first_grand_summary_row {
+#retrjiyqaf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -922,11 +922,11 @@
   border-top-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_striped {
+#retrjiyqaf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#exkrnqxbxj .gt_table_body {
+#retrjiyqaf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -935,7 +935,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_footnotes {
+#retrjiyqaf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -949,13 +949,13 @@
   border-right-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_footnote {
+#retrjiyqaf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#exkrnqxbxj .gt_sourcenotes {
+#retrjiyqaf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -969,41 +969,41 @@
   border-right-color: #D3D3D3;
 }
 
-#exkrnqxbxj .gt_sourcenote {
+#retrjiyqaf .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#exkrnqxbxj .gt_left {
+#retrjiyqaf .gt_left {
   text-align: left;
 }
 
-#exkrnqxbxj .gt_center {
+#retrjiyqaf .gt_center {
   text-align: center;
 }
 
-#exkrnqxbxj .gt_right {
+#retrjiyqaf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#exkrnqxbxj .gt_font_normal {
+#retrjiyqaf .gt_font_normal {
   font-weight: normal;
 }
 
-#exkrnqxbxj .gt_font_bold {
+#retrjiyqaf .gt_font_bold {
   font-weight: bold;
 }
 
-#exkrnqxbxj .gt_font_italic {
+#retrjiyqaf .gt_font_italic {
   font-style: italic;
 }
 
-#exkrnqxbxj .gt_super {
+#retrjiyqaf .gt_super {
   font-size: 65%;
 }
 
-#exkrnqxbxj .gt_footnote_marks {
+#retrjiyqaf .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1109,8 +1109,8 @@
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'kableExtra'</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span>
 <span class="va">dt</span> <span class="op">&lt;-</span> <span class="va">mtcars</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span>
-<span class="va">dt</span> <span class="op">%&gt;%</span> 
-<span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html">kbl</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<span class="va">dt</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+<span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html">kbl</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
     <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html">kable_material</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"striped"</span>, <span class="st">"hover"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <table class="table  lightable-material lightable-striped lightable-hover">
 <thead><tr>
@@ -1254,11 +1254,11 @@ Hornet Sportabout
 </tbody>
 </table>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mtcars</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html">kbl</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html">kable_paper</a></span><span class="op">(</span>full_width <span class="op">=</span> <span class="cn">F</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<code class="sourceCode R"><span class="va">mtcars</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html">kbl</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html">kable_paper</a></span><span class="op">(</span>full_width <span class="op">=</span> <span class="cn">F</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">2</span>, color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_color.html">spec_color</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">$</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span><span class="op">)</span>,
-              link <span class="op">=</span> <span class="st">"https://haozhu233.github.io/kableExtra/"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+              link <span class="op">=</span> <span class="st">"https://haozhu233.github.io/kableExtra/"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">6</span>, color <span class="op">=</span> <span class="st">"white"</span>,
               background <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_color.html">spec_color</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">$</span><span class="va">drat</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>, end <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span>,
               popover <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"am:"</span>, <span class="va">mtcars</span><span class="op">$</span><span class="va">am</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></code></pre></div>
@@ -1532,15 +1532,15 @@ Merc 240D
 <span class="va">inline_plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>cyl <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">6</span>, <span class="fl">8</span><span class="op">)</span>, mpg_box <span class="op">=</span> <span class="st">""</span>, mpg_hist <span class="op">=</span> <span class="st">""</span>,
                           mpg_line1 <span class="op">=</span> <span class="st">""</span>, mpg_line2 <span class="op">=</span> <span class="st">""</span>,
                           mpg_points1 <span class="op">=</span> <span class="st">""</span>, mpg_points2 <span class="op">=</span> <span class="st">""</span>, mpg_poly <span class="op">=</span> <span class="st">""</span><span class="op">)</span>
-<span class="va">inline_plot</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html">kbl</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html">kable_paper</a></span><span class="op">(</span>full_width <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">2</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_boxplot.html">spec_boxplot</a></span><span class="op">(</span><span class="va">mpg_list</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">3</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_hist.html">spec_hist</a></span><span class="op">(</span><span class="va">mpg_list</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">4</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, same_lim <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">5</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, same_lim <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">6</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, type <span class="op">=</span> <span class="st">"p"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">7</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, <span class="va">disp_list</span>, type <span class="op">=</span> <span class="st">"p"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<span class="va">inline_plot</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html">kbl</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html">kable_paper</a></span><span class="op">(</span>full_width <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">2</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_boxplot.html">spec_boxplot</a></span><span class="op">(</span><span class="va">mpg_list</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">3</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_hist.html">spec_hist</a></span><span class="op">(</span><span class="va">mpg_list</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">4</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, same_lim <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">5</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, same_lim <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">6</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, type <span class="op">=</span> <span class="st">"p"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">7</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, <span class="va">disp_list</span>, type <span class="op">=</span> <span class="st">"p"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html">column_spec</a></span><span class="op">(</span><span class="fl">8</span>, image <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/spec_plot.html">spec_plot</a></span><span class="op">(</span><span class="va">mpg_list</span>, polymin <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <table class="table  lightable-paper">
 <thead><tr>
