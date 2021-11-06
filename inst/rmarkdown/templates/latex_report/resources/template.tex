@@ -991,12 +991,15 @@ $endif$
 % ---------------------------------------------------------------------------- %
 % Add Page Background Color
 
+$if(page-background)$
+$else$
 \usepackage{eso-pic}
 \newcommand\BackPage{%
 \begin{tikzpicture}[remember picture,overlay]
 \fill[pageBackgroundColor](current page.south west) rectangle (\paperwidth,\paperheight);
 \end{tikzpicture}%
 }
+$endif$
 
 %......................................................................%
 % Remove Blank Page after Table of Contents and between chapter
