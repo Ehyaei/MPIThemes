@@ -84,7 +84,8 @@ Customization](https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_t
 `MPIThemes` is not (yet) available on CRAN, so install development
 version from GitHub via the `devtools` or `remotes` packages.
 
-<div style="background-color:#FF7F7F;color:white;padding:2%;">
+<div
+style="background-color:#FF7F7F!important;color:white!important;padding:2%;">
 
 Before installing the package, you should check that you have X11 and
 Univers font on your machine. The font source can be found
