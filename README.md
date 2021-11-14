@@ -85,8 +85,8 @@ Customization](https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_t
 version from GitHub via the `devtools` or `remotes` packages.
 
 :stop_sign: :construction: Before installing the package, you should
-check that you have X11 and Univers font on your machine. The font
-source can be found
+check that you have X11 plotting device and Univers font on your
+machine. The font source can be found
 [here](https://github.com/Ehyaei/MPIThemes/tree/master/inst/rmarkdown/templates/latex_report/skeleton/src/fonts).
 For more details on package dependencies, see [Get
 Started](https://ehyaei.github.io/MPIThemes/articles/articles/MPIThemes.html).
