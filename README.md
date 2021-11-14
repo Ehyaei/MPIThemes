@@ -84,13 +84,20 @@ Customization](https://ehyaei.github.io/MPIThemes/articles/articles/pdf_report_t
 `MPIThemes` is not (yet) available on CRAN, so install development
 version from GitHub via the `devtools` or `remotes` packages.
 
+<div style="background-color:#FF7F7F;color:white;padding:2%;">
+
+Before installing the package, you should check that you have X11 and
+Univers font on your machine. The font source can be found
+[here](https://github.com/Ehyaei/MPIThemes/tree/master/inst/rmarkdown/templates/latex_report/skeleton/src/fonts).
+For more details on package dependencies, see [Get
+Started](https://ehyaei.github.io/MPIThemes/articles/articles/MPIThemes.html).
+
+</div>
+
 ``` r
 # install.packages("devtools")
 devtools::install_github("Ehyaei/MPIThemes")
 ```
-
-For find more details of package dependencies, you can see [Get
-Started](https://ehyaei.github.io/MPIThemes/articles/articles/MPIThemes.html).
 
 ## Example Gallery
 
@@ -99,7 +106,6 @@ Design can be found in the
 [examples](https://github.com/Ehyaei/MPIThemes/tree/master/examples)
 section. The full document details may be found by clicking on the
 image.
-
 <table width="100%" border="0">
 <tr>
 <td>
